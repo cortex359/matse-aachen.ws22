@@ -1,0 +1,181 @@
+\section{Aufgabe 9}
+
+Die erweiterte Matrix des linearen Gleichungssystems $\displaystyle Ax=b$ mit $\displaystyle \alpha ,\beta \in \mathbb{R}$ sei:
+
+
+$\displaystyle ( A|b) =\begin{pmatrix}
+	\alpha  & 0 & \beta  & 2\\
+	\alpha  & \alpha  & 4 & 4\\
+	0 & \alpha  & 2 & \beta 
+\end{pmatrix}$
+
+
+
+Für welche $\displaystyle \alpha $ und $\displaystyle \beta $ hat das System
+\begin{itemize}
+	\item eine eindeutige Lösung?
+	\item eine einparametrige Lösung?
+	\item eine zweiparametrige Lösung?
+	\item keine Lösung?
+\end{itemize}
+
+
+
+\subsection{Lösung 9}
+
+Zunächst wird die erweiterte Matrix $\displaystyle ( A|b)$ in die Zeilenstufenfrom gebracht:
+\begin{align*}
+	\begin{pmatrix}
+		\alpha  & 0 & \beta  & 2\\
+		\alpha  & \alpha  & 4 & 4\\
+		0 & \alpha  & 2 & \beta 
+	\end{pmatrix} & \begin{array}{ l c }
+		& \\
+		-\ I & \\
+		& 
+	\end{array}\\
+	\begin{pmatrix}
+		\alpha  & 0 & \beta  & 2\\
+		0 & \alpha  & 4-\beta  & 2\\
+		0 & \alpha  & 2 & \beta 
+	\end{pmatrix} & \begin{array}{ l c }
+		& \\
+		-III & \\
+		& 
+	\end{array}\\
+	\begin{pmatrix}
+		\alpha  & 0 & \beta  & 2\\
+		0 & 0 & 2-\beta  & 2-\beta \\
+		0 & \alpha  & 2 & \beta 
+	\end{pmatrix} & \begin{array}{ l c }
+		& \\
+		\rotatebox[origin=c]{270}{$\Rsh$}  & \\
+		\rotatebox[origin=c]{270}{$\Lsh$}  & 
+	\end{array}\\
+	\begin{pmatrix}
+		\alpha  & 0 & \beta  & 2\\
+		0 & \alpha  & 2 & \beta \\
+		0 & 0 & 2-\beta  & 2-\beta 
+	\end{pmatrix} & \begin{array}{ l c }
+		& \\
+		& \\
+		:( 2-\beta ) & 
+	\end{array}\\
+	\begin{pmatrix}
+		\alpha  & 0 & \beta  & 2\\
+		0 & \alpha  & 2 & \beta \\
+		0 & 0 & 1 & 1
+	\end{pmatrix} & \begin{array}{ l c }
+		& \\
+		-2\cdot III & \\
+		& 
+	\end{array}\\
+	\begin{pmatrix}
+		\alpha  & 0 & \beta  & 2\\
+		0 & \alpha  & 0 & \beta -2\\
+		0 & 0 & 1 & 1
+	\end{pmatrix} & \begin{array}{ l c }
+		& \\
+		-2\cdot III & \\
+		& 
+	\end{array}\\
+	\begin{pmatrix}
+		\alpha  & 0 & 0 & 2-\beta \\
+		0 & \alpha  & 0 & \beta -2\\
+		0 & 0 & 1 & 1
+	\end{pmatrix} & \begin{array}{ l c }
+		& \\
+		& \\
+		& 
+	\end{array}
+\end{align*}
+Daraus ergeben sich die folgenden Gleichungen:
+\begin{gather*}
+	x_{1} =\frac{2-\beta }{\alpha }\\
+	\\
+	x_{2} =\frac{\beta -2}{\alpha }\\
+	\\
+	x_{3} =1
+\end{gather*}
+Es lassen sich drei relevant zu unterscheidende Fälle erkennen.
+
+
+
+\textbf{Fall 1} für $\displaystyle \alpha =0\land \beta\neq 2$ lässt sich zu einem Widerspruch führen
+\begin{equation*}
+	x_{1} \cdot 0=2-\beta \ \lightning 
+\end{equation*}
+und damit zeigen, dass das Gleichungssystem \textit{überbestimmt} ist, also keine Lösung existiert.
+
+$\displaystyle \Rightarrow \mathbb{L}_{1} =\emptyset $
+
+
+
+\textbf{Fall 2} für $\displaystyle \alpha =0\land \beta=2$
+\begin{align*}
+	\begin{pmatrix}
+		0 & 0 & 0 & 0\\
+		0 & 0 & 0 & 0\\
+		0 & 0 & 1 & 1
+	\end{pmatrix} & 
+\end{align*}
+ist das Gleichungssystem \textit{unterbestimmt}, also existieren unendlich viele Lösungen, da $\displaystyle x_{1}$ und $\displaystyle x_{2}$ einen beliebigen Wert annehmen können. Man könnte auch von einer zweiparametrigen Lösung sprechen:
+
+$\displaystyle \Rightarrow \mathbb{L}_{2} =\left\{\begin{pmatrix}
+	0\\
+	0\\
+	1
+\end{pmatrix} +x_{1} \cdot \begin{pmatrix}
+	1\\
+	0\\
+	0
+\end{pmatrix} +x_{2} \cdot \begin{pmatrix}
+	0\\
+	1\\
+	0
+\end{pmatrix}\Bigl| x_{1} ,x_{2} \in \mathbb{R}\right\}$
+
+
+
+\textbf{Fall 3} für $\displaystyle \alpha \neq 0\land \beta \neq 2$ 
+\begin{equation*}
+	\begin{array}{ c c c c c }
+		& x_{2} & = & \frac{\beta -2}{\alpha } & \\
+		\Leftrightarrow  & \alpha  & = & \frac{\beta -2}{x_{2}} & \\
+		& x_{1} & = & \frac{2-\beta }{\alpha } & \Bigl|\text{ Einsetzen}\\
+		\Leftrightarrow  & x_{1} & = & \frac{( 2-\beta ) \cdot x_{2}}{\beta -2} & \\
+		\Leftrightarrow  & x_{1} & = & x_{2} \cdot \frac{2-\beta }{\beta -2} & \\
+		\Leftrightarrow  & x_{1} \cdot \frac{\beta -2}{2-\beta } & = & x_{2} &
+	\end{array}
+\end{equation*}
+existieren zwei äquivalente einparametrige Lösungen. Sowohl in der Schreibweise mit dem Parameter $\displaystyle x_{2}$, als auch mit dem Parameter $\displaystyle x_{1}$:
+
+$\displaystyle \Rightarrow \mathbb{L}_{3} =\left\{\begin{pmatrix}
+	0\\
+	0\\
+	1
+\end{pmatrix} +x_{2} \cdot \begin{pmatrix}
+	\frac{2-\beta }{\beta -2}\\
+	1\\
+	0
+\end{pmatrix}\Bigl| x_{2} \in \mathbb{R}\right\} =\left\{\begin{pmatrix}
+	0\\
+	0\\
+	1
+\end{pmatrix} +x_{1} \cdot \begin{pmatrix}
+	\frac{\beta -2}{2-\beta }\\
+	1\\
+	0
+\end{pmatrix}\Bigl| x_{1} \in \mathbb{R}\right\}$
+
+
+
+\textbf{Fall 4} für $\displaystyle \alpha \neq 0\land \beta =2$ existiert eine eindeutige Lösung
+
+
+
+$\displaystyle \Rightarrow \mathbb{L}_{4} =\left\{\begin{pmatrix}
+	0\\
+	0\\
+	1
+\end{pmatrix}\right\}$

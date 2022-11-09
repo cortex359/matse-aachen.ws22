@@ -1,0 +1,100 @@
+\section{Aufgabe 6}
+
+Bestimmen Sie eine Gleichung der Geraden durch die Punkte A und B. Untersuchen Sie jeweils, ob der Punkt C auf dieser Geraden liegt.
+
+(a)
+\begin{equation*}
+  A=( -2|1) ,\ B=( 2|2) ,\ C=( -10|5)
+\end{equation*}
+(b)
+\begin{equation*}
+  A=( 1|2|3) ,\ B=( 3|1|2) ,\ C=( -9|7|8)
+\end{equation*}
+
+\subsection{Lösung 6a}
+
+Eine Gerade $\displaystyle G$ kann durch eine Geradengleichung der Form $\displaystyle \forall x\in G:x=\vec{p} +\alpha \cdotp \vec{v}$ beschrieben werden, welche den Ortsvektor $\displaystyle \vec{p}$ zum Punkt $\displaystyle A$, sowie den Richtungsvektor $\displaystyle \vec{v} =\overrightarrow{OB} -\vec{p}$ zwischen dem Punkt B und A verwendet.
+\begin{gather*}
+  \begin{array}{ c r l }
+    & x= & \begin{pmatrix}
+      -2\\
+      1
+    \end{pmatrix} +\alpha \cdotp \left(\begin{pmatrix}
+      2\\
+      2
+    \end{pmatrix} -\begin{pmatrix}
+      -2\\
+      1
+    \end{pmatrix}\right)\\
+    \Leftrightarrow  & x= & \begin{pmatrix}
+      -2\\
+      1
+    \end{pmatrix} +\alpha \cdotp \begin{pmatrix}
+      4\\
+      1
+    \end{pmatrix}\\
+    \Leftrightarrow  & x= & \begin{pmatrix}
+      4\alpha -2\\
+      \alpha +1
+    \end{pmatrix}
+  \end{array}\\
+  \\
+  x_{1} =4\alpha -2\\
+  x_{2} =\alpha +1\ 
+\end{gather*}
+Der Punkt C liegt auf der Gerade, wenn $\displaystyle \exists \alpha :-10=4\alpha -2\land 5=\alpha +1\ \lightning $
+\\
+$\Rightarrow$ Es existiert keine Gerade, auf der alle Punkte liegen.
+
+\subsection{Lösung 6b}
+Nach der gleichen Argumentation gilt in $\mathbb{R}^3$:
+\begin{gather*}
+  \begin{array}{ c r l }
+    & x= & \begin{pmatrix}
+      1\\
+      2\\
+      3
+    \end{pmatrix} +\alpha \cdotp \left(\begin{pmatrix}
+      3\\
+      1\\
+      2
+    \end{pmatrix} -\begin{pmatrix}
+      1\\
+      2\\
+      3
+    \end{pmatrix}\right)\\
+    \\
+    \Leftrightarrow  & x= & \begin{pmatrix}
+      1\\
+      2\\
+      3
+    \end{pmatrix} +\alpha \cdotp \begin{pmatrix}
+      2\\
+      -1\\
+      -1
+    \end{pmatrix}\\
+    \\
+    \Leftrightarrow  & x= & \begin{pmatrix}
+      1+2\alpha \\
+      2-\alpha \\
+      3-\alpha 
+    \end{pmatrix}
+  \end{array}\\
+\end{gather*}
+
+Wenn der Punkt $C$ auf der Geraden liegt, muss ein $\alpha$ existieren, für dass $x=c$:
+
+\begin{gather*}
+  x_{1} =1+2\alpha \\
+  x_{2} =2-\alpha \\
+  x_{3} =3-\alpha \\
+  \\
+  \begin{array}{ l r r l c }
+    x_{1} : &  & -9= & 1+2\alpha  & \\
+    & \Leftrightarrow  & \alpha = & -5 & \\
+    x_{2} : &  & 7= & 2-( -5) & \checkmark \\
+    x_{3} : &  & 8= & 3-( -5) & \checkmark 
+  \end{array}
+\end{gather*}
+
+$\Rightarrow$ Der Punkt C liegt auf der Geraden.

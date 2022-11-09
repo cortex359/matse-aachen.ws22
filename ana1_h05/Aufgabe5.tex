@@ -1,0 +1,61 @@
+\section{Aufgabe 5}
+
+Untersuchen Sie die folgenden Reihen mittels eines geeigneten Kriteriums auf Konvergenz.
+\begin{align*}
+	\begin{array}{ l c }
+		\text{a)} & \sum\limits _{n=0}^{\infty }\frac{13^{n+2} \cdotp n^{n^{2}}}{5^{n-2} \cdotp ( n+1)^{n^{2}}}
+	\end{array} & & \begin{array}{ l c }
+		\text{b)} & \sum\limits _{l=1}^{\infty }\frac{l!}{l^{l}}
+	\end{array} & & \begin{array}{ l c }
+		\text{c)} & \sum\limits _{m=0}^{\infty }\frac{( m+1)^{8} \cdotp 3^{m}}{m!}
+	\end{array}
+\end{align*}
+
+
+\subsection{Lösung 5a}
+Die Folge $\displaystyle a_{n} =\frac{13^{n+2} \cdotp n^{n^{2}}}{5^{n-2} \cdotp ( n+1)^{n^{2}}}$ für $\displaystyle n\in \mathbb{N}$ lässt sich mit den Potenzgesetzen zunächst so umformen:
+\begin{gather*}
+	\begin{array}{ c l }
+		a_{n} & =\frac{13^{n+2} \cdotp n{^{n}}^{2}}{5^{n-2}( n+1){^{n}}^{2}} =\frac{13^{n} \cdotp 13^{2} \cdotp n^{n\cdotp n}}{\frac{5^{n}}{5^{2}} \cdotp ( n+1)^{n\cdotp n}} =\frac{13^{2} \cdotp 5^{2} \cdotp 13^{n} \cdotp n^{n\cdotp n}}{5^{n} \cdotp ( n+1)^{n\cdotp n}} =13^{2} \cdotp 5^{2} \cdotp \left(\frac{13 \cdotp n^{n}}{5 \cdotp ( n+1)^{n}}\right)^{n}
+	\end{array}\\
+\end{gather*}
+Für die Reihe gilt nun:
+\begin{equation*}
+	\sum\limits _{n=0}^{\infty }\frac{13^{n+2} \cdotp n^{n^{2}}}{5^{n-2} \cdotp ( n+1)^{n^{2}}} =13^{2} \cdotp 5^{2} \cdotp \sum\limits _{n=0}^{\infty }\left(\frac{13 \cdotp n^{n}}{5 \cdotp ( n+1)^{n}}\right)^{n}
+\end{equation*}
+
+
+Diese wird nun mit dem Wurzelkriterium untersucht. 
+\begin{equation*}
+	\begin{array}{ r l }
+		r & =\lim\limits _{n\rightarrow \infty }\sqrt[n]{\left(\frac{13 \cdotp n^{n}}{5 \cdotp ( n+1)^{n}}\right)^{n}}\\
+		& =\lim _{n\rightarrow \infty }\left| \frac{13 \cdotp n^{n}}{5 \cdotp ( n+1)^{n}}\right| \\
+		& =\lim _{n\rightarrow \infty }\left| \frac{13}{5} \cdotp \left(\frac{n}{( n+1)}\right)^{n}\right| \\
+		& =\lim _{n\rightarrow \infty }\left| \frac{13}{5} \cdotp \left(\frac{1}{1+\frac{1}{n}}\right)^{n}\right| \\
+		& =\frac{13}{5} \cdotp \left| \frac{1}{\lim\limits _{n\rightarrow \infty }\left( 1+\frac{1}{n}\right)^{n}}\right| \\
+		& =\frac{13}{5e}\\
+		& < 1
+	\end{array}
+\end{equation*}
+Aus $\displaystyle r< 1\ \Rightarrow $ die gegebene Reihe ist konvergent.
+
+
+
+\subsection{Lösung 5b}
+
+Die gegebene Reihe soll mit dem Quotientenkriterium untersucht werden. Dazu betrachten wir die Folge $\displaystyle a_{l} =\frac{l!}{l^{l}}$:
+\begin{equation*}
+	\begin{array}{ c l }
+		r & =\lim\limits _{l\rightarrow \infty }\frac{a_{l+1}}{a_{l}}\\
+		& =\lim\limits _{l\rightarrow \infty }\frac{( l+1) !}{( l+1)^{l+1}} \cdotp \frac{l^{l}}{l!}\\
+		& =\lim\limits _{l\rightarrow \infty }\frac{( l+1) \cdotp l^{l}}{( l+1)^{l+1}}\\
+		& =\lim\limits _{l\rightarrow \infty }( l+1)^{1-( l+1)} \cdotp l^{l}\\
+		& =\lim\limits _{l\rightarrow \infty }( l+1)^{-l} \cdotp l^{l}\\
+		& =\lim\limits _{l\rightarrow \infty }\left(\frac{l}{l+1}\right)^{l}\\
+		& =\lim\limits _{l\rightarrow \infty }\left(\frac{l+1}{l}\right)^{-l}\\
+		& =\lim\limits _{l\rightarrow \infty }\left(\frac{l}{l} +\frac{1}{l}\right)^{-l}\\
+		& =\lim\limits _{l\rightarrow \infty }\left( 1+\frac{1}{l}\right)^{-l}\\
+		& =\frac{1}{e} < 1
+	\end{array}
+\end{equation*}
+Aus $\displaystyle r< 1\ \Rightarrow $ die gegebene Reihe ist konvergent.

@@ -1,0 +1,40 @@
+\section*{Aufgabe 2}
+
+Gegeben sei die Folge
+\begin{equation*}
+  a_{n} =\frac{5n^{2} +n-5}{7n^{2} -5n+4}
+\end{equation*}
+Zeigen Sie die Konvergenz der Folge und geben Sie ein $\displaystyle n_{0}$ in Abhängigkeit von $\displaystyle \epsilon $ an.
+
+
+
+\subsection*{Lösung 2}
+
+\begin{equation*}
+  \lim _{n\rightarrow \infty } a_{n} =\lim _{n\rightarrow \infty }\frac{5n^{2} +n-5}{7n^{2} -5n+4}
+\end{equation*}
+
+
+Erweitern man den Bruch mit $\displaystyle \frac{1}{n^{2}}$ und wendet die Rechenregeln für Limes an, so erhält man
+
+\begin{gather*}
+  \lim _{n\rightarrow \infty }\frac{5 +\frac{1}{n} -\frac{5}{n^{2}}}{7-\frac{5}{n} +\frac{4}{n^{2}}} =\frac{\lim\limits _{n\rightarrow \infty }\left( 5 +\frac{1}{n} -\frac{5}{n^{2}}\right)}{\lim\limits _{n\rightarrow \infty }\left( 7-\frac{5}{n} +\frac{4}{n^{2}}\right)} =\frac{\lim\limits _{n\rightarrow \infty }( 5) +\lim\limits _{n\rightarrow \infty }\left(\frac{1}{n}\right) -\lim\limits _{n\rightarrow \infty }\left(\frac{5}{n^{2}}\right)}{\lim\limits _{n\rightarrow \infty }( 7) -\lim\limits _{n\rightarrow \infty }\left(\frac{5}{n}\right) +\lim\limits _{n\rightarrow \infty }\left(\frac{4}{n^{2}}\right)}\\
+  \\
+  =\frac{5+0-0}{7-0+0} =\frac{5}{7}
+\end{gather*}
+
+
+als den Grenzwert $\displaystyle a$ der Folge $\displaystyle a_{n}$.\\
+
+Die Indexfunktion $\displaystyle n_{0}( \epsilon )$ wird durch die Eigenschaft $\displaystyle |a_{n} -a|< \epsilon $ beschrieben.
+\begin{equation*}
+  \begin{array}{ c r l }
+    & \epsilon  > & |a_{n} -a|\\
+    \Rightarrow  & \epsilon  > & \left| \frac{5n^{2} +n-5}{7n^{2} -5n+4} -\frac{5}{7}\right| \\
+    \Leftrightarrow  & \epsilon  > & \left| \frac{\left( 5n^{2} +n-5\right) \cdot 7-5\cdot \left( 7n^{2} -5n+4\right)}{\left( 7n^{2} -5n+4\right) \cdot 7}\right| \\
+    \Leftrightarrow  & \epsilon  > & \left| \frac{\left( 35n^{2} +7n-35\right) -\left( 35n^{2} -25n+20\right)}{49n^{2} -35n+28}\right| \\
+    \Leftrightarrow  & \epsilon  > & \left| \frac{32n-55}{49n^{2} -35n+28}\right| \\
+    \Rightarrow  & \epsilon  > & \left| \frac{32}{14n}\right|  >\left| \frac{32n}{49n^{2} -35n}\right|  >\left| \frac{32n-55}{49n^{2} -35n+28}\right| \\
+    \Rightarrow  & n > & \frac{16}{7\epsilon }
+  \end{array}
+\end{equation*}

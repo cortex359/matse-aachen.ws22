@@ -1,0 +1,54 @@
+\section*{Aufgabe 1}
+
+Untersuchen Sie die folgenden Folgen auf Monotonie und begründen Sie anhand der Definition.
+\begin{align*}
+  \begin{array}{ c c }
+    \text{a)} & a_{n} =\frac{3n-5}{3n-10}
+  \end{array} & & \begin{array}{ c c }
+    \text{b)} & a_{n} =2n^{2} -6n+10
+  \end{array}
+\end{align*}
+
+
+\subsection*{Lösung 1}
+Wir betrachten für ein festes, aber beliebiges Folgeglied $\displaystyle a_{n}$ und dessen Nachfolger $\displaystyle a_{n+1}$ den Abstand $\displaystyle a_{n} -a_{n+1}$.
+
+\subsubsection*{1a)}
+
+\begin{align*}
+  a_{n} & =\frac{3n-5}{3n-10}\\
+  a_{n+1} & =\frac{3( n+1) -5}{3( n+1) -10}\\
+  a_{n} -a_{n+1} & =\frac{3n-5}{3n-10} -\frac{3( n+1) -5}{3( n+1) -10}\\
+  & =\frac{3n-5}{3n-10} -\frac{3n-2}{3n-7}\\
+  & =\frac{( 3n-5)( 3n-7) -( 3n-2)( 3n-10)}{( 3n-10)( 3n-7)}\\
+  & =\frac{9n^{2} -21n-15n-35-\left( 9n^{2} -30n-6n-20\right)}{( 3n-10)( 3n-7)}\\
+  & =\frac{-35-( -20)}{( 3n-10)( 3n-7)}\\
+  & =\frac{-15}{( 3n-10)( 3n-7)}
+\end{align*}
+Der Ausdruck ist negativ, wenn $\displaystyle ( 3n-10)( 3n-7) \  >0$ und positiv, wenn $\displaystyle ( 3n-10)( 3n-7) < 0$. Dazu sucht man nach möglichen Nullstellen
+\begin{gather*}
+  \begin{array}{ c r c }
+    & ( 3n-10) \cdot ( 3n-7) \  & =0\\
+    \Leftrightarrow  & 9n^{2} -51n+70\  & =0\\
+    \Leftrightarrow  & n^{2} -\frac{51}{9} n+\frac{70}{9} \  & =0\\
+    \Leftrightarrow  & \frac{51}{18} \pm \sqrt{\left(\frac{51}{18}\right)^{2} -\frac{70}{9}} & =n\\
+    \Leftrightarrow  & \frac{17}{6} \pm \sqrt{\frac{1}{4}} & =n
+  \end{array}\\
+  \Rightarrow \ \ \ n_{1} =\frac{7}{3} \ \land \ n_{2} =\frac{10}{3}
+\end{gather*}
+
+
+$\displaystyle n_{1} ,n_{2} \notin \mathbb{N}$ aber in dem Intervall $\displaystyle ( n_{1} ;n_{2})$ liegt der Punkt $\displaystyle n_{3} =3$. Für $\displaystyle n_{3}$ ist der Ausdruck $\displaystyle a_{n} -a_{n+1}  >0$. Für alle anderen Punkte jedoch $\displaystyle a_{n} -a_{n+1} < 0$. Die Folge ist also ab $\displaystyle n >3$ streng monoton steigend. 
+
+\subsubsection*{1b)}
+
+Wir betrachten für ein festes, aber beliebiges Folgeglied $\displaystyle a_{n}$ und dessen Nachfolger $\displaystyle a_{n+1}$ den Abstand $\displaystyle a_{n} -a_{n+1}$.
+\begin{align*}
+  a_{n} & =2n^{2} -6n+10\\
+  a_{n+1} & =2( n+1)^{2} -6( n+1) +10\\
+  & =2n^{2} +4n+2-6n-6+10\\
+  & =2n^{2} -2n+6\\
+  a_{n} -a_{n+1} & =\left( 2n^{2} -6n+10\right) -\left( 2n^{2} -2n+6\right)\\
+  & =-4n+4
+\end{align*}
+Da für jedes beliebige $\displaystyle n\in \mathbb{N}$ gilt $\displaystyle -4n+4\ \geq 0$ ist die Folge monoton wachsend.

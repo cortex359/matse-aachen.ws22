@@ -1,0 +1,26 @@
+\section{Aufgabe 4 (optional)}
+
+Untersuchen Sie die folgende Reihe auf Konvergenz:
+\begin{equation*}
+  \sum _{k=1}^{\infty }\left(\frac{1}{4} +\sqrt{k^{2} +k} -k\right)^{k}
+\end{equation*}
+
+\subsection{Lösung 4}
+
+Untersuchung mittels Wurzelkriterium der Folge
+\begin{equation*}
+  a_{k} =\left(\frac{1}{4} +\sqrt{k^{2} +k} -k\right)^{k}
+\end{equation*}
+Wobei wir $\displaystyle W$ als Kennzahl zur Beurteilung der Konvergenz der unendlichen Reihe bestimmen:
+\begin{gather*}
+  \begin{array}{ r l }
+    W & =\lim\limits _{k\rightarrow \infty }\sqrt[k]{| a_{k}| }\\
+    & =\lim\limits _{k\rightarrow \infty }\sqrt[k]{\left| \left(\frac{1}{4} +\sqrt{k^{2} +k} -k\right)^{k}\right| }\vspace{2mm}\\
+    & =\lim\limits _{k\rightarrow \infty } \ \left| \frac{1}{4} +\sqrt{k^{2} +k} -k\right| \vspace{2mm}\\
+    & =\frac{1}{4} +\lim\limits _{k\rightarrow \infty } \ \left| \sqrt{k^{2} +k} -k\right| \vspace{2mm}\\
+    & =\frac{1}{4} +\frac{1}{2}\vspace{2mm}\\
+    & =\frac{3}{4}
+  \end{array}\\
+  \\
+  W< 1\ \Rightarrow \ \sum _{k=1}^{\infty } a_{k} \ \text{konvergiert}
+\end{gather*}

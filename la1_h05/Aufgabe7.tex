@@ -1,0 +1,223 @@
+\section{Aufgabe 7}
+
+Der 10km hohe Luftraum über „Quadrat-Stadt“, einer ebenen Stadt mit quadratischer Grundfläche von 4km Seitenlänge, soll nicht überflogen werden. Es nähert sich ein Flugobjekt entlang einer Geraden. 
+
+Berechnen Sie die Länge der Strecke, die es in der Zone zurücklegt. Bezogen auf das kartesische Koordinatensystem (in Einheiten von km), dessen Ursprung in einer Ecke der Stadt liegt und deren Grenzen entlang der positiven x- bzw. y-Koordinatenachse verlaufen, nährt sich das Objekt entlang der Geraden
+\begin{equation*}
+	g:x=\begin{pmatrix}
+		x\\
+		y\\
+		z
+	\end{pmatrix} =\begin{pmatrix}
+		1\\
+		-10\\
+		17,5
+	\end{pmatrix} +\lambda \begin{pmatrix}
+		0\\
+		1\\
+		-0,75
+	\end{pmatrix}\text{.}
+\end{equation*}
+Machen Sie zuerst eine Skizze. Berechnen Sie sodann den Eintrittspunkt, der in der (xz)-Ebene liegt. Wo liegt der Austrittspunkt? Wie groß ist schließlich die Länge der Strecke?
+
+\subsection{Lösung 7}
+
+\textbf{Lösung 7}
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+	%uncomment if require: \path (0,325); %set diagram left start at 0, and has height of 325
+	
+	%Straight Lines [id:da3033100050412927] 
+	\draw    (169.89,156.35) -- (396,156.35) ;
+	\draw [shift={(399,156.35)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+	%Straight Lines [id:da4802821622683172] 
+	\draw    (169.89,156.35) -- (32.7,293.55) ;
+	\draw [shift={(30.58,295.67)}, rotate = 315] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+	%Straight Lines [id:da7151892617161288] 
+	\draw    (169.89,13.83) -- (169.89,156.35) ;
+	\draw [shift={(169.89,10.83)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+	%Straight Lines [id:da21366386253617298] 
+	\draw    (170.44,82.97) -- (278.58,82.97) ;
+	%Straight Lines [id:da11261555821378322] 
+	\draw    (278.58,82.97) -- (278.58,156.35) ;
+	%Straight Lines [id:da9323590820135851] 
+	\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (278.58,82.97) -- (143.96,217.59) ;
+	%Straight Lines [id:da6798557284344653] 
+	\draw    (347,156.35) -- (244.93,258.42) ;
+	%Straight Lines [id:da3448179157469241] 
+	\draw    (244.93,258.42) -- (67.27,258.42) ;
+	%Straight Lines [id:da8149535348499427] 
+	\draw    (143.41,217.59) -- (143.41,259.53) ;
+	%Straight Lines [id:da94399368085912] 
+	\draw    (143.23,218.33) -- (65.06,296.49) ;
+	%Straight Lines [id:da029279137089188723] 
+	\draw    (307.89,53.67) -- (278.58,82.97) ;
+	
+	% Text Node
+	\draw (281.1,78.07) node [anchor=north west][inner sep=0.75pt]    {$v_{0}$};
+	% Text Node
+	\draw (343.48,133.3) node [anchor=north west][inner sep=0.75pt]    {$4$};
+	% Text Node
+	\draw (45.55,241.44) node [anchor=north west][inner sep=0.75pt]    {$4$};
+	% Text Node
+	\draw (145.21,212.19) node [anchor=north west][inner sep=0.75pt]    {$v_{1}$};
+	% Text Node
+	\draw (394.67,157.4) node [anchor=north west][inner sep=0.75pt]    {$x$};
+	% Text Node
+	\draw (152.67,3.4) node [anchor=north west][inner sep=0.75pt]    {$z$};
+	% Text Node
+	\draw (15.33,277.4) node [anchor=north west][inner sep=0.75pt]    {$y$};
+	
+	
+\end{tikzpicture}
+
+
+
+Sei der Eintrittspunkt in der x-z-Ebene $\displaystyle v_{0}$ mit
+\begin{equation*}
+	\overrightarrow{v_{0}} :\begin{pmatrix}
+		x\\
+		0\\
+		z
+	\end{pmatrix} =\begin{pmatrix}
+		1\\
+		-10\\
+		17,5
+	\end{pmatrix} +\lambda \begin{pmatrix}
+		0\\
+		1\\
+		-0,75
+	\end{pmatrix}
+\end{equation*}
+und $\displaystyle \lambda =10$, so ist
+\begin{equation*}
+	\overrightarrow{v_{0}} =\begin{pmatrix}
+		1\\
+		0\\
+		10
+	\end{pmatrix}\text{.}
+\end{equation*}
+Sei der Austrittspunkt $\displaystyle v_{1}$ mit
+\begin{equation*}
+	\overrightarrow{v_{0}} :\begin{pmatrix}
+		x\\
+		4\\
+		z
+	\end{pmatrix} =\begin{pmatrix}
+		1\\
+		-10\\
+		17,5
+	\end{pmatrix} +\lambda \begin{pmatrix}
+		0\\
+		1\\
+		-0,75
+	\end{pmatrix}
+\end{equation*}
+und $\displaystyle \lambda =14$, so ist
+\begin{equation*}
+	\overrightarrow{v_{1}} =\begin{pmatrix}
+		1\\
+		4\\
+		7
+	\end{pmatrix}\text{.}
+\end{equation*}
+
+
+Die Länge der Strecke zwischen den beiden Vektoren ist $\displaystyle \left| \overrightarrow{v_{1}} -\overrightarrow{v_{0}}\right| =5$.
+\begin{gather*}
+	\begin{pmatrix}
+		1\\
+		4\\
+		7
+	\end{pmatrix} -\begin{pmatrix}
+		1\\
+		0\\
+		10
+	\end{pmatrix} =\begin{pmatrix}
+		0\\
+		4\\
+		-3
+	\end{pmatrix}\\
+	\\
+	\left| \begin{pmatrix}
+		0\\
+		4\\
+		-3
+	\end{pmatrix}\right| =\sqrt{0^{2} +4^{2} +( -3)^{2}} =\sqrt{25} =5
+\end{gather*}
+\\
+Sei der Eintrittspunkt in der x-z-Ebene $\displaystyle v_{0}$ mit
+\begin{equation*}
+	\overrightarrow{v_{0}} :\begin{pmatrix}
+		x\\
+		0\\
+		z
+	\end{pmatrix} =\begin{pmatrix}
+		1\\
+		-10\\
+		17,5
+	\end{pmatrix} +\lambda \begin{pmatrix}
+		0\\
+		1\\
+		-0,75
+	\end{pmatrix}
+\end{equation*}
+und $\displaystyle \lambda =10$, so ist
+\begin{equation*}
+	\overrightarrow{v_{0}} =\begin{pmatrix}
+		1\\
+		0\\
+		10
+	\end{pmatrix}\text{.}
+\end{equation*}
+Sei der Austrittspunkt $\displaystyle v_{1}$ mit
+\begin{equation*}
+	\overrightarrow{v_{0}} :\begin{pmatrix}
+		x\\
+		4\\
+		z
+	\end{pmatrix} =\begin{pmatrix}
+		1\\
+		-10\\
+		17,5
+	\end{pmatrix} +\lambda \begin{pmatrix}
+		0\\
+		1\\
+		-0,75
+	\end{pmatrix}
+\end{equation*}
+und $\displaystyle \lambda =14$, so ist
+\begin{equation*}
+	\overrightarrow{v_{1}} =\begin{pmatrix}
+		1\\
+		4\\
+		7
+	\end{pmatrix}\text{.}
+\end{equation*}
+
+
+Die Länge der Strecke zwischen den beiden Vektoren ist $\displaystyle \left| \overrightarrow{v_{1}} -\overrightarrow{v_{0}}\right| =5$.
+\begin{gather*}
+	\begin{pmatrix}
+		1\\
+		4\\
+		7
+	\end{pmatrix} -\begin{pmatrix}
+		1\\
+		0\\
+		10
+	\end{pmatrix} =\begin{pmatrix}
+		0\\
+		4\\
+		-3
+	\end{pmatrix}\\
+	\\
+	\left| \begin{pmatrix}
+		0\\
+		4\\
+		-3
+	\end{pmatrix}\right| =\sqrt{0^{2} +4^{2} +( -3)^{2}} =\sqrt{25} =5
+\end{gather*}

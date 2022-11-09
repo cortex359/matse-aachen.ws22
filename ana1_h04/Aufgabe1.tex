@@ -1,0 +1,82 @@
+\section{Aufgabe 1}
+
+Konvergieren oder divergieren die folgenden rekursiven Folgen $\displaystyle ( n\in \mathbb{N}_{o})$? Berechnen Sie gegebenenfalls den Grenzwert.
+\begin{align*}
+  \begin{array}{ c c }
+    \text{a)} & a_{n+1} =\sqrt{4a_{n} -3} \ \text{mit} \ a_{o} =3
+  \end{array} & & \begin{array}{ c c }
+    \text{b)} & a_{n+1} =\frac{n+2}{n+1} \cdot a_{n} \ \text{mit} \ a_{0} =1
+  \end{array}
+\end{align*}
+
+\subsection{Lösung 1a}
+
+Die Berechnung der ersten Folgenglieder lässt vermuten, dass die explizite Form der Folge als $\displaystyle a_{n} =3$ geschrieben werden kann. Dies soll im Folgenden durch vollständige Induktion bewiesen werden:\\
+
+\textbf{Induktionsanfang: }
+
+Für $\displaystyle n_{o} =0$ gilt $\displaystyle a_{0} =3\ \checkmark $
+
+\textbf{Induktionsannahme:}
+
+Es gelte für ein festes, aber beliebiges $\displaystyle n\geq n_{0} ,\ n\in \mathbb{N}_{0}$
+\begin{equation*}
+a_{n} =3\text{.}
+\end{equation*}
+\textbf{Induktionsbehauptung:}
+
+Dann gilt für $\displaystyle n+1$ auch
+\begin{equation*}
+a_{n+1} =3\text{.}
+\end{equation*}
+\textbf{Beweis des Induktionsschritts:}
+\begin{equation*}
+a_{n+1} =\sqrt{4a_{n} -3} \ \xlongequal{IV}\sqrt{4\cdotp 3-3} =\sqrt{9} =3\ \checkmark 
+\end{equation*}
+Damit ist gezeigt, dass die Aussage $\displaystyle a_{n} =3$ für alle $\displaystyle n\in \mathbb{N}$ erfüllt ist, sie also allgemeingültig ist.\\
+
+Der Grenzwert der Folge ist
+\begin{equation*}
+\lim _{n\rightarrow \infty } a_{n} =\lim _{n\rightarrow \infty } 3=3\text{.}
+\end{equation*}
+Die Folge $\displaystyle a_{n}$ ist konstant und eine konstante Folge ist konvergent.
+
+
+
+\subsection{Lösung 1b}
+
+Für die ersten Folgenglieder ergibt sich
+\begin{gather*}
+a_{1} =\frac{2}{1} \cdot 1=2\\
+a_{2} =\frac{3}{2} \cdot 2=3\\
+a_{3} =\frac{4}{3} \cdot 3=4
+\end{gather*}
+sodass sich vermuten lässt, dass die explizite Form der Folge als $\displaystyle a_{n} =n+1$ behauptet werden kann. Dies soll im Folgenden durch vollständige Induktion bewiesen werden: \\
+
+\textbf{Induktionsanfang: }
+
+Für $\displaystyle n_{o} =0$ gilt $\displaystyle a_{0} =0+1=1\ \checkmark $
+
+\textbf{Induktionsannahme:}
+
+Es gelte für ein festes, aber beliebiges $\displaystyle n\geq n_{0} ,\ n\in \mathbb{N}_{0}$
+\begin{equation*}
+a_{n} =n+1\text{.}
+\end{equation*}
+\textbf{Induktionsbehauptung:}
+
+Dann gilt für $\displaystyle n+1$ auch
+\begin{equation*}
+a_{n+1} =( n+1) +1\text{.}
+\end{equation*}
+\textbf{Beweis des Induktionsschritts:}
+\begin{equation*}
+a_{n+1} =\frac{n+2}{n+1} \cdot a_{n}\xLeftrightarrow{IV}( n+1) +1=\frac{n+2}{n+1} \cdot ( n+1) \Leftrightarrow \ ( n+1) +1=n+2\ \checkmark 
+\end{equation*}
+Somit ist gezeigt, dass aus der Induktionsannahme stets die Induktionsbehauptung folgt und zwar für alle $\displaystyle n\in \mathbb{N}$.\\
+
+Versucht man nun den Grenzwert der Folge zu mit der zuvor bewiesenen, expliziten Form zu bestimmen, so zeigt sich, dass die Folge keinen Grenzwert hat.
+\begin{equation*}
+\lim _{n\rightarrow \infty } a_{n} =\lim _{n\rightarrow \infty } n+1=\infty 
+\end{equation*}
+Die Folge $\displaystyle a_{n}$ ist somit divergent.

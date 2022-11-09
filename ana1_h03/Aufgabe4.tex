@@ -1,0 +1,55 @@
+\section*{Aufgabe 4}
+
+Untersuchen Sie die Folge
+
+
+\begin{equation*}
+  a_{n} =\frac{1}{1^{2}} +\frac{1}{2^{2}} +\frac{1}{3^{2}} +\cdots +\frac{1}{n^{2}} +\frac{1}{n}
+\end{equation*}
+auf Monotonie und Beschränktheit.
+
+\subsection*{Lösung 4}
+
+Um die Folge $\displaystyle a_{n}$ auf Monotonie und Beschränktheit zu untersuchen, lässt sich zunächst die Folge allgemein für $\displaystyle n$ sowie für den Nachfolger $\displaystyle n+1$ notieren:
+\begin{equation*}
+  \begin{array}{ r l }
+    a_{n} = & \sum\limits _{k=1}^{n}\left(\frac{1}{k^{2}}\right) +\frac{1}{n}\\
+    a_{n+1} = & \sum\limits _{k=1}^{n+1}\left(\frac{1}{k^{2}}\right) +\frac{1}{n+1}\\
+    = & \sum\limits _{k=1}^{n}\left(\frac{1}{k^{2}}\right) +\frac{1}{( n+1)^{2}} +\frac{1}{n+1}
+  \end{array}
+\end{equation*}
+Um zu zeigen, in welchem Verhältnis $\displaystyle a_{n}$ und $\displaystyle a_{n+1}$ zueinander stehen, lässt sich wieder die Differenz untersuchen:
+\begin{equation*}
+  \begin{array}{ c c l }
+    & a_{n+1} -a_{n} = & \sum\limits _{k=1}^{n+1}\left(\frac{1}{k^{2}}\right) +\frac{1}{n+1} -\left(\sum\limits _{k=1}^{n}\left(\frac{1}{k^{2}}\right) +\frac{1}{n}\right)\\
+    \Leftrightarrow  & a_{n+1} -a_{n} = & \sum\limits _{k=1}^{n}\left(\frac{1}{k^{2}}\right) +\frac{1}{( n+1)^{2}} +\frac{1}{n+1} -\sum\limits _{k=1}^{n}\left(\frac{1}{k^{2}}\right) -\frac{1}{n}\\
+    \Leftrightarrow  & a_{n+1} -a_{n} = & \frac{1}{( n+1)^{2}} +\frac{1}{n+1} -\frac{1}{n}\\
+    \Leftrightarrow  & a_{n+1} -a_{n} = & \frac{n}{( n+1)^{2} \cdot n} +\frac{( n+1) \cdot n}{( n+1)^{2} \cdot n} -\frac{( n+1)^{2}}{( n+1)^{2} \cdot n}\\
+    \Leftrightarrow  & a_{n+1} -a_{n} = & \frac{n+n\cdot ( n+1) -( n+1)^{2}}{( n+1)^{2} \cdot n}\\
+    \Leftrightarrow  & a_{n+1} -a_{n} = & \frac{n+n^{2} +n-n^{2} -2n-1}{n^{3} +2n^{2} +n}\\
+    \Leftrightarrow  & a_{n+1} -a_{n} = & \frac{-1}{n^{3} +2n^{2} +n}
+  \end{array}
+\end{equation*}
+Daraus lässt sich sehen, dass die Differenz eines beliebigen, aber festen Folgegliedes subtrahiert von seinem Nachfolger
+\begin{equation*}
+  \frac{\overbrace{-1}^{< 0}}{\underbrace{n^{3} +2n^{2} +n}_{ >0\ \forall n\in \mathbb{N}}}
+\end{equation*}
+
+
+insgesamt immer$\displaystyle < 0\ \forall n\in \mathbb{N}$ ist. Daraus folgt, dass die Folge $\displaystyle a_{n}$ streng monoton fallend ist.
+
+
+
+Zur Untersuchung der oberen Schranke reicht auf Grund der Monotonie also die Bestimmung von $\displaystyle a_{1} =2$.
+
+
+
+Für die Untere Schranke soll gelten:
+\begin{equation*}
+  \begin{array}{ c l }
+    \lim\limits _{n\rightarrow \infty } a_{n} & =\lim\limits _{n\rightarrow \infty }\left(\sum\limits _{k=1}^{n}\left(\frac{1}{k^{2}}\right) +\frac{1}{n}\right)\\
+    & =\lim\limits _{n\rightarrow \infty }\left(\sum\limits _{k=1}^{n}\left(\frac{1}{k^{2}}\right)\right) +\lim\limits _{n\rightarrow \infty }\left(\frac{1}{n}\right)\\
+    & =\lim\limits _{n\rightarrow \infty }\left(\sum\limits _{k=1}^{n}\left(\frac{1}{k^{2}}\right)\right) +0\\
+    & =\frac{\pi ^{2}}{6}
+  \end{array}
+\end{equation*}

@@ -1,0 +1,226 @@
+\section{Aufgabe 6}
+
+Berechnen Sie zu den folgenden Ebenengleichungen im $\displaystyle \mathbb{R}^{3}$ die jeweils anderen Darstellungsformen (Punkt-Richtungsform, Normalform, Hessesche Normalform).
+\begin{equation*}
+	\begin{array}{ l r l }
+		\text{a)} & E_{1} : & x=\begin{pmatrix}
+			1\\
+			2\\
+			3
+		\end{pmatrix} +\lambda \begin{pmatrix}
+			2\\
+			1\\
+			3
+		\end{pmatrix} +\mu \begin{pmatrix}
+			0\\
+			1\\
+			1
+		\end{pmatrix}\\
+		\text{b)} & E_{2} : & 2x_{1} +x_{2} =7\\
+		\text{c)} & E_{3} : & \frac{x_{1}}{2} +\frac{x_{2}}{3} +\frac{x_{3}}{2} =1\\
+		\text{d)} & E_{4} : & P=( 1|2|3) ,\ Q=( 1|3|2) ,\ R=( 0|2|1)\\
+		\text{e)} & E_{5} : & \langle n,x\rangle =4\ \text{mit} \ n=\begin{pmatrix}
+			2\\
+			2\\
+			-1
+		\end{pmatrix}
+	\end{array}
+\end{equation*}
+
+\subsection{Lösung 6}
+
+Darstellungsformen der Ebene $\displaystyle E$ im $\displaystyle \mathbb{R}^{3}$
+\begin{equation*}
+	\begin{array}{ l l c l }
+		E_{P.-R.} & : & \vec{X} & =P+\lambda \cdotp \vec{a} +\mu \cdotp \vec{b}\\
+		E_{Norm.} & : & 0 & =\vec{n} \cdotp (\vec{X} -P)\\
+		E_{Hess.} & : & 0 & =\overrightarrow{e_{n}} \cdotp (\vec{X} -P)
+	\end{array}
+\end{equation*}
+mit den Richtungsvektoren $\displaystyle \vec{a} ,\vec{b}$, dem Aufpunkt $\displaystyle P$, dem Normalvektor $\displaystyle \vec{n}$, dem Einheitsvektor des Normalvektors $\displaystyle \overrightarrow{e_{n}}$ und den freien Parametern $\displaystyle \lambda ,\mu $, sodass $\displaystyle \vec{X}$ alle Punkte der Ebene beschreibt.
+
+
+
+\subsubsection{Lösung 6a}
+
+Die Ebene $\displaystyle E_{1}$ ist in der Punkt-Richtungsform gegeben. 
+\begin{equation*}
+	\begin{array}{ r l }
+		E_{1} : & x=\begin{pmatrix}
+			1\\
+			2\\
+			3
+		\end{pmatrix} +\lambda \begin{pmatrix}
+			2\\
+			1\\
+			3
+		\end{pmatrix} +\mu \begin{pmatrix}
+			0\\
+			1\\
+			1
+		\end{pmatrix}
+	\end{array}
+\end{equation*}
+Aus der Punkt-Richtungsform lässt sich der Normalvektor bestimmen, in dem das Kreuzprodukt der beiden Richtungsvektoren gebildet wird.
+\begin{equation*}
+	\vec{n} =\begin{pmatrix}
+		2\\
+		1\\
+		3
+	\end{pmatrix} \times \begin{pmatrix}
+		0\\
+		1\\
+		1
+	\end{pmatrix} =\begin{pmatrix}
+		-2\\
+		-2\\
+		2
+	\end{pmatrix}
+\end{equation*}
+Die Normalvektorform lautet nun
+\begin{equation*}
+	\begin{array}{ r l }
+		E_{1} : & 0=\begin{pmatrix}
+			-2\\
+			-2\\
+			2
+		\end{pmatrix} \cdotp \left(\vec{X} -\begin{pmatrix}
+			1\\
+			2\\
+			3
+		\end{pmatrix}\right)\text{.}
+	\end{array}
+\end{equation*}
+oder als Skalarprodukt geschrieben, mit dem Abstand vom Ursprung $\displaystyle d=\sqrt{1^{2} +2^{2} +3^{2}} =\sqrt{14}$
+\begin{equation*}
+	\begin{array}{ r l }
+		E_{1} : & \left< \begin{pmatrix}
+			-2\\
+			-2\\
+			2
+		\end{pmatrix} ,\vec{X}\right> =\sqrt{14}
+	\end{array}
+\end{equation*}
+Die Hessesche Normalform der Ebene ist die Normalvektorform, jedoch mit dem Einheitsvektor $\displaystyle \overrightarrow{e_{n}}$ des Normalenvektors statt demselbigen.
+
+Der Einheitsvektor lässt sich bestimmen, indem man einen Vektor durch seine Länge teilt.
+\begin{equation*}
+	\begin{array}{ r l }
+		\vec{e} & =\frac{\vec{n}}{| \vec{n}| }\vspace{2mm}\\
+		\vec{e} & =\begin{pmatrix}
+			-2\\
+			-2\\
+			2
+		\end{pmatrix} :\sqrt{( -2)^{2} +( -2)^{2} +( 2)^{2}}\vspace{2mm}\\
+		& =\begin{pmatrix}
+			-2\\
+			-2\\
+			2
+		\end{pmatrix} :\sqrt{12}\vspace{2mm}\\
+		& =\begin{pmatrix}
+			-\frac{1}{\sqrt{3}}\vspace{2mm}\\
+			-\frac{1}{\sqrt{3}}\vspace{2mm}\\
+			\frac{\sqrt{3}}{3}
+		\end{pmatrix}
+	\end{array}
+\end{equation*}
+Die Hessesche Normalform der Ebene ist also
+\begin{equation*}
+	\begin{array}{ r l }
+		E_{1} : & 0=\begin{pmatrix}
+			-\frac{1}{\sqrt{3}}\\
+			-\frac{1}{\sqrt{3}}\\
+			\frac{\sqrt{3}}{3}
+		\end{pmatrix} \cdotp \left(\vec{X} -\begin{pmatrix}
+			1\\
+			2\\
+			3
+		\end{pmatrix}\right)\text{.}
+	\end{array}
+\end{equation*}
+
+
+\subsubsection{Lösung 6d}
+Die Ebene $\displaystyle E_{4}$ ist durch die Punkte $\displaystyle P$, $\displaystyle Q$ und $\displaystyle R$ bestimmt. 
+\begin{equation*}
+	\begin{array}{ r l }
+		E_{4} : & P=( 1|2|3) ,\ Q=( 1|3|2) ,\ R=( 0|2|1)
+	\end{array}
+\end{equation*}
+Sei $\displaystyle \vec{p}$ der Stützvektor zu dem Aufpunkt $\displaystyle P$ und die Richtungsvektoren $\displaystyle \overrightarrow{PQ}$ und $\displaystyle \overrightarrow{PR}$, so gilt für die Punkt-Richtungsform
+\begin{equation*}
+	\begin{array}{ r l }
+		E_{4} : & \vec{X} =\begin{pmatrix}
+			1\\
+			2\\
+			3
+		\end{pmatrix} +\lambda \begin{pmatrix}
+			0\\
+			1\\
+			-1
+		\end{pmatrix} +\mu \begin{pmatrix}
+			-1\\
+			0\\
+			-2
+		\end{pmatrix}\text{.}
+	\end{array}
+\end{equation*}
+Nach dem in \textbf{6a }beschriebenen Verfahren bestimmen wir
+\begin{equation*}
+	\begin{array}{ c l }
+		\vec{n} & =\begin{pmatrix}
+			-2\\
+			1\\
+			1
+		\end{pmatrix}\vspace{2mm}\\
+		\vec{e} & =\frac{\vec{n}}{| \vec{n}| } =\frac{\vec{n}}{\sqrt{6}}\vspace{2mm}\\
+		d & =\sqrt{14}
+	\end{array}
+\end{equation*}
+sodass wir für 
+\begin{equation*}
+	\begin{array}{ l l c l }
+		E_{4_{P.-R.}} & : & \vec{X} & =P+\lambda \cdotp \vec{a} +\mu \cdotp \vec{b}\vspace{2mm}\\
+		&  &  & =\begin{pmatrix}
+			1\\
+			2\\
+			3
+		\end{pmatrix} +\lambda \begin{pmatrix}
+			0\\
+			1\\
+			-1
+		\end{pmatrix} +\mu \begin{pmatrix}
+			-1\\
+			0\\
+			-2
+		\end{pmatrix}\vspace{2mm}\\
+		E_{4_{Norm.}} & : & 0 & =\vec{n} \cdotp (\vec{X} -P)\vspace{2mm}\\
+		&  &  & =\begin{pmatrix}
+			-2\\
+			1\\
+			1
+		\end{pmatrix} \cdotp \left(\vec{X} -\begin{pmatrix}
+			1\\
+			2\\
+			3
+		\end{pmatrix}\right)\vspace{2mm}\\
+		E_{4_{Hess.}} & : & 0 & =\overrightarrow{e_{n}} \cdotp (\vec{X} -P)\vspace{2mm}\\
+		&  &  & =\frac{\vec{n}}{\sqrt{6}} \cdotp \left(\vec{X} -\begin{pmatrix}
+			1\\
+			2\\
+			3
+		\end{pmatrix}\right)
+	\end{array}
+\end{equation*}
+
+\subsubsection{Lösung 6e}
+\begin{equation*}
+	\begin{array}{ r l }
+		E_{5} : & \langle n,x\rangle =4\ \text{mit} \ n=\begin{pmatrix}
+			2\\
+			2\\
+			-1
+		\end{pmatrix}
+	\end{array}
+\end{equation*}
+[Fehlt]

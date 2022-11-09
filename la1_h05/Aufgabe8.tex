@@ -1,0 +1,88 @@
+\section{Aufgabe 8}
+
+Ein Gebäude in Form einer Pyramide hat die Eckpunkte $\displaystyle O=( 0|0|0) ,\ A=( 6|8|0) ,\ B=( 0|8|0)$ und die Spitze $\displaystyle S=( 2|4|8)$. Von der Ecke $\displaystyle B$ verläuft zum Punkt $\displaystyle P=( 4|6|4)$ ein Stahlträger.
+
+a) Zeigen Sie, dass $\displaystyle P$ in der Ebene $\displaystyle E_{OAS}$ liegt, die die Pyramidenseite $\displaystyle OAS$ enthält.
+
+b) Überprüfen Sie, ob der Stahlträger senkrecht auf die Ebene $\displaystyle E_{OAS}$ trifft.
+
+
+
+\subsection{Lösung 8a}
+
+Die Ebene $\displaystyle E_{OAS}$ kann mit den Richtungsvektoren $\displaystyle \overrightarrow{OA}$ und $\displaystyle \overrightarrow{OS}$ mit der Gleichung
+\begin{equation*}
+	\begin{array}{ r l }
+		E_{OAS} : & \vec{X} =\lambda \begin{pmatrix}
+			6\\
+			8\\
+			0
+		\end{pmatrix} +\mu \begin{pmatrix}
+			2\\
+			4\\
+			8
+		\end{pmatrix}
+	\end{array}
+\end{equation*}
+beschrieben werden.
+
+Sei $\displaystyle \vec{p}$ der Ortsvektor zum Punkt $\displaystyle P$, so gilt für $\displaystyle \lambda =\frac{1}{2}$ und $\displaystyle \mu =\frac{1}{2}$ 
+\begin{equation*}
+	\begin{array}{ c c l }
+		& \vec{p} & =\frac{1}{2} \cdotp \begin{pmatrix}
+			6\\
+			8\\
+			0
+		\end{pmatrix} +\frac{1}{2} \cdotp \begin{pmatrix}
+			2\\
+			4\\
+			8
+		\end{pmatrix}\vspace{2mm}\\
+		\Leftrightarrow  & \begin{pmatrix}
+			4\\
+			6\\
+			4
+		\end{pmatrix} & =\begin{pmatrix}
+			3\\
+			4\\
+			0
+		\end{pmatrix} +\begin{pmatrix}
+			1\\
+			2\\
+			4
+		\end{pmatrix} \ \ \checkmark
+	\end{array}
+\end{equation*}
+
+\subsection{Lösung 8b}
+Der Normalenvektor $\displaystyle \overrightarrow{n_{E}}$ der Ebene $\displaystyle E_{OAS}$ ist
+\begin{equation*}
+	\begin{array}{ c l }
+		\overrightarrow{n_{E}} & =\begin{pmatrix}
+			6\\
+			8\\
+			0
+		\end{pmatrix} \times \begin{pmatrix}
+			2\\
+			4\\
+			8
+		\end{pmatrix}\vspace{2mm}\\
+		& =\begin{pmatrix}
+			64\\
+			-48\\
+			8
+		\end{pmatrix}
+	\end{array}
+\end{equation*}
+Der Stahlträger trifft senkrecht auf die Ebene, wenn $\displaystyle \left< \overrightarrow{n_{E}} ,\vec{p}\right> =0$.
+\begin{equation*}
+	\left< \begin{pmatrix}
+		64\\
+		-48\\
+		8
+	\end{pmatrix} ,\begin{pmatrix}
+		4\\
+		6\\
+		4
+	\end{pmatrix}\right> =0\ \ \checkmark
+\end{equation*}

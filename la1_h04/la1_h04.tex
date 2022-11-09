@@ -1,0 +1,144 @@
+\documentclass[12pt,a4paper]{article}
+
+%%%%%%%%%%%%%%% Deutsch %%%%%%%%%%%%%%%
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+%\usepackage[ansinew]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Verfeinerungen des Schriftbildes durch Grauwertausgleich etc.
+\usepackage[babel=true]{microtype}
+
+%%%%%%%%%%%%%%% AMS %%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\usepackage{makeidx}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+%\usepackage{etex}  % wird für das Symbol beim beweis-Theorem benötigt
+
+\usepackage{framed} % braucht man für die gerahmten Boxen
+
+%%%% erweiterte Umgebung für Theoreme
+\usepackage[amsmath, standard, framed, thmmarks]{ntheorem}
+
+%%% für schräge Brüche in Arrays im Math-mode
+%\usepackage{xfrac}
+\usepackage{nicefrac}
+
+\definecolor{gruen}{rgb}{0,0.7,0}
+
+% Skript: dunkelblau
+\definecolor{idxfarbe}{rgb}{0.0,0.0,0.4}
+
+\definecolor{fhcyan}{rgb}{0,0.69411,0.6745}
+\definecolor{fhdarkcyan}{rgb}{0,0.49411, 0.4745}
+\definecolor{fhlightcyan}{rgb}{0.4,0.89411, 0.8745}
+\definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
+\definecolor{defcolor}{RGB}{195,62,62}
+\definecolor{red}{rgb}{0.9,0,0}
+
+\usepackage[
+naturalnames=true,  % mre 090528 beseitigt \ref Problem in Mik2.7
+colorlinks=true,
+hyperindex=true,
+bookmarks=true,
+bookmarksnumbered=true,
+filecolor=fhcyan,
+breaklinks,
+urlcolor=fhcyan,
+linkcolor=blue
+]{hyperref}
+
+\parindent0cm
+
+\definecolor{grau}{gray}{0.4}
+
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{0}
+
+% Index erzeugen lassen
+\makeindex
+
+% Serifenschrift: Palatino anstelle der Standard-Schrift
+\usepackage[sc]{mathpazo}
+
+% serifenlose Schrift: Helvetica anstelle der Standardschrift
+% Die Formeln auf den Folien werden dadurch besser lesbar.
+\usepackage[scaled=.95]{helvet}
+
+% Schriftart Courier anstelle der Standardschrift für Maschinenschrift
+\usepackage{courier}
+
+\usepackage{listings}
+% nötig, um in Formeln Kreise um Zahlen zu ermöglichen
+\usepackage{tikz}
+
+\usepackage{relsize}
+
+%%%------------------------------------------------------------------------------------------------------%%%%
+
+\usepackage[a4paper, 
+includehead,% See below for an explanation
+nomarginpar,% We don't want any margin paragraphs
+headheight=28pt, % Set \headheight to 16pt to avoid fancyhr warnings
+top=25mm,
+bottom=25mm,
+left=25mm,
+right=25mm
+]{geometry}
+
+
+\usepackage{rotating}
+\usepackage{pstricks}
+
+\usepackage{siunitx} % für SI Einheiten
+\sisetup{locale = DE}
+
+%\usepackage{physics}
+
+\usepackage{mathdots}
+\usepackage{yhmath}
+\usepackage{cancel}
+\usepackage{color}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amssymb}
+%\usepackage{gensymb}
+%\usepackage{tabularx}
+\usepackage{extarrows}
+\usepackage{booktabs}
+
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+
+\usepackage{stmaryrd}
+
+\usepackage{lastpage}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%---- HEader ---%
+\fancyhf{}
+\fancyhead[L]{\textbf{Lineare Algebra 1}\\\textbf{WiSe 2022/2023}}
+\fancyhead[C]{\textbf{Hausaufgaben}\\\textbf{Blatt 04}}
+\fancyhead[R]{Ausgabe: 26.10.2022\\Abgabe: 01.11.2022}
+
+%--- Footer ----%
+\fancyfoot[L]{{\small 29.10.2022}}
+\fancyfoot[C]{{\small Seite \thepage~ von \pageref{LastPage}}}
+\fancyfoot[R]{{\small Christian Rene Thelen}}
+
+\begin{document}
+  
+  %\include{Aufgabe5}
+  \include{Aufgabe6}
+  \include{Aufgabe7}
+  \include{Aufgabe8}
+  
+\end{document}

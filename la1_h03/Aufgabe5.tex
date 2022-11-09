@@ -1,0 +1,51 @@
+\section*{Aufgabe 5}
+\textit{Hinweis: Aufgabentext zur besseren Verständlichkeit abgeändert.}\\
+Ein Artist springt von einem \SI{21}{\meter} hohen Gebäude in nordöstliche Richtung. Seine Flugbahn wird durch eine Gerade beschrieben und seine Geschwindigkeit ist konstant. 
+Die Geschwindigkeit in nordöstliche Richtung beträgt $\sqrt{2}[\si{\meter\per\second}]$ und die Fallgeschwindigkeit $2[\si{\meter\per\second}]$.\\
+Das Landepodest hat einen Radius von \SI{3}{\meter} und ist \SI{1}{\meter} hoch. Sein Mittelpunkt befindet sich von der Gebäudeecke \SI{11}{\meter} in östlicher und \SI{10}{\meter} in nördlicher Richtung.
+
+\begin{enumerate}
+	\item[a)] Führen Sie ein geeignetes Koordinatensystem ein und bestimmen Sie darin die Koordinaten der wesentlichen Punkte:
+	\subitem Absprungstelle
+	\subitem Mittelpunkt des Podest
+	\subitem Landepunkt
+	\item[b)] Welche Strecke legt der Artist im Flug zurück?
+	\item[c)] Wie lange dauert der Flug?
+	\item[d)] Wie groß ist die Geschwindigkeit des Fallschirmspringers?
+\end{enumerate}
+
+\subsection*{Lösung 5}
+Da sowohl Start- als auch Landepunkt auf einer Ebene liegen, da bspw. Seitenwinde oder Lenkbewegungen vernachlässigt werden, genügt ein 2-dimensionales Koordinatensystem mit der x-Achse für die horizontale Strecke von Südwest nach Nordost und der y-Achse für die vertikale Höhenstrecke.
+Da die Absprungstelle an der Hausecke bekommt die x-Koordinate $x=0$. 
+Da der Artist auf und nicht neben dem Podest landen soll, kann für die Höhe des Podests die y-Koordinate $y=0$ gewählt werden.
+
+\subsubsection*{5a)}
+Die Absprungstelle liegt somit an dem Punkt $A(0|20)$, und der Mittelpunkt des Podestes entsprechend dem Satz des Pythagoras an dem Punkt $P(d|0)$ mit $d=\sqrt{11^2+10^2}=\sqrt{221}$.\\
+
+Die Bewegungsgerade soll der Form $y=k\cdot x + A_y$ entsprechen, wobei sich die Steigung durch die zwei Geschwindigkeitskomponenten, nämlich der vertikalen Fallgeschwindigkeit $v_y = -2 [\si{\meter\per\second}]$ und der horizontalen Geschwindigkeit $v_x = \sqrt{2} [\si{\meter\per\second}]$ zu $k = \frac{v_y}{v_x} = \frac{-2}{\sqrt{2}} [\si{\meter\per\second}]$ ergibt.\\
+
+Der Landepunkt ist nun die Nullstelle der Geraden, sofern die Nullstelle im Intervall $x_0 \in [d-3; d+3]$ liegt.
+
+\begin{equation*}
+	\begin{array}{ r c l }
+		& y &= \frac{v_y}{v_x} \cdot x + A_y\\
+		\\
+		\Rightarrow 	& 0   &= \frac{-2}{\sqrt{2}} \cdot x_0 + 20\\
+		\Leftrightarrow & x_0 &= -20 \cdot \frac{\sqrt{2}}{-2}\\
+		\Leftrightarrow & x_0 &= 10\sqrt{2}
+	\end{array}
+\end{equation*}
+\begin{equation*}
+	d-3 < x_0 < d+3 \;\;\checkmark
+\end{equation*}
+
+Der Landepunkt liegt an $L(10\sqrt{2}|0)$ und somit auf dem Podest.
+
+\subsubsection*{5b)}
+Der Artist legt eine Strecke von $\sqrt{20^2+(10\sqrt{2})^2}=\sqrt{400+200}=10\sqrt{6}$ also rund \SI{24.495}{\meter} im Flug zurück.
+
+\subsubsection*{5c)}
+Bei einer als konstant angenommenen Geschwindigkeit von $v = \sqrt{-2^2+\sqrt{2}^2} = \sqrt{6} [\si{\meter\per\second}]$ ist eine Strecke von $s=10\sqrt{6} [\si{\meter}]$ mit $s=v\cdot t\Leftrightarrow t=\frac{s}{v}$ nach $t=10 [\si{\second}]$ zurückgelegt.
+
+\subsubsection*{5d)}
+Die Gesamtgeschwindigkeit des Artisten beträgt zwischen Start- und Landepunkt $v = \sqrt{6} [\si{\meter\per\second}]$.

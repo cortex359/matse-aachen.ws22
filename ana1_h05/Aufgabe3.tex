@@ -1,0 +1,52 @@
+\section{Aufgabe 3}
+
+Vereinfachen Sie die folgenden Terme mithilfe der Additionstheoreme.
+\begin{align*}
+	\begin{array}{ l c }
+		\text{a)} & \frac{\sin( 2x)}{\sin( x)}
+	\end{array} & & \begin{array}{ l c }
+		\text{b)} & \sin^{4}( x) -\cos^{4}( x)
+	\end{array}
+\end{align*}
+
+
+\subsection{Lösung 3a}
+
+Mit dem Additionstheorem (\textit{Lemma 108, Seite 131)}
+\begin{equation*}
+	\sin( u+v) =\sin( u) \cdotp \cos( v) +\sin( v) \cdotp \cos( u)
+\end{equation*}
+gilt mit $\displaystyle \sin( 2x) =\sin( x+x)$ für
+\begin{equation*}
+	\begin{array}{ r l }
+		\sin( x+x) = & \sin( x) \cdotp \cos( x) +\sin( x) \cdotp \cos( x)\\
+		= & \sin( x) \cdotp (\cos( x) +\cos( x))
+	\end{array}
+\end{equation*}
+sodass
+\begin{equation*}
+	\begin{array}{ r l }
+		\frac{\sin( 2x)}{\sin( x)} = & \frac{\sin( x) \cdotp (\cos( x) +\cos( x))}{\sin( x)}\\
+		= & \cos( x) +\cos( x)\\
+		= & 2\cdotp \cos( x)
+	\end{array}
+\end{equation*}
+vereinfacht werden kann. 
+
+
+
+\subsection{Lösung 3b}
+Aus dem Additionstheorem (\textit{Lemma 108, Seite 131)}\begin{equation*}
+	1=\cos^{2}( x) +\sin^{2}( x)
+\end{equation*}
+
+folgt mit der 3. Binomischen Formel:
+\begin{equation*}
+	\begin{array}{ c l }
+		\sin^{4}( x) -\cos^{4}( x) & =\left(\sin^{2}( x) +\cos^{2}( x)\right) \cdotp \left(\sin^{2}( x) -\cos^{2}( x)\right)\\
+		& =\sin^{2}( x) -\cos^{2}( x)\\
+		& =1-\cos^{2}( x) -\cos^{2}( x)\\
+		& =1-2\cos^{2}( x)\\
+		& =-\cos( 2x)
+	\end{array}
+\end{equation*}

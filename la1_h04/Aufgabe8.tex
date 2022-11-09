@@ -1,0 +1,170 @@
+\renewcommand{\arraystretch}{1.1}
+
+\section{Aufgabe 8}
+
+Bestimmen Sie die Lösungen $\displaystyle x$ der Gleichung $\displaystyle a\times x=b$ für $\displaystyle a=( 2,\ -1,\ 3)^{T}$ und
+
+(a)
+\begin{equation*}
+  b=\begin{pmatrix}
+    1\\
+    -4\\
+    -2
+  \end{pmatrix}
+\end{equation*}
+(b)
+\begin{equation*}
+  b=\begin{pmatrix}
+    1\\
+    -4\\
+    -1
+  \end{pmatrix}
+\end{equation*}
+falls es überhaupt Lösungen gibt.
+
+\subsection{Lösung 8a}
+
+\begin{gather*}
+  a\times x=b\\
+  \\
+  \begin{pmatrix}
+    2\\
+    -1\\
+    3
+  \end{pmatrix} \times \begin{pmatrix}
+    x_{1}\\
+    x_{2}\\
+    x_{3}
+  \end{pmatrix} =\begin{pmatrix}
+    1\\
+    -4\\
+    -2
+  \end{pmatrix}\\
+  \\
+  \Leftrightarrow \ \begin{pmatrix}
+    -x_{3} -3x_{2}\\
+    3x_{1} -2x_{3}\\
+    2x_{2} +x_{1}
+  \end{pmatrix} =\begin{pmatrix}
+    1\\
+    -4\\
+    -2
+  \end{pmatrix}
+\end{gather*}
+
+Dies kann man als Lineares Gleichungssystem schreiben:
+
+\begin{equation*}
+  \begin{array}{ c r l }
+    & \left(\begin{array}{rrr|r}
+      0 & -3 & -1 & 1\\
+      3 & 0 & -2 & -4\\
+      1 & 2 & 0 & -2
+    \end{array}\right) & \begin{array}{ l }
+      \rightarrow III\\
+      \rightarrow II\\
+      \rightarrow I
+    \end{array}\vspace{2mm}\\
+    \Leftrightarrow  & \left(\begin{array}{rrr|r}
+      1 & 2 & 0 & -2\\
+      0 & -3 & -1 & 1\\
+      3 & 0 & -2 & -4
+    \end{array}\right) & \begin{array}{ l }
+      \\
+      \cdotp ( -\nicefrac{1}{3})\\
+      +( -3\cdotp I)
+    \end{array}\vspace{2mm}\\
+    \Leftrightarrow  & \left(\begin{array}{rrr|r}
+      1 & 2 & 0 & -2\\
+      0 & 1 & \nicefrac{1}{3} & \nicefrac{-1}{3}\\
+      0 & -6 & -2 & 2
+    \end{array}\right) & \begin{array}{ l }
+      \\
+      \\
+      +( 6\cdotp II)
+    \end{array}\vspace{2mm}\\
+    \Leftrightarrow  & \left(\begin{array}{rrr|r}
+      1 & 2 & 0 & -2\\
+      0 & 1 & \nicefrac{1}{3} & \nicefrac{-1}{3}\\
+      0 & 0 & 0 & 0
+    \end{array}\right) & \begin{array}{ l }
+      \\
+      \\
+      
+    \end{array}
+  \end{array}
+\end{equation*}
+Das LGS ist unterbestimmt, also existiert keine eindeutige Lösung.
+
+\subsection{Lösung 8b}
+\begin{gather*}
+  a\times x=b\\
+  \\
+  \begin{pmatrix}
+    2\\
+    -1\\
+    3
+  \end{pmatrix} \times \begin{pmatrix}
+    x_{1}\\
+    x_{2}\\
+    x_{3}
+  \end{pmatrix} =\begin{pmatrix}
+    1\\
+    -4\\
+    -1
+  \end{pmatrix}\\
+  \Leftrightarrow \ \begin{pmatrix}
+    -x_{3} -3x_{2}\\
+    3x_{1} -2x_{3}\\
+    2x_{2} +x_{1}
+  \end{pmatrix} =\begin{pmatrix}
+    1\\
+    -4\\
+    -1
+  \end{pmatrix}
+\end{gather*}
+
+Als LGS:
+
+\begin{equation*}
+  \begin{array}{ c r l }
+    & \left(\begin{array}{rrr|r}
+      0 & -3 & -1 & 1\\
+      3 & 0 & -2 & -4\\
+      1 & 2 & 0 & -1
+    \end{array}\right) & \begin{array}{ l }
+      \rightarrow III\\
+      \rightarrow II\\
+      \rightarrow I
+    \end{array}\vspace{2mm}\\
+    \Leftrightarrow  & \left(\begin{array}{rrr|r}
+      1 & 2 & 0 & -1\\
+      0 & -3 & -1 & 1\\
+      3 & 0 & -2 & -4
+    \end{array}\right) & \begin{array}{ l }
+      \\
+      \cdotp ( -\nicefrac{1}{3})\\
+      +( -3\cdotp I)
+    \end{array}\vspace{2mm}\\
+    \Leftrightarrow  & \left(\begin{array}{rrr|r}
+      1 & 2 & 0 & -1\\
+      0 & 1 & \nicefrac{1}{3} & \nicefrac{-1}{3}\\
+      0 & -6 & -2 & -1
+    \end{array}\right) & \begin{array}{ l }
+      \\
+      \\
+      +( 6\cdotp II)
+    \end{array}\vspace{2mm}\\
+    \Leftrightarrow  & \left(\begin{array}{rrr|r}
+      1 & 2 & 0 & -2\\
+      0 & 1 & \nicefrac{1}{3} & \nicefrac{-1}{3}\\
+      0 & 0 & 0 & -3
+    \end{array}\right) & \begin{array}{ l }
+      \\
+      \\
+      \lightning 
+    \end{array}
+  \end{array}
+\end{equation*}
+\\
+Durch den Widerspruch ist gezeigt, dass keine Lösung existiert. $\mathbb{L}=\emptyset$

@@ -1,0 +1,41 @@
+\section*{Aufgabe 8}
+
+Gegeben sind 2 Vektoren $\displaystyle a,b\in \mathbb{R}^{3}$. Bestimmen Sie den Vektor $\displaystyle p$ als Projektion von $\displaystyle b$ auf $\displaystyle a$ und dann den Vektor $\displaystyle q$, die Projektion von $\displaystyle p$ auf $\displaystyle b$. Berechnen Sie daraus
+\begin{equation*}
+  \frac{| | q| | }{| | p| | }
+\end{equation*}
+und vereinfachen Sie das Ergebnis so, dass darin nur noch die Vektoren $\displaystyle a$ und $\displaystyle b$ vorkommen.
+
+\subsection*{Lösung 8}
+
+Die orthogonale Projektion von $\displaystyle b$ in Richtung $\displaystyle a$ ergibt sich aus
+\begin{gather*}
+  p=\frac{\langle b,a\rangle }{\langle a,a\rangle } \cdot a\\
+\end{gather*}
+und die orthogonale Projektion von $\displaystyle p$ in Richtung $\displaystyle b$ aus
+\begin{equation*}
+  q=\frac{\langle p,b\rangle }{\langle b,b\rangle } \cdot b
+\end{equation*}
+
+Die Länge der orthogonalen Projektionen $p$ und $q$ ist deren euklidische Norm nach der Definition 2.27, mit
+\begin{gather*}
+  \| p\| =\frac{| \langle b,a\rangle | }{\| a\| }\\
+  \\
+  \text{und}\\
+  \\
+  \| q\| =\frac{| \langle p,b\rangle | }{\| b\| }\text{.}
+\end{gather*}
+woraus für $\displaystyle \dfrac{\| q\| }{\| p\| }$ folgt: 
+
+\begin{gather*}
+	\begin{array}{ c r l l }
+		\frac{\| q\| }{\| p\| } & = & \frac{| \langle p,b\rangle | }{\| b\| } \cdotp \frac{\| a\| }{| \langle b,a\rangle | } & \vspace{2mm}\\
+		& = & \frac{| \langle p,b\rangle | }{| \langle b,a\rangle | } \cdotp \frac{\| a\| }{\| b\| } & \Bigl| \text{ mit} \ p=\frac{\langle b,a\rangle }{\langle a,a\rangle } \cdot a\vspace{2mm}\\
+		& = & \frac{\left| \langle \frac{\langle b,a\rangle }{\langle a,a\rangle } \cdot a,b\rangle \right| }{| \langle b,a\rangle | } \cdotp \frac{\| a\| }{\| b\| } & \vspace{2mm}\\
+		& = & \frac{\left| \frac{\langle b,a\rangle }{\langle a,a\rangle } \cdot \langle a,b\rangle \right| }{| \langle b,a\rangle | } \cdotp \frac{\| a\| }{\| b\| } & \Bigl| \text{ Kürzen}\vspace{2mm}\\
+		& = & \left| \frac{\langle b,a\rangle }{\langle a,a\rangle }\right| \cdotp \frac{\| a\| }{\| b\| } &
+	\end{array}\\
+\end{gather*}
+
+
+

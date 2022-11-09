@@ -1,0 +1,138 @@
+\section{Aufgabe 8}
+
+Zwei Orte $\displaystyle A$ und $\displaystyle B$ sind 245 km voneinander entfernt. Um 8 Uhr fährt Herr Bummel in $\displaystyle A$ ab, um nach $\displaystyle B$ zu fahren. 20 Minuten später startet Frau Schrott von $\displaystyle B$ aus nach $\displaystyle A$. Um 9 Uhr sind sie noch 135 km voneinander entfernt. Um 10 Uhr treffen sie sich. 
+
+Wie groß waren die Durchschnittsgeschwindigkeiten der beiden und in welcher Entfernung von $\displaystyle A$ liegt der Treffpunkt?
+
+\subsection{Lösung 8}
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1.4,xscale=1.4]
+	%uncomment if require: \path (0,302); %set diagram left start at 0, and has height of 302
+	
+	%Straight Lines [id:da9709661804377181] 
+	\draw    (50,70) -- (50,53) ;
+	\draw [shift={(50,50)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+	%Straight Lines [id:da7754127616059268] 
+	\draw    (110,170) -- (110,153) ;
+	\draw [shift={(110,150)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+	%Straight Lines [id:da04186121924657593] 
+	\draw    (290,171) -- (290,154) ;
+	\draw [shift={(290,151)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+	%Straight Lines [id:da20001294989631968] 
+	\draw    (200,281) -- (200,264) ;
+	\draw [shift={(200,261)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+	
+	% Text Node
+	\draw (31,31.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
+	% Text Node
+	\draw (357,32.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
+	% Text Node
+	\draw (201,32) node [anchor=north west][inner sep=0.75pt]   [align=left] {245km};
+	% Text Node
+	\draw (101,122.4) node [anchor=north west][inner sep=0.75pt]    {$a_{1}$};
+	% Text Node
+	\draw (281,123.4) node [anchor=north west][inner sep=0.75pt]    {$b_{1}$};
+	% Text Node
+	\draw (201,123) node [anchor=north west][inner sep=0.75pt]   [align=left] {135km};
+	% Text Node
+	\draw (2,2) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle T_{0} =0h$};
+	% Text Node
+	\draw (1,92) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle T_{1} =T_{0} +\upDelta t\ =1h$};
+	% Text Node
+	\draw (52,73) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Herr Bummel};
+	% Text Node
+	\draw (1,202) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle T_{2} =T_{0} +\upDelta t\ =\ 2h$};
+	% Text Node
+	\draw (162,174) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Herr Bummel};
+	% Text Node
+	\draw (292,174) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Frau Schrott};
+	% Text Node
+	\draw (31,122.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
+	% Text Node
+	\draw (357,123.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
+	% Text Node
+	\draw (197,233.4) node [anchor=north west][inner sep=0.75pt]    {$P$};
+	% Text Node
+	\draw (209,283) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Frau Schrott};
+	% Text Node
+	\draw (31,232.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
+	% Text Node
+	\draw (357,233.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
+	% Text Node
+	\draw (131,283) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Herr Bummel};
+	% Connection
+	\draw    (50,39.1) -- (198,40.29) ;
+	\draw [shift={(50,39.1)}, rotate = 180.46] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (0,5.59) -- (0,-5.59)   ;
+	% Connection
+	\draw    (251,40.4) -- (351,40.04) ;
+	\draw [shift={(351,40.04)}, rotate = 179.79] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (0,5.59) -- (0,-5.59)   ;
+	% Connection
+	\draw    (123,131.06) -- (198,131.38) ;
+	\draw [shift={(123,131.06)}, rotate = 180.25] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (0,5.59) -- (0,-5.59)   ;
+	% Connection
+	\draw    (251,131.7) -- (275,131.89) ;
+	\draw [shift={(275,131.89)}, rotate = 180.44] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (0,5.59) -- (0,-5.59)   ;
+	% Connection
+	\draw    (50,130.17) -- (96,130.81) ;
+	\draw [shift={(98,130.84)}, rotate = 180.8] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	\draw [shift={(50,130.17)}, rotate = 180.8] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (0,5.59) -- (0,-5.59)   ;
+	% Connection
+	\draw    (303,131.82) -- (351,131.16) ;
+	\draw [shift={(351,131.16)}, rotate = 179.22] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (0,5.59) -- (0,-5.59)   ;
+	\draw [shift={(301,131.84)}, rotate = 359.22] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	% Connection
+	\draw    (214,241) -- (351,241) ;
+	\draw [shift={(351,241)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (0,5.59) -- (0,-5.59)   ;
+	\draw [shift={(212,241)}, rotate = 0] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	% Connection
+	\draw    (48,240.06) -- (192,240.93) ;
+	\draw [shift={(194,240.95)}, rotate = 180.35] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	
+\end{tikzpicture}
+
+\vspace{8mm}
+Die Strecke zwischen den Punkten $\displaystyle A,B$ beträgt $\displaystyle \overline{AB} =245km$.
+
+Zum Zeitpunkt $\displaystyle T_{1}$ beträgt die Entfernung zwischen Herrn Bummel und Frau Schrott $\displaystyle \overline{a_{1} b_{1}} =135km$. Die zu dem Zeitpunkt von beiden zurückgelegte Strecke ist also $\displaystyle \overline{Aa_{1}} +\overline{Bb_{1}} =\overline{AB} -135km$.
+
+Zum Zeitpunkt $\displaystyle T_{2}$ beträgt die zurückgelegte Strecke $\displaystyle \overline{AP} +\overline{BP} =\overline{AB} =245km$.
+
+Herr Bummel startet zum Zeitpunkt $\displaystyle T_{0} =0h$ und Frau Schrott startet 20 Min. später $\displaystyle T_{0} +\frac{1}{3} h$.
+
+Da die zurückgelegte Strecke $\displaystyle s$ das Produkt aus Geschwindigkeit $\displaystyle v$ mal Zeit $\displaystyle t$ ist $\displaystyle ( s=v\cdot t)$ ergeben sich folgende Gleichungen:
+\begin{gather*}
+	\overline{Aa_{1}} =v_{B} \cdot T_{1}\\
+	\overline{Bb_{1}} =v_{S} \cdot \left( T_{1} -\frac{1}{3} h\right)\\
+	\Rightarrow \ \overline{AB} -135km=v_{B} \cdot T_{1} +v_{S} \cdot \left( T_{1} -\frac{1}{3} h\right)\\
+	\overline{AP} =v_{B} \cdot T_{2}\\
+	\overline{BP} =v_{S} \cdot \left( T_{2} -\frac{1}{3} h\right)\\
+	\Rightarrow \ \overline{AB} =v_{B} \cdot T_{2} +v_{S} \cdot \left( T_{2} -\frac{1}{3} h\right)
+\end{gather*}
+Setzt man die bekannten Werte ein, lässt sich das LGS als \textit{erweiterte Matrix} und lösen schreiben:
+\begin{align*}
+	\begin{pmatrix}
+		1h & \frac{2} h & 110km\\
+		2h & \frac{5} h & 245km
+	\end{pmatrix} & \begin{array}{ l c }
+		& \\
+		+I\cdot ( -2) & 
+	\end{array}\\
+	\begin{pmatrix}
+		1h & \frac{2} h & 110km\\
+		0h & \frac{1} h & 25km
+	\end{pmatrix} & \begin{array}{ l c }
+		+II\cdot ( -2) & \\
+		\cdot 3 & 
+	\end{array}\\
+	\begin{pmatrix}
+		1h & 0h & 60km\\
+		0h & 1h & 75km
+	\end{pmatrix} & 
+\end{align*}
+Daraus folgt:
+\begin{align*}
+	v_{B} & =60\frac{km}{h} & v_{S} & =75\frac{km}{h}
+\end{align*}
+Der Treffpunkt $\displaystyle P$ liegt $\displaystyle \overline{AP} =v_{B} \cdot T_{2} =60\frac{km}{h} \cdot 2h=120km$ von dem Ort $\displaystyle A$ entfernt.

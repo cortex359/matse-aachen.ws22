@@ -1,0 +1,50 @@
+\section{Aufgabe 2}
+
+Untersuchen Sie mit Hilfe des Minoranten-/Majorantenkriteriums auf Konvergenz:
+\begin{align*}
+  \begin{array}{ c c }
+    \text{a)} & \sum\limits _{k=1}^{\infty }\frac{3k+2}{k^{2} +5k-1}
+  \end{array} & & \begin{array}{ c c }
+    \text{b)} & \sum\limits _{k=1}^{\infty }\frac{2\cos( k) +\sin^{2}( k)}{3k^{2}}
+  \end{array}
+\end{align*}
+
+\subsection{Lösung 2}
+
+\underline{Majorantenkriterium:} 
+
+Sei $\displaystyle \sum _{n=0}^{\infty } b_{n} :b_{n} \geq 0\ \forall n\in \mathbb{N}$ konvergent, dann gilt
+
+$\displaystyle \forall n\geq n_{0} :|a_{n} |\leq b_{n} \Rightarrow \sum _{n=0}^{\infty } a_{n}$ konvergent absolut
+
+
+
+\underline{Minorantenkriterium:}
+
+Sei $\displaystyle \sum _{n=0}^{\infty } b_{n} :b_{n} \geq 0\ \forall n\in \mathbb{N}$ divergent, dann gilt
+
+$\displaystyle \forall n\geq n_{0} :a_{n} \geq b_{n} \Rightarrow \sum _{n=0}^{\infty } a_{n}$ divergent.
+
+\subsubsection{2a)} 
+
+Betrachen wir die gegebene Reihe mit dem Minorantenkriterium
+\begin{gather*}
+  \sum\limits _{k=1}^{\infty }\frac{3k+2}{k^{2} +5k-1} \geq \sum\limits _{k=1}^{\infty }\frac{3k}{k^{2} +5k} \geq \sum\limits _{k=1}^{\infty }\frac{3k}{k\cdotp ( k +5)} =\sum\limits _{k=1}^{\infty }\frac{3}{( k +5)}\\
+  \\
+  \\
+  \sum\limits _{k=1}^{\infty }\frac{3}{( k +5)} =\sum\limits _{k=6}^{\infty }\frac{3}{k} =\underbrace{\sum\limits _{k=1}^{\infty }\frac{3}{k}}_{\text{divergiert}\rightarrow \infty } -\underbrace{\sum\limits _{k=1}^{5}\frac{3}{k}}_{\text{konvergiert}}
+\end{gather*}
+Somit ist gezeigt, dass die Folge $\displaystyle \sum\nolimits _{k=1}^{\infty }\frac{1}{k}$ immer kleiner oder gleich der untersuchten Folge ist.\\
+
+Da wir wissen, dass diese Folge gegen Unendlich divergiert und gezeigt haben, dass die untersuchte Folge immer größer ist, muss die untersuchte Folge auch gegen Unendlich divergieren. 
+
+
+\subsubsection{2b)}
+
+Wir untersuchen die gegebene Reihe mit dem Majorantenkriterium auf Konvergenz:
+\begin{equation*}
+  \sum\limits _{k=1}^{\infty }\frac{2\cos( k) +\sin^{2}( k)}{3k^{2}} \leq \sum\limits _{k=1}^{\infty }\frac{2+1}{3k^{2}} =\sum\limits _{k=1}^{\infty }\frac{3}{3k^{2}} =\underbrace{\sum\limits _{k=1}^{\infty }\frac{1}{k^{2}}}_{\text{konvergiert }}
+\end{equation*}
+Somit ist gezeigt, dass die Folge $\displaystyle \sum\nolimits _{k=1}^{\infty }\frac{1}{k^{2}}$ immer größer oder gleich der untersuchten Folge ist.\\
+
+Da bekannt ist, dass jene Folge gegen $\displaystyle \frac{\pi ^{2}}{6}$ konvergiert und wir gezeigt haben, dass die untersuchte Folge immer kleiner ist, muss die untersuchte Folge auch konvergent sein.
