@@ -1,0 +1,56 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 2}
+Entscheiden Sie, ob die folgende Funktion auf dem Intervall $[-1;1]$ gleichmäßig stetig ist
+
+\begin{equation*}
+    f(x) =\frac{x}{4-x^{2}}
+\end{equation*}
+
+\subsection{Lösung 2}
+
+\textcolor[rgb]{0.4,0.72,0.06}{Die Funktion }\textcolor[rgb]{0.4,0.72,0.06}{$\displaystyle f( x)$}\textcolor[rgb]{0.4,0.72,0.06}{ ist an der Stelle }\textcolor[rgb]{0.4,0.72,0.06}{$\displaystyle x_{0}$}\textcolor[rgb]{0.4,0.72,0.06}{ stetig, falls}
+\textcolor[rgb]{0.4,0.72,0.06}{\begin{equation*}
+    \forall \epsilon  >0\exists \delta ( x_{0} ,\epsilon )  >0\ :\ \forall ( x-x_{0}) < \delta \ :\ | f( x) -f( x_{0})| < \epsilon \text{.}
+\end{equation*}}
+
+Die Funktion $f( x)$ ist gleichmäßig stetig in einem Intervall $D$, wenn in jedem Punkt $x_{0} \in D$ gilt:
+\begin{equation*}
+    \forall \epsilon  >0\exists \delta ( \epsilon )  >0\forall x,x_{0} \in D:(| x-x_{0}| < \delta ( \epsilon ) \Longrightarrow | f( x) -f( x_{0})| < \epsilon )\text{.}
+\end{equation*}
+Hinweis: Dabei muss $\delta $ unabhängig von $x_{0}$ sein.
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+
+% \begin{tikzpicture}
+% %\draw (10,15.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,opacity=1 ]  {${\displaystyle f( x) =\frac{x}{4-x}}$};
+% \begin{axis}[
+%     width=\linewidth, % Scale the plot to \linewidth
+%     axis lines = left,
+%     xlabel = \(x\),
+%     ylabel = {\(f(x)=\frac{x}{4-x^2}\)},
+%     xmin = -3, xmax = 3,
+%     ymin = -2, ymax = 2,
+%     grid=major,
+%     grid style={dashed,gray!30},
+% ]
+% \addplot [
+%     domain=-3:0:3,
+%     samples=100,
+%     color=td-blue
+% ]{x/(4-(x*x))};
+% %\addlegendentry{\(f(x) =\frac{x}{4-x^2}\)}
+% \end{axis}
+% \end{tikzpicture}
+
+\begin{figure}
+    \includesvg{fig1.svg}
+    \caption{Graph 1}
+\end{figure}
+
+Stetigkeit mit $\epsilon $-$\delta $-Beweis zu zeigen. Sei $\epsilon  >0$ und $x_{0} \in [ -1;1]$
+
+
+\end{document}

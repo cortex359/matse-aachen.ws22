@@ -1,0 +1,133 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 5}
+Gegeben sind die folgenden Geraden in der Parmaeterdarstellung:
+\begin{equation*}
+    \begin{array}{ c l c l }
+        g_{1} : & x=1+t & , & y=3-2\cdot t\\
+        g_{2} : & x=\nicefrac{1}{2} -\nicefrac{3}{2} \cdotp t & , & y=1-4\cdotp t
+    \end{array}
+\end{equation*}
+Geben Sie die jeweiligen Normalform und Hesse-Normalform an. Gibt es einen Schnittpunkt?
+
+\subsection{Lösung 5}
+Punkt-Richtungsform:
+\begin{equation*}
+    \begin{array}{ c l }
+        g_{1} : & \vec{X} =\begin{pmatrix}
+        1\\
+        3
+        \end{pmatrix} +t\cdotp \begin{pmatrix}
+        1\\
+        -2
+        \end{pmatrix}\\
+        g_{2} : & \vec{X} =\begin{pmatrix}
+        \nicefrac{1}{2}\\
+        1
+        \end{pmatrix} +t\cdotp \begin{pmatrix}
+        \nicefrac{3}{2}\\
+        -4
+        \end{pmatrix}
+    \end{array}
+\end{equation*}
+Normalform mit dem Normalenvektor $\overrightarrow{n_{g1}} =\begin{pmatrix}
+2\\
+1
+\end{pmatrix}$ da $\left< \begin{pmatrix}
+1\\
+-2
+\end{pmatrix} ,\begin{pmatrix}
+2\\
+1
+\end{pmatrix}\right> =0$:
+
+\begin{equation*}
+    g_{1} :0=\begin{pmatrix}
+    2\\
+    1
+    \end{pmatrix} \cdotp \left(\vec{X} -\begin{pmatrix}
+    1\\
+    3
+    \end{pmatrix}\right)
+\end{equation*}
+
+Hesse-Normalform mit $\displaystyle |\vec{n} |=\sqrt{5}$:
+\begin{equation*}
+    g_{1} :0=\begin{pmatrix}
+    \nicefrac{2}{\sqrt{5}}\\
+    \nicefrac{1}{\sqrt{5}}
+    \end{pmatrix} \cdotp \left(\vec{X} -\begin{pmatrix}
+    1\\
+    3
+    \end{pmatrix}\right)
+\end{equation*}
+
+
+Normalform mit dem Normalenvektor $\overrightarrow{n_{g2}} =\begin{pmatrix}
+4\\
+\nicefrac{3}{2}
+\end{pmatrix}$ da $\left< \begin{pmatrix}
+\nicefrac{3}{2}\\
+-4
+\end{pmatrix} ,\begin{pmatrix}
+4\\
+\nicefrac{3}{2}
+\end{pmatrix}\right> =0$:
+
+\begin{equation*}
+    g_{2} :0=\begin{pmatrix}
+    4\\
+    \nicefrac{3}{2}
+    \end{pmatrix} \cdotp \left(\vec{X} -\begin{pmatrix}
+    \nicefrac{1}{2}\\
+    1
+    \end{pmatrix}\right)
+\end{equation*}
+
+Hesse-Normalform mit $|\vec{n} |=\sqrt{\nicefrac{73}{4}}$:
+\begin{equation*}
+    g_{2} :0=\frac{\begin{pmatrix}
+    4\\
+    \nicefrac{3}{2}
+    \end{pmatrix}}{\sqrt{\nicefrac{73}{4}}} \cdotp \left(\vec{X} -\begin{pmatrix}
+    \nicefrac{1}{2}\\
+    1
+    \end{pmatrix}\right)
+\end{equation*}
+
+Die beiden Geraden schneiden sich in $\displaystyle \mathbb{R}^{2}$, wenn sie nicht parallel zueinander sind.
+
+Beweis duch Widerspruch: Wir nehmen an $\displaystyle g_{1} \parallel g_{2}$, dann $\displaystyle \exists \ t\in \mathbb{R}$ für das gilt
+
+\begin{gather*}
+    \begin{array}{ c c c c }
+        & t\cdotp \begin{pmatrix}
+        1\\
+        -2
+        \end{pmatrix} & = & \begin{pmatrix}
+        \nicefrac{3}{2}\\
+        -4
+        \end{pmatrix}\\
+        \text{mit} \ t=2: & 2\cdotp \begin{pmatrix}
+        1\\
+        -2
+        \end{pmatrix} & = & \begin{pmatrix}
+        \nicefrac{3}{2}\\
+        -4
+        \end{pmatrix}\\
+        \Leftrightarrow  & \begin{pmatrix}
+        1\\
+        -4
+        \end{pmatrix} & = & \begin{pmatrix}
+        \nicefrac{3}{2}\\
+        -4
+        \end{pmatrix}
+    \end{array}\\
+    1=\nicefrac{3}{2} \ \lightning
+\end{gather*}
+
+Da die Geraden nicht parallel sind, muss es einen Schnittpunkt geben.
+
+\end{document}

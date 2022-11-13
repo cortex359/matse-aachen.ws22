@@ -1,0 +1,236 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 6}
+Untersuchen Sie, ob die folgenden Ebenen einen eindeutigen Schnittpunkt im $\displaystyle \mathbb{R}^{3}$ besitzen:
+
+a)
+
+
+\begin{equation*}
+\begin{array}{ l l }
+E_{1} :x= & \begin{pmatrix}
+1\\
+0\\
+0
+\end{pmatrix} +\lambda \begin{pmatrix}
+2\\
+-2\\
+0
+\end{pmatrix} +\mu \begin{pmatrix}
+-2\\
+0\\
+2
+\end{pmatrix} ,\\
+E_{2} :x= & \begin{pmatrix}
+0\\
+1\\
+0
+\end{pmatrix} +\lambda \begin{pmatrix}
+3\\
+0\\
+1
+\end{pmatrix} +\mu \begin{pmatrix}
+0\\
+3\\
+5
+\end{pmatrix} ,\\
+E_{3} :x= & \begin{pmatrix}
+0\\
+0\\
+2
+\end{pmatrix} +\lambda \begin{pmatrix}
+1\\
+0\\
+1
+\end{pmatrix} +\mu \begin{pmatrix}
+0\\
+1\\
+3
+\end{pmatrix}
+\end{array}
+\end{equation*}
+b)
+\begin{equation*}
+\begin{array}{ l l }
+E_{1} :x= & \begin{pmatrix}
+1\\
+1\\
+0
+\end{pmatrix} +\lambda \begin{pmatrix}
+2\\
+-1\\
+0
+\end{pmatrix} +\mu \begin{pmatrix}
+-3\\
+0\\
+1
+\end{pmatrix} ,\\
+E_{2} :x= & \begin{pmatrix}
+0\\
+1\\
+0
+\end{pmatrix} +\lambda \begin{pmatrix}
+0\\
+1\\
+0
+\end{pmatrix} +\mu \begin{pmatrix}
+-1\\
+0\\
+3
+\end{pmatrix} ,\\
+E_{3} :x= & \begin{pmatrix}
+2\\
+0\\
+1
+\end{pmatrix} +\lambda \begin{pmatrix}
+1\\
+-4\\
+0
+\end{pmatrix} +\mu \begin{pmatrix}
+2\\
+0\\
+-4
+\end{pmatrix}
+\end{array}
+\end{equation*}
+
+\subsection{Lösung 6}
+Zunächst werden die Normalenvektoren der gegebenen Ebenen berechnet.
+
+
+
+Ist das LGS der drei Ebenen eindeutig lösbar, so existiert ein eindeutiger Schnittpunkt der Ebenen.
+
+Dies ist der Fall, wenn die Ebenen $E_{1}$ und $E_{2}$ nicht parallel liegen ($\overrightarrow{n_{E_{1}}} \times \overrightarrow{n_{E2}} \neq 0)$ und deren Schnittgerade nicht parallel zu $E_{3}$ ist.
+\begin{equation*}
+\left< \left(\overrightarrow{n_{E_{1}}} \times \overrightarrow{n_{E_{2}}}\right) ,\overrightarrow{n_{E_{3}}}\right> \neq 0
+\end{equation*}
+Da dies auch die Definition der Determinante ist, gilt ebenso:
+\begin{equation*}
+\det\left(\overrightarrow{n_{E_{1}}} ,\overrightarrow{n_{E_{2}}} ,\overrightarrow{n_{E_{3}}}\right) \neq 0
+\end{equation*}
+
+\subsubsection{Lösung 6a}
+\begin{gather*}
+\begin{array}{ r l }
+\overrightarrow{n_{E_{1}}} = & \begin{pmatrix}
+2\\
+-2\\
+0
+\end{pmatrix} \times \begin{pmatrix}
+-2\\
+0\\
+2
+\end{pmatrix} =\begin{pmatrix}
+-4\\
+-4\\
+-4
+\end{pmatrix}\\
+    & \\
+\overrightarrow{n_{E_{2}}} = & \begin{pmatrix}
+3\\
+0\\
+1
+\end{pmatrix} \times \begin{pmatrix}
+0\\
+3\\
+5
+\end{pmatrix} =\begin{pmatrix}
+-3\\
+-15\\
+9
+\end{pmatrix}\\
+    & \\
+\overrightarrow{n_{E_{3}}} = & \begin{pmatrix}
+1\\
+0\\
+1
+\end{pmatrix} \times \begin{pmatrix}
+0\\
+1\\
+3
+\end{pmatrix} =\begin{pmatrix}
+-1\\
+-3\\
+1
+\end{pmatrix}
+\end{array}\\
+\\
+\begin{array}{ r l }
+\det\left(\overrightarrow{n_{E_{1}}} ,\overrightarrow{n_{E_{2}}} ,\overrightarrow{n_{E_{3}}}\right) = & \det\begin{pmatrix}
+-4 & -3 & -1\\
+-4 & -15 & -3\\
+-4 & 9 & 1
+\end{pmatrix}\\
+= & ( -4)( -15) +( -3)( -3)( -4) +( -1)( -4) \cdotp 9\\
+ & -( -4)( -3) \cdotp 9-( -3)( -4) -( -1)( -15)( -4)\\
+= & 60-36+36-108-12+60\\
+= & 0
+\end{array}
+\end{gather*}
+$\implies$ Es existiert \textbf{kein} Schnittpunkt in $\mathbb{R}^{3}$.
+
+
+\subsubsection{Lösung 6b}
+
+\begin{gather*}
+\begin{array}{ r l }
+\overrightarrow{n_{E_{1}}} = & \begin{pmatrix}
+2\\
+-1\\
+0
+\end{pmatrix} \times \begin{pmatrix}
+-3\\
+0\\
+1
+\end{pmatrix} =\begin{pmatrix}
+-1\\
+-2\\
+-3
+\end{pmatrix}\\
+    & \\
+\overrightarrow{n_{E_{2}}} = & \begin{pmatrix}
+0\\
+1\\
+0
+\end{pmatrix} \times \begin{pmatrix}
+-1\\
+0\\
+3
+\end{pmatrix} =\begin{pmatrix}
+3\\
+0\\
+1
+\end{pmatrix}\\
+    & \\
+\overrightarrow{n_{E_{3}}} = & \begin{pmatrix}
+1\\
+-4\\
+0
+\end{pmatrix} \times \begin{pmatrix}
+2\\
+0\\
+-4
+\end{pmatrix} =\begin{pmatrix}
+16\\
+4\\
+8
+\end{pmatrix}
+\end{array}\\
+\\
+\begin{array}{ r l }
+\det\left(\overrightarrow{n_{E_{1}}} ,\overrightarrow{n_{E_{2}}} ,\overrightarrow{n_{E_{3}}}\right) = & \det\begin{pmatrix}
+-1 & 3 & 16\\
+-2 & 0 & 4\\
+-3 & 1 & 8
+\end{pmatrix}\\
+= & 3\cdotp 4\cdotp ( -3) +( 16\cdotp ( -2) -( -1) \cdotp 4-3\cdotp ( -2) \cdotp 8\\
+= & -36-32+4+48\\
+= & -16
+\end{array}
+\end{gather*}
+$\implies$ Es existiert \textbf{ein} eindeutiger Schnittpunkt in $\mathbb{R}^{3}$.
+
+\end{document}

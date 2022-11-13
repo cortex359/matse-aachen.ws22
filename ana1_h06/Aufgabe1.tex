@@ -1,0 +1,64 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 1}
+Untersuchen Sie, ob folgende Funktionen an der Stelle $x_{0}$ stetig ergänzbar sind:
+
+a)
+\begin{equation*}
+    f(x) =\begin{cases}
+        2x+1 & \text{für} \ x < -1\\
+        4x-1 & \text{für} \ x > -1
+    \end{cases} \ \text{und} \ \ x_{0} = -1
+\end{equation*}
+
+b)
+\begin{equation*}
+    f(x) =x\cdotp \cos\frac{1}{x} \ \ \text{und} \ \ x_{0} = 0
+\end{equation*}
+
+c)
+\begin{equation*}
+    f(x) =\frac{1}{e^{\frac{1}{x-1}}} \ \ \text{und} \ \ x_{0} = 1
+\end{equation*}
+
+\subsection{Lösung 1a}
+
+Unstetigkeit mit Folgenkriterium gezeigt:
+
+Dazu die Folge $r_{n} =-1+\frac{1}{n}$ für die Annährung von rechts und $l_{n} =-1-\frac{1}{n}$ für die Annhärung von links, da
+\begin{equation*}
+    \lim _{n\rightarrow \infty } l_{n} =\lim _{n\rightarrow \infty } r_{n} =-1\text{.}
+\end{equation*}
+Setzt man $r_{n}$ und $l_{n}$ in $f( x)$ für die entsprechenden Bereiche, so erhält man für $x< -1$
+
+
+\begin{gather*}
+    \begin{array}{ c l }
+        f( l_{n}) & =2\cdotp l_{n} +1\\
+        & =2\cdotp \left( -1-\frac{1}{n}\right) +1\\
+        & =-2-\frac{2}{n} +1\\
+        & =-\frac{2}{n} -1
+    \end{array}\\
+    \\
+    \lim _{n\rightarrow \infty } f( l_{n}) =\lim _{n\rightarrow \infty } -\frac{2}{n} -1=-1
+\end{gather*}
+und für $x >-1$
+\begin{gather*}
+    \begin{array}{ c l }
+        f( r_{n}) & =4\cdotp r_{n} -1\\
+        & =4\cdotp \left( -1+\frac{1}{n}\right) -1\\
+        & =-4+\frac{4}{n} -1\\
+        & =-5+\frac{4}{n}
+    \end{array}\\
+    \\
+    \lim _{n\rightarrow \infty } f( r_{n}) =\lim _{n\rightarrow \infty } -5+\frac{4}{n} =-5
+\end{gather*}
+
+
+$\Rightarrow$ Die Funktion $f(x)$ ist an der Stelle $x_{0}$ nicht stetig.
+
+
+
+\end{document}
