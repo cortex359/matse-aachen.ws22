@@ -1,0 +1,80 @@
+% !TeX root = la1_thelen_christianrene_h02.tex
+\section{Aufgabe 8}
+
+Bestimmen Sie die Lösungsmenge des LGS. 
+\begin{equation*}
+  \begin{array}{ r l }
+    1x_{1} -4x_{2} +9x_{3} & =1\\
+    2x_{1} +4x_{2} -12x_{3} & =2\\
+    -3x_{1} +3x_{2} -3x_{3} & =3
+  \end{array}
+\end{equation*}
+
+\subsection{Lösung 8}
+
+Das LGS lässt sich als erweiterte Matrix $\displaystyle [ X|\vec{y}]$ schreiben und mit dem Gaußschen Eliminationsverfahren in die Zeilenstufenform bringen:
+\begin{align*}
+  \begin{pmatrix}
+    1 & -4 & 9 & 1\\
+    2 & 4 & -12 & 2\\
+    -3 & 3 & -3 & 3
+  \end{pmatrix} & \begin{array}{ l c }
+    & \\
+    \cdot ( -\frac{1}{2}) +I & \\
+    +( 3\cdot I) & 
+  \end{array}\\
+  \begin{pmatrix}
+    1 & -4 & 9 & 1\\
+    0 & -6 & 15 & 0\\
+    0 & -9 & 24 & 6
+  \end{pmatrix} & \begin{array}{ l c }
+    & \\
+    :( -6) & \\
+    & 
+  \end{array}\\
+  \begin{pmatrix}
+    1 & -4 & 9 & 1\\
+    0 & 1 & \sfrac{-5}{2} & 0\\
+    0 & -9 & 24 & 6
+  \end{pmatrix} & \begin{array}{ l c }
+    & \\
+    & \\
+    +( II\cdot 9) & 
+  \end{array}\\
+  \begin{pmatrix}
+    1 & -4 & 9 & 1\\
+    0 & 1 & \sfrac{-5}{2} & 0\\
+    0 & 0 & \sfrac{3}{2} & 6
+  \end{pmatrix} & \begin{array}{ l c }
+    & \\
+    & \\
+    \cdot \frac{2}{3} & 
+  \end{array}\\
+  \begin{pmatrix}
+    1 & -4 & 9 & 1\\
+    0 & 1 & \sfrac{-5}{2} & 0\\
+    0 & 0 & 1 & 4
+  \end{pmatrix} & 
+\end{align*}
+
+Daraus folgt für die nun übrigen Gleichungen:
+\begin{equation*}
+  \begin{array}{ c r l }
+    & \boldsymbol{x_{3}} & = \boldsymbol{4}\\
+    &  & \\
+    & x_{2} -\frac{5} x_{3} & =0\ \\
+    \Leftrightarrow \  & \boldsymbol{x_{2}} & = \boldsymbol{10}\\
+    &  & \\
+    & x_{1} -4x_{2} +9x_{3} & =1\\
+    \Leftrightarrow  & x_{1} -40+36 & =1\\
+    \Leftrightarrow  & \boldsymbol{x_{1}} & = \boldsymbol{5}
+  \end{array}
+\end{equation*}
+
+Es existiert eine eindeutige Lösung.
+
+$\displaystyle \Rightarrow \mathbb{L} =\left\{\begin{pmatrix}
+  5\\
+  10\\
+  4
+\end{pmatrix}\right\}$

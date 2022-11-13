@@ -1,0 +1,41 @@
+% !TeX root = la1_thelen_christianrene_h02.tex
+\section{Aufgabe 6}
+
+Welcher Punkt hat von den Punkten $\displaystyle A=( 0,1)$, $\displaystyle B=( 0,7)$ und $\displaystyle C=( 4,9)$ den gleichen Abstand? 
+
+
+
+\subsection{Lösung 6}
+
+Gesucht ist der Vektor $\displaystyle \vec{p} =( x,y)^{T}$, dessen Differenz zu den Vektoren $\displaystyle \vec{a} =( 0,1)^{T}$, $\displaystyle \vec{b} =( 0,7)^{T}$ und $\displaystyle \vec{c} =( 4,9)^{T}$ dem Betrag nach gleich ist.
+\begin{gather*}
+  \| p-a\| =\| p-b\| \\
+  \| p-b\| =\| p-c\| \\
+  \\
+  \begin{array}{ c l }
+    \| p-a\| = & \sqrt{( x-0)^{2} +( y-1)^{2}} =\sqrt{x^{2} +( y-1)^{2}}\\
+    \| p-b\| = & \sqrt{( x-0)^{2} +( y-7)^{2}} =\sqrt{x^{2} +( y-7)^{2}}\\
+    \| p-c\| = & \sqrt{( x-4)^{2} +( y-9)^{2}}
+  \end{array}\\
+  \\
+  \begin{array}{ c r c l l }
+    & \| p-a\|  & = & \| p-b\|  & \\
+    & \sqrt{x^{2} +( y-1)^{2}} & = & \sqrt{x^{2} +( y-7)^{2}} & |^{\ 2}\\
+    \Leftrightarrow  & x^{2} +( y-1)^{2} & = & x^{2} +( y-7)^{2} & |-x^{2}\\
+    \Leftrightarrow  & y^{2} -2y+1 & = & y^{2} -14y+49 & |-y^{2} +14y-1\\
+    \Leftrightarrow  & 12y & = & 48 & |:12\\
+    \Leftrightarrow  & y & = & 4 & 
+  \end{array}\\
+  \\
+  \\
+  \begin{array}{ c r c l l }
+    & \| p-a\|  & = & \| p-c\|  & \\
+    & \sqrt{x^{2} +( y-1)^{2}} & = & \sqrt{( x-4)^{2} +( y-9)^{2}} & |\ ^{2}\\
+    \Leftrightarrow  & x^{2} +( y-1)^{2} & = & ( x-4)^{2} +( y-9)^{2} & |\ y=4\\
+    \Leftrightarrow  & x^{2} +( 4-1)^{2} & = & ( x-4)^{2} +( 4-9)^{2} & |-9\\
+    \Leftrightarrow  & x^{2} & = & x^{2} -8x+16+25 & |-x^{2} +8x\\
+    \Leftrightarrow  & 8x & = & 32 & |:8\\
+    \Leftrightarrow  & x & = & 4 & 
+  \end{array}
+\end{gather*}
+$\displaystyle \Rightarrow $$\displaystyle \vec{p} =( 4,4)^{T}$

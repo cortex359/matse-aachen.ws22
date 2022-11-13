@@ -1,0 +1,32 @@
+% !TeX root = la1_thelen_christianrene_h02.tex
+\section{Aufgabe 7}
+
+Zeigen Sie, dass durch $\displaystyle \langle u,v\rangle =u_{1} v_{1} +u_{2} v_{3} -u_{3} v_{2} +u_{4} v_{4}$ für 
+
+\begin{equation*}
+  u=\begin{pmatrix}
+    u_{1}\\
+    u_{2}\\
+    u_{3}\\
+    u_{4}
+  \end{pmatrix} \ \text{ und } \ v=\begin{pmatrix}
+    v_{1}\\
+    v_{2}\\
+    v_{3}\\
+    v_{4}
+  \end{pmatrix}
+\end{equation*}
+kein Skalarprodukt definiert wird. 
+
+
+\subsection{Lösung 7}
+
+Bedingung SP1 (Symmetrie): Wenn die beschriebene Abbildung $\displaystyle \langle u,v\rangle $ ein Skalarprodukt definieren würde, dann müsste gelten $\displaystyle \langle u,v\rangle =\langle v,u\rangle $ für alle $\displaystyle u,v\in \mathbb{R}^{n}$ und somit
+\begin{equation*}
+  \begin{array}{ c r c l l }
+    & u_{1} v_{1} +u_{2} v_{3} -u_{3} v_{2} +u_{4} v_{4} & = & v_{1} u_{1} +v_{2} u_{3} -v_{3} u_{2} +v_{4} u_{4} & |\ -( u_{1} v_{1}) \ |\ -( u_{4} v_{4})\\
+    \Leftrightarrow  & u_{2} v_{3} -u_{3} v_{2} & = & v_{2} u_{3} -v_{3} u_{2} & \\
+    \Leftrightarrow  & u_{2} v_{3} -u_{3} v_{2} & = & u_{3} v_{2} -u_{2} v_{3} & 
+  \end{array}
+\end{equation*}
+Dies gilt aber nicht.

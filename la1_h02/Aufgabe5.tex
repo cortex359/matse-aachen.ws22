@@ -1,0 +1,69 @@
+% !TeX root = la1_thelen_christianrene_h02.tex
+\section{Aufgabe 5}
+
+Zeigen Sie, dass für beliebige Vektoren $\displaystyle a$ und $\displaystyle b$ gilt:
+\begin{equation*}
+  \begin{array}{ c l }
+    \text{(a)} & \| a+b\| ^{2} =\| a\| ^{2} +\| b\| ^{2} +2\langle a,b\rangle \\
+    \text{(b)} & \| a+b\| ^{2} +\| a-b\| ^{2} =2\| a\| ^{2} +2\| b\| ^{2}\\
+    \text{(c)} & \| a+b\| ^{2} -\| a-b\| ^{2} =4\langle a,b\rangle 
+  \end{array}
+\end{equation*}
+
+
+\subsection{Lösung 5a}
+
+Einem Vektor wird die \textit{euklidische Norm} oder \textit{Standardnorm} $\displaystyle \| a\| $ zugeordnet: 
+\begin{equation*}
+  \| a\| \ \stackrel{\text{def}}{=} \ \left(\sum _{i=1}^{n} a_{i}^{2}\right)^{\frac{1}{2}}
+\end{equation*}
+Während ein \textit{euklidisches Skalar-} oder auch \textit{Punktprodukt} $\displaystyle \langle a,b\rangle $ so definiert ist:
+\begin{equation*}
+  \langle a,b\rangle \stackrel{\text{def}}{=} \ \sum _{i=1}^{n}( a_{i} \cdot b_{i})
+\end{equation*}
+Daraus ergibt sich
+\begin{equation*}
+  \begin{array}{ c l }
+    & \| a+b\| ^{2} =\| a\| ^{2} +\| b\| ^{2} +2\langle a,b\rangle \\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n}( a_{i} +b_{i})^{2} =\sum\limits _{i=1}^{n}( a_{i})^{2} +\sum\limits _{i=1}^{n}( b_{i})^{2} +2\cdot \sum\limits _{i=1}^{n}( a_{i} \cdot b_{i})
+  \end{array}
+\end{equation*}
+Nun ergibt sich durch Anwendung der ersten binomischen Formeln auf der linken Seite, sowie der Rechenregeln für Summen
+\begin{equation*}
+  \begin{array}{ c l }
+    \Leftrightarrow  & \sum\limits _{i=1}^{n}\left( a_{i}^{2} +2\cdot a_{i} b_{i} +b_{i}^{2}\right) =\sum\limits _{i=1}^{n} a_{i}^{2} +\sum\limits _{i=1}^{n} b_{i}^{2} +2\cdot \sum\limits _{i=1}^{n}( a_{i} \cdot b_{i})\\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n} a_{i}^{2} +\sum\limits _{i=1}^{n} 2\cdot a_{i} b_{i} +\sum\limits _{i=1}^{n} b_{i}^{2} =\sum\limits _{i=1}^{n} a_{i}^{2} +\sum\limits _{i=1}^{n} b_{i}^{2} +2\cdot \sum\limits _{i=1}^{n}( a_{i} \cdot b_{i})\\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n} a_{i}^{2} +\sum\limits _{i=1}^{n} b_{i}^{2} +2\cdot \sum\limits _{i=1}^{n} a_{i} b_{i} =\sum\limits _{i=1}^{n} a_{i}^{2} +\sum\limits _{i=1}^{n} b_{i}^{2} +2\cdot \sum\limits _{i=1}^{n}( a_{i} \cdot b_{i}) \ \checked 
+  \end{array}
+\end{equation*}
+eine wahre Aussage. 
+
+
+\subsection{Lösung 5b}
+
+Mit den gleichen Definitionen und der Anwendung der ersten und zweiten binomischen Formel lässt sich auch hier durch Umformen eine wahre Aussage zeigen:
+\begin{equation*}
+  \begin{array}{ c l }
+    & \| a+b\| ^{2} +\| a-b\| ^{2} =2\| a\| ^{2} +2\| b\| ^{2}\\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n}( a_{i} +b_{i})^{2} +\sum\limits _{i=1}^{n}( a_{i} -b_{i})^{2} =2\cdot \sum\limits _{i=1}^{n}( a_{i})^{2} +2\cdot \sum\limits _{i=1}^{n}( b_{i})^{2}\\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n}\left( a_{i}^{2} +2\cdot a_{i} b_{i} +b_{i}^{2}\right) +\sum\limits _{i=1}^{n}\left( a_{i}^{2} -2\cdot a_{i} b_{i} +b_{i}^{2}\right) =2\cdot \sum\limits _{i=1}^{n}( a_{i})^{2} +2\cdot \sum\limits _{i=1}^{n}( b_{i})^{2}\\
+    \Leftrightarrow  & 2\cdot \sum\limits _{i=1}^{n} a_{i}^{2} +2\cdot \sum\limits _{i=1}^{n} a_{i} b_{i} +2\cdot \sum\limits _{i=1}^{n} b_{i}^{2} -2\cdot \sum\limits _{i=1}^{n} a_{i} b_{i} =2\cdot \sum\limits _{i=1}^{n}( a_{i})^{2} +2\cdot \sum\limits _{i=1}^{n}( b_{i})^{2}\\
+    \Leftrightarrow  & 2\cdot \sum\limits _{i=1}^{n} a_{i}^{2} +2\cdot \sum\limits _{i=1}^{n} b_{i}^{2} =2\cdot \sum\limits _{i=1}^{n}( a_{i})^{2} +2\cdot \sum\limits _{i=1}^{n}( b_{i})^{2} \ \checked 
+  \end{array}
+\end{equation*}
+
+
+\subsection{Lösung 5c}
+
+Ebenso in dem dritten Beispiel:
+\begin{equation*}
+  \begin{array}{ c l }
+    & \| a+b\| ^{2} -\| a-b\| ^{2} =4\langle a,b\rangle \\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n}( a_{i} +b_{i})^{2} -\sum\limits _{i=1}^{n}( a_{i} -b_{i})^{2} =4\cdot \sum\limits _{i=1}^{n}( a_{i} \cdot b_{i})\\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n}\left( a_{i}^{2} +2\cdot a_{i} b_{i} +b_{i}^{2}\right) -\sum\limits _{i=1}^{n}\left( a_{i}^{2} -2\cdot a_{i} b_{i} +b_{i}^{2}\right) =4\cdot \sum\limits _{i=1}^{n}( a_{i} \cdot b_{i})\\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n}\left(\left( a_{i}^{2} +2\cdot a_{i} b_{i} +b_{i}^{2}\right) -\left( a_{i}^{2} -2\cdot a_{i} b_{i} +b_{i}^{2}\right)\right) =4\cdot \sum\limits _{i=1}^{n}( a_{i} \cdot b_{i})\\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n}\left(( 2\cdot a_{i} b_{i}) -( -2\cdot a_{i} b_{i})\right) =4\cdot \sum\limits _{i=1}^{n}( a_{i} \cdot b_{i})\\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n}( 2\cdot a_{i} b_{i} +2\cdot a_{i} b_{i}) =4\cdot \sum\limits _{i=1}^{n}( a_{i} \cdot b_{i})\\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n}( 4\cdot a_{i} b_{i}) =4\cdot \sum\limits _{i=1}^{n}( a_{i} \cdot b_{i}) \ \ \checked 
+  \end{array}
+\end{equation*}
