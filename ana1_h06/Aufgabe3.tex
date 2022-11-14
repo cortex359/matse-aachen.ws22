@@ -3,15 +3,56 @@
 \begin{document}
 
 \section{Aufgabe 3}
-Sind die folgende Funktionen lokal Lipschitz-stetig im Punkt $x_{0}$? Berechnen Sie ggf. die Lipschitz-Konstante $L$ in Abhängigkeit von $\delta$.
+Sind die folgende Funktionen lokal Lipschitz-stetig im Punkt $x_{0}$? Berechnen Sie ggf.\ die Lipschitz-Konstante $L$ in Abhängigkeit von $\delta$.
 
 \begin{equation*}
     \begin{array}{ c l c l }
-        \text{a)} & f( x) =\sqrt{2+3x} & , & x_{0} =1\\
-        \text{b)} & f( x) =\sqrt{x^{2} +1} & , & x_{0} =-1
+        \text{(a)} & f (x) =\sqrt{2+3x} & , & x_{0} =1\\
+        \text{(b)} & f (x) =\sqrt{x^{2} +1} & , & x_{0} =-1
     \end{array}
 \end{equation*}
 
 \subsection{Lösung 3}
+Eine Funktion $f:D\rightarrow \mathbb{R}$ ist Lipschitz-stetig in einem Punkt $x_{0} \in D$, wenn gilt
+\begin{equation*}
+    \exists L\geq 0\forall x,x_{0} \in D:| f( x) -f( x_{0})| \leq L\cdot | x-x_{0}| \text{.}
+\end{equation*}
+Daraus folgt für die Lipschitz-Konstante $L$
+\begin{equation*}
+    L\geq \frac{| f( x) -f( x_{0})| }{| x-x_{0}| }
+\end{equation*}
+
+Außerdem gilt $|x-x_{0} |< \delta \Leftrightarrow x_{0} -\delta < x< x_{0} +\delta $.
+
+\subsubsection{Lösung 3a}
+
+\begin{equation*}
+    \begin{array}{ c r l }
+     & L\geq  & \frac{| f( x) -f( x_{0})| }{| x-x_{0}| }\\
+    \equiv  & L\geq  & \frac{\left| \sqrt{2+3x} -\sqrt{2+3x_{0}}\right| }{| x-x_{0}| }\\
+     & = & \frac{\left| \sqrt{2+3x} -\sqrt{2+3x_{0}}\right| \cdot \left| \sqrt{2+3x} +\sqrt{2+3x_{0}}\right| }{| x-x_{0}| \cdot \left| \sqrt{2+3x} +\sqrt{2+3x_{0}}\right| }\\
+     & = & \frac{|2+3x|-|2+3\cdot x_{0} |}{| x-x_{0}| \cdot \left| \sqrt{2+3x} +\sqrt{2+3x_{0}}\right| }\\
+     & = & \frac{3\cdot |( x-x_{0}) |}{| x-x_{0}| \cdot \left| \sqrt{2+3x} +\sqrt{2+3x_{0}}\right| }\\
+     & = & \frac{3}{\left| \sqrt{2+3x} +\sqrt{2+3x_{0}}\right| }\\
+     &  > & \frac{3}{\left| \sqrt{2+3( x_{0} +\delta )} +\sqrt{2+3x_{0}}\right| }\\
+    \Rightarrow  & L( \delta )  > & \frac{3}{\left| \sqrt{5+3\delta } +\sqrt{5}\right| }
+    \end{array}
+\end{equation*}
+
+\subsubsection{Lösung 3b}
+
+\begin{equation*}
+    \begin{array}{ c r l }
+     & L\geq  & \frac{| f( x) -f( x_{0})| }{| x-x_{0}| }\\
+    \equiv  & L\geq  & \frac{\left| \sqrt{x^{2} +1} -\sqrt{x_{0}^{2} +1}\right| }{| x-x_{0}| }\\
+     & = & \frac{\left| \sqrt{x^{2} +1} -\sqrt{x_{0}^{2} +1}\right| \cdot \left| \sqrt{x^{2} +1} +\sqrt{x_{0}^{2} +1}\right| }{| x-x_{0}| \cdot \left| \sqrt{x^{2} +1} +\sqrt{x_{0}^{2} +1}\right| }\\
+     & = & \frac{\left| x^{2} +1\right| -\left| x_{0}^{2} +1\right| }{| x-x_{0}| \cdot \left| \sqrt{x^{2} +1} +\sqrt{x_{0}^{2} +1}\right| }\\
+     & = & \frac{| x -x_{0}| \cdot | x+ x_{0}| }{| x-x_{0}| \cdot \left| \sqrt{x^{2} +1} +\sqrt{x_{0}^{2} +1}\right| }\\
+     & = & \frac{| x+ x_{0}| }{\left| \sqrt{x^{2} +1} +\sqrt{x_{0}^{2} +1}\right| }\\
+     &  > & \frac{| ( x_{0} -\delta ) + x_{0}| }{\left| \sqrt{{( x_{0} +\delta )}^{2} +1} +\sqrt{x_{0}^{2} +1}\right| }\\
+     & = & \frac{| 2x_{0} -\delta | }{\left| \sqrt{{( x_{0} +\delta )}^{2} +1} +\sqrt{x_{0}^{2} +1}\right| }\\
+    \Rightarrow  & L( \delta )  > & \frac{| 2x_{0} -\delta | }{\left| \sqrt{{( x_{0} +\delta )}^{2} +1} +\sqrt{x_{0}^{2} +1}\right| }
+    \end{array}
+\end{equation*}
 
 \end{document}
