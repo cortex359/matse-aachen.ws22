@@ -33,8 +33,6 @@ final
 \usepackage{makeidx}
 \usepackage{graphicx}
 
-
-
 \usepackage{xcolor}
 %\usepackage{etex}  % wird für das Symbol beim beweis-Theorem benötigt
 
@@ -146,9 +144,6 @@ right=25mm
 \usetikzlibrary{shadows.blur}
 \usetikzlibrary{shapes}
 
-\usepackage{pgfplots}
-\usepackage{svg}
-
 \usepackage{stmaryrd}
 
 % Seitennummerierung
@@ -165,6 +160,9 @@ right=25mm
 
 %---- Customs ----%
 \newcommand{\checked}{\checkmark} % for compatibility with mathcha.io exports
+\renewcommand{\cdotp}{\cdot} % for compatibility with mathcha.io exports
+
+\arraycolsep=1.4pt\def\arraystretch{2.2} % streach array
 
 \newcommand{\hausaufgabe}[3]{
   \fancyhead[L]{\textbf{\module}\\\textbf{\semester}}
@@ -177,7 +175,7 @@ right=25mm
     colorlinks=true,         % false: boxed links; true: colored links
     unicode=true,            % non-Latin characters in Acrobat’s bookmarks
     pdfnewwindow=true,       % links in new window
-    pdftitle={\module : Hausaufgabenblatt #1},
+    pdftitle={\module: Hausaufgabenblatt #1},
     pdfsubject={Aufgaben vom #2, Abgabe am #3},
     pdfkeywords={Hausaufgaben, \module},
     pdfauthor={Christian Rene Thelen},                  % author
@@ -222,7 +220,7 @@ right=25mm
 
 \makeatletter
 \fancyfoot[L]{{\small \@date}}
-\fancyfoot[C]{{\small Seite \thepage~von \pageref{LastPage}}}
+\fancyfoot[C]{{\small Seite \thepage~von~\pageref{LastPage}}}
 \fancyfoot[R]{{\small \@author}}
 \makeatother
 
