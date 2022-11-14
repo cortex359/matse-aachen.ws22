@@ -1,34 +1,32 @@
 \section{Aufgabe 5}
 
 Bestimmen Sie die allgemeine Gleichung der Geraden durch folgende Punkte:
+
 \begin{equation*}
 	\begin{array}{ c l l }
-		\text{a)} & P_{1} =( 2|3) & P_{2} =( 1|1)\\
-		\text{b)} & A=( 0|0) & B=( 2|3)\\
-		\text{c)} & R=( 1|2) & S=( 3|2)
+		\text{(a)} & P_{1} =( 2|3) & P_{2} =( 1|1)\\
+		\text{(b)} & A=( 0|0) & B=( 2|3)\\
+		\text{(c)} & R=( 1|2) & S=( 3|2)
 	\end{array}
 \end{equation*}
+
 Geben Sie sie in einer parameterlosen Darstellung und einer Parameterdarstellung an.
 
-
-
-\textbf{Lösung 5}
-
+\subsection{Lösung 5}
 Für die Parameterform der Geradengleichung wird der erste Punkt $\displaystyle A$ als \textit{Aufpunkt} oder auch \textit{Stützvektor} gewählt. Der Richtungsvektor $\displaystyle \vec{r}$ ergibt sich aus der Differenz der Ortsvektoren beider Punkte. Allgemein gilt für $\displaystyle \lambda \in \mathbb{R}$:
 \begin{equation*}
-	G:X=A+\lambda \cdotp \vec{r}
+	G_{PF} : \vec{x}=A+\lambda \cdot \vec{r}
 \end{equation*}
-
 
 Für die Umrechnung in die parameterfreie Hauptform der Geradengleichung werden zunächst die Gleichungen für die beiden Koordinaten abgelesen. Danach wird die Gleichung für die x-Koordinate nach $\displaystyle \lambda $ umgestellt und in die Gleichung für die y-Koordinate eingesetzt, sodass sich eine explizite Form der Geradengleichung mit $\displaystyle k$ als der Steigung und $\displaystyle b$ als dem Ordinatenabschnitt ergibt:
 
-
 \begin{equation*}
-	G:y=k\cdotp x+b
+	G_{NF} : x_2 = k\cdot x_1 + b
 \end{equation*}
-\textbf{Lösung 5a}
+
+\subsection{Lösung 5a}
 \begin{gather*}
-	G_{a} :X=\begin{pmatrix}
+	G_{PF} :\vec{x}=\begin{pmatrix}
 		2\\
 		3
 	\end{pmatrix} +\lambda \begin{pmatrix}
@@ -36,11 +34,22 @@ Für die Umrechnung in die parameterfreie Hauptform der Geradengleichung werden 
 		2
 	\end{pmatrix} \ \Bigl| \ \lambda \in \mathbb{R}\\
 	\\
-	G_{a} :\ y=2x-1
+	G_{NF} : \begin{pmatrix}
+		2\\
+		-1
+	\end{pmatrix} \cdot \vec{x} = \begin{pmatrix}
+		-2\\
+		1
+	\end{pmatrix}\begin{pmatrix}
+		2\\
+		3
+	\end{pmatrix}\\
+	\Leftrightarrow 2 x_1 - x_2 = -1
 \end{gather*}
-\textbf{Lösung 5b}
+
+\subsection{Lösung 5b}
 \begin{gather*}
-	G_{b} :X=\begin{pmatrix}
+	G_{PF} :\vec{x}=\begin{pmatrix}
 		0\\
 		0
 	\end{pmatrix} +\lambda \begin{pmatrix}
@@ -48,11 +57,12 @@ Für die Umrechnung in die parameterfreie Hauptform der Geradengleichung werden 
 		3
 	\end{pmatrix} \ \Bigl| \ \lambda \in \mathbb{R}\\
 	\\
-	G_{b} :y=\frac{3}{2} x
+	G_{NF} : 0 = 3 \cdot x_1 - 2 \cdot x_2
 \end{gather*}
-\textbf{Lösung 5c}
+
+\subsection{Lösung 5c}
 \begin{gather*}
-	G_{c} :X=\begin{pmatrix}
+	G_{PF} :\vec{x}=\begin{pmatrix}
 		1\\
 		2
 	\end{pmatrix} +\lambda \begin{pmatrix}
@@ -60,5 +70,5 @@ Für die Umrechnung in die parameterfreie Hauptform der Geradengleichung werden 
 		0
 	\end{pmatrix} \ \Bigl| \ \lambda \in \mathbb{R}\\
 	\\
-	G_{c} :y=2
+	G_{NF} : x_2 = 2
 \end{gather*}
