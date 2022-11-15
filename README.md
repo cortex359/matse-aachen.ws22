@@ -1,5 +1,6 @@
 # AMI B.Sc. Hausaufgaben
 
+| | |
 | ----------: | --------------------------------------------------------- |
 |  Hochschule | FH Aachen - University of Applied Sciences                |
 | Studiengang | Angewandte Mathematik und Informatik B.Sc. (AMI)          |
