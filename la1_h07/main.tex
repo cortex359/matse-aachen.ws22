@@ -161,6 +161,7 @@ right=25mm
 %---- Customs ----%
 \newcommand{\checked}{\checkmark} % for compatibility with mathcha.io exports
 \renewcommand{\cdotp}{\cdot} % for compatibility with mathcha.io exports
+\renewcommand{\vec}{\overrightarrow}
 
 \arraycolsep=1.4pt\def\arraystretch{2.2} % streach array
 
@@ -171,8 +172,6 @@ right=25mm
   \let\@ifnextchar\new@ifnextchar
   \array{*\c@MaxMatrixCols c}}
 \makeatother
-
-
 
 \newcommand{\hausaufgabe}[3]{
   \fancyhead[L]{\textbf{\module}\\\textbf{\semester}}
