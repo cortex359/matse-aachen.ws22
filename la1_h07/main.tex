@@ -161,10 +161,11 @@ right=25mm
 %---- Customs ----%
 \newcommand{\checked}{\checkmark} % for compatibility with mathcha.io exports
 \renewcommand{\cdotp}{\cdot} % for compatibility with mathcha.io exports
-\renewcommand{\vec}{\overrightarrow}
+\renewcommand{\vec}{\overrightarrow} % Darstellung von Vektoren
 
+% Standardmäßige Vergrößerung normaler Arrays
 \arraycolsep=1.4pt\def\arraystretch{2.2} % streach array
-
+% Anpassbarkeit von Matrizen und Vektoren
 \makeatletter
 \renewcommand*\env@matrix[1][\arraystretch]{%
   \edef\arraystretch{#1}%

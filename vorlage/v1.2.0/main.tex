@@ -161,8 +161,18 @@ right=25mm
 %---- Customs ----%
 \newcommand{\checked}{\checkmark} % for compatibility with mathcha.io exports
 \renewcommand{\cdotp}{\cdot} % for compatibility with mathcha.io exports
+\renewcommand{\vec}{\overrightarrow} % Darstellung von Vektoren
 
+% Standardmäßige Vergrößerung normaler Arrays
 \arraycolsep=1.4pt\def\arraystretch{2.2} % streach array
+% Anpassbarkeit von Matrizen und Vektoren
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+  \edef\arraystretch{#1}%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols c}}
+\makeatother
 
 \newcommand{\hausaufgabe}[3]{
   \fancyhead[L]{\textbf{\module}\\\textbf{\semester}}
@@ -178,11 +188,11 @@ right=25mm
     pdftitle={\module: Hausaufgabenblatt #1},
     pdfsubject={Aufgaben vom #2, Abgabe am #3},
     pdfkeywords={Hausaufgaben, \module},
-    pdfauthor={Christian Rene Thelen},                  % author
-    pdfcreator={cortex359 v1.2},  % creator of the document
-    pdfproducer={cortex359 / Christian Rene Thelen},    % producer of the document
+    pdfauthor={Christian Rene Thelen}, % author
+    pdfcreator={cortex359 v1.2}, % creator of the document
+    pdfproducer={cortex359 / Christian Rene Thelen}, % producer of the document
     linkcolor=td-blue,       % color of internal links
-                            %   (change box color with linkbordercolor)
+                             %   (change box color with linkbordercolor)
     citecolor=td-blue,       % color of links to bibliography
     filecolor=td-blue,       % color of file links
     urlcolor=td-blue,        % color of external links
@@ -196,9 +206,9 @@ right=25mm
 \newcommand{\semester}{WiSe 2022/2023}
 
 %\newcommand{\module}{Lineare Algebra 1}
-\newcommand{\module}{Analysis 1}
+%\newcommand{\module}{Analysis 1}
 
-\hausaufgabe{01}{05.10.2022}{11.10.2022}
+%\hausaufgabe{01}{05.10.2022}{11.10.2022}
 %\hausaufgabe{02}{12.10.2022}{18.10.2022}
 %\hausaufgabe{03}{19.10.2022}{25.10.2022}
 %\hausaufgabe{04}{26.10.2022}{01.11.2022}
@@ -213,7 +223,7 @@ right=25mm
 
 %--- Footer ----%
 \newcommand{\lastMod}{
-    \Filemodtoday{\filemodNewest{{Aufgabe1.tex}{Aufgabe2.tex}{Aufgabe3.tex}{Aufgabe4.tex}}}
+    %\Filemodtoday{\filemodNewest{{Aufgabe1.tex}{Aufgabe2.tex}{Aufgabe3.tex}{Aufgabe4.tex}}}
     %\Filemodtoday{\filemodNewest{{Aufgabe5.tex}{Aufgabe6.tex}{Aufgabe7.tex}{Aufgabe8.tex}}}
 }
 \date{\lastMod{}}
@@ -227,7 +237,7 @@ right=25mm
 
 \begin{document}
 
-\subfile{Aufgabe1.tex}
+%\subfile{Aufgabe1.tex}
 % \subfile{Aufgabe2.tex}
 % \subfile{Aufgabe3.tex}
 % \subfile{Aufgabe4.tex}
@@ -236,5 +246,6 @@ right=25mm
 % \subfile{Aufgabe6.tex}
 % \subfile{Aufgabe7.tex}
 % \subfile{Aufgabe8.tex}
+% \subfile{Aufgabe9.tex}
 
 \end{document}
