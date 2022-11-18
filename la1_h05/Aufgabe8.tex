@@ -1,23 +1,23 @@
 \section{Aufgabe 8}
 
-Ein Gebäude in Form einer Pyramide hat die Eckpunkte $\displaystyle O=( 0|0|0) ,\ A=( 6|8|0) ,\ B=( 0|8|0)$ und die Spitze $\displaystyle S=( 2|4|8)$. Von der Ecke $\displaystyle B$ verläuft zum Punkt $\displaystyle P=( 4|6|4)$ ein Stahlträger.
+Ein Gebäude in Form einer Pyramide hat die Eckpunkte $O=( 0|0|0) ,\ A=( 6|8|0) ,\ B=( 0|8|0)$ und die Spitze $S=( 2|4|8)$. Von der Ecke $B$ verläuft zum Punkt $P=( 4|6|4)$ ein Stahlträger.
 
-a) Zeigen Sie, dass $\displaystyle P$ in der Ebene $\displaystyle E_{OAS}$ liegt, die die Pyramidenseite $\displaystyle OAS$ enthält.
-
-b) Überprüfen Sie, ob der Stahlträger senkrecht auf die Ebene $\displaystyle E_{OAS}$ trifft.
-
+\begin{enumerate}
+	\item[(a)] Zeigen Sie, dass $P$ in der Ebene $E_{OAS}$ liegt, die die Pyramidenseite $OAS$ enthält.
+	\item[(b)] Überprüfen Sie, ob der Stahlträger senkrecht auf die Ebene $E_{OAS}$ trifft.
+\end{enumerate}
 
 
 \subsection{Lösung 8a}
 
-Die Ebene $\displaystyle E_{OAS}$ kann mit den Richtungsvektoren $\displaystyle \overrightarrow{OA}$ und $\displaystyle \overrightarrow{OS}$ mit der Gleichung
+Die Ebene $E_{OAS}$ kann mit den Richtungsvektoren $\overrightarrow{OA}$ und $\overrightarrow{OS}$ mit der Gleichung
 \begin{equation*}
 	\begin{array}{ r l }
-		E_{OAS} : & \vec{X} =\lambda \begin{pmatrix}
+		E_{OAS} : & \vec{X} =\lambda \begin{pmatrix}[1]
 			6\\
 			8\\
 			0
-		\end{pmatrix} +\mu \begin{pmatrix}
+		\end{pmatrix} +\mu \begin{pmatrix}[1]
 			2\\
 			4\\
 			8
@@ -26,27 +26,27 @@ Die Ebene $\displaystyle E_{OAS}$ kann mit den Richtungsvektoren $\displaystyle 
 \end{equation*}
 beschrieben werden.
 
-Sei $\displaystyle \vec{p}$ der Ortsvektor zum Punkt $\displaystyle P$, so gilt für $\displaystyle \lambda =\frac{1}{2}$ und $\displaystyle \mu =\frac{1}{2}$ 
+Sei $\vec{p}$ der Ortsvektor zum Punkt $P$, so gilt für $\lambda =\frac{1}{2}$ und $\mu =\frac{1}{2}$ 
 \begin{equation*}
 	\begin{array}{ c c l }
-		& \vec{p} & =\frac{1}{2} \cdotp \begin{pmatrix}
+		& \vec{p} & =\frac{1}{2} \cdotp \begin{pmatrix}[1]
 			6\\
 			8\\
 			0
-		\end{pmatrix} +\frac{1}{2} \cdotp \begin{pmatrix}
+		\end{pmatrix} +\frac{1}{2} \cdotp \begin{pmatrix}[1]
 			2\\
 			4\\
 			8
 		\end{pmatrix}\vspace{2mm}\\
-		\Leftrightarrow  & \begin{pmatrix}
+		\Leftrightarrow  & \begin{pmatrix}[1]
 			4\\
 			6\\
 			4
-		\end{pmatrix} & =\begin{pmatrix}
+		\end{pmatrix} & =\begin{pmatrix}[1]
 			3\\
 			4\\
 			0
-		\end{pmatrix} +\begin{pmatrix}
+		\end{pmatrix} +\begin{pmatrix}[1]
 			1\\
 			2\\
 			4
@@ -55,34 +55,54 @@ Sei $\displaystyle \vec{p}$ der Ortsvektor zum Punkt $\displaystyle P$, so gilt 
 \end{equation*}
 
 \subsection{Lösung 8b}
-Der Normalenvektor $\displaystyle \overrightarrow{n_{E}}$ der Ebene $\displaystyle E_{OAS}$ ist
+Der Normalenvektor $\overrightarrow{n_{E}}$ der Ebene $E_{OAS}$ ist
 \begin{equation*}
 	\begin{array}{ c l }
-		\overrightarrow{n_{E}} & =\begin{pmatrix}
+		\overrightarrow{n_{E}} & =\begin{pmatrix}[1]
 			6\\
 			8\\
 			0
-		\end{pmatrix} \times \begin{pmatrix}
+		\end{pmatrix} \times \begin{pmatrix}[1]
 			2\\
 			4\\
 			8
 		\end{pmatrix}\vspace{2mm}\\
-		& =\begin{pmatrix}
+		& =\begin{pmatrix}[1]
 			64\\
 			-48\\
 			8
-		\end{pmatrix}
+		\end{pmatrix}\text{.}
 	\end{array}
 \end{equation*}
-Der Stahlträger trifft senkrecht auf die Ebene, wenn $\displaystyle \left< \overrightarrow{n_{E}} ,\vec{p}\right> =0$.
+
+Der Stahlträger trifft senkrecht auf die Ebene, wenn $\left< \vec{n_{E}} ,\vec{BP} \right> =0$.
 \begin{equation*}
-	\left< \begin{pmatrix}
-		64\\
-		-48\\
-		8
-	\end{pmatrix} ,\begin{pmatrix}
-		4\\
-		6\\
-		4
-	\end{pmatrix}\right> =0\ \ \checkmark
+	\begin{array}{ r l }
+		0 = &
+		\left< \begin{pmatrix}[1]
+			64\\
+			-48\\
+			8
+		\end{pmatrix} ,\begin{pmatrix}[1]
+			4\\
+			6\\
+			4
+		\end{pmatrix}-\begin{pmatrix}[1]
+			0\\
+			8\\
+			0
+		\end{pmatrix}\right>\\
+		= & 
+		\left< \begin{pmatrix}[1]
+			64\\
+			-48\\
+			8
+		\end{pmatrix} ,\begin{pmatrix}[1]
+			4\\
+			-2\\
+			4
+		\end{pmatrix}\right>\\
+		= & 64\cdot 4 + (-2)\cdot (-48) + 8\cdot 4\\
+		= & 256 + 96 + 32\ \ \lightning \\
+	\end{array}
 \end{equation*}
