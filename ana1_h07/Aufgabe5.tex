@@ -3,7 +3,30 @@
 \begin{document}
 
 \section{Aufgabe 5}
+Gegeben sei die Funktion
+
+\begin{equation*}
+    f:[0;1]\rightarrow \mathbb{R} ,\ f( x) =2\cdotp \ln\left( x^{3} +\sqrt{2-x^{2}}\right)
+\end{equation*}
+
+Zeigen Sie durch Anwendung des Mittelwertsatzes: $\exists y\in ] 0;1[$ mit $f'( y) =\ln( 2)$
 
 \subsection{Lösung 5}
+
+Mittelwertsatz:
+Es sei $f$ stetig auf $[a,b]$ und $f$ differenzierbar auf $(a,b)$
+\begin{equation*}
+    \Rightarrow \exists \ \epsilon \in (a,b) : \frac{f(b)-f(a)}{b-a} = f'(\epsilon) \text{.}
+\end{equation*}
+
+\begin{equation*}
+    \begin{array}{ r l }
+    \exists \ y\in (0;1) \ :\frac{f( 1) -f( 0)}{1-0} & =\frac{2\cdotp \ln\left( 1^{3} +\sqrt{2-1^{2}}\right) -2\cdotp \ln\left( 0^{3} +\sqrt{2-0^{2}}\right)}{1-0}\\
+     & =2\cdotp \ln\left( 1+\sqrt{1}\right) -2\cdotp \ln\left(\sqrt{2}\right)\\
+     & =2\cdotp \ln\left(\frac{1+\sqrt{1}}{\sqrt{2}}\right)\\
+     & =2\cdotp \ln\left(\sqrt{2}\right)\\
+     & =\ln( 2)
+    \end{array}
+\end{equation*}
 
 \end{document}
