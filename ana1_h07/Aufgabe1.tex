@@ -15,4 +15,58 @@ Bestimmen Sie mit Hilfe des Differentialquotienten die Tangentensteigung an der 
 
 \subsection{Lösung 1}
 
+Der Differentialquotient oder auch die Ableitung von $f$ an der Stelle $x_{0}$ ist:
+\begin{equation*}
+    \lim _{x\rightarrow x_{0}} \upDelta ( x) =f'( x_{0}) =\lim _{h\rightarrow 0}\frac{f( x_{0} +h) -f( x_{0})}{h}
+\end{equation*}
+
+Entsprechend gilt im Folgenden:
+
+\subsubsection*{Lösung 1a}
+\begin{equation*}
+    \begin{array}{ c c l }
+    \lim\limits _{x\rightarrow x_{0}} \upDelta ( x) & \eqdef  & \lim\limits _{h\rightarrow 0}\frac{\left( 2( x_{0} +h)^{3} +x_{0} +h-1\right) -\left( 2x_{0}^{3} +x_{0} -1\right)}{h}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{2( x_{0} +h)^{3} +h-2x_{0}^{3}}{h}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{2x_{0}^{3} +6x_{0}^{2} h+6x_{0} h^{2} +2h^{3} +h-2x_{0}^{3}}{h}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{h\cdotp \left( 6x_{0}^{2} +6x_{0} h +2h^{2} +1\right)}{h}\\
+    & = & \lim\limits _{h\rightarrow 0} 6x_{0}^{2} +6x_{0} h +2h^{2} +1\\
+    & = & 6x_{0}^{2} +1\\
+    & \overset{x_{0} =\ 3}{=} & 6\cdotp 9+1\\
+    & = & 55
+    \end{array}
+\end{equation*}
+
+
+\subsubsection*{Lösung 1b}
+\begin{equation*}
+    \begin{array}{ c c l }
+    \lim\limits _{x\rightarrow x_{0}} \upDelta ( x) & \eqdef  & \lim\limits _{h\rightarrow 0}\frac{\frac{2}{3( x_{0} +h)^{3}} -\frac{2}{3( x_{0})^{3}}}{h}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{\frac{6\cdotp x{_{0}}^{3} -\ 6\cdotp ( x_{0} +h)^{3}}{9\cdotp ( x_{0} +h)^{3} \cdotp ( x_{0})^{3}}}{h}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{6\cdotp x{_{0}}^{3} -\ 6\cdotp \left( x_{0}^{3} +3x_{0}^{2} h+3x_{0} h^{2} +h^{3}\right)}{9\cdotp \left( x_{0}^{3} +3x_{0}^{2} h+3x_{0} h^{2} +h^{3}\right) \cdotp x{_{0}}^{3}} \cdotp \frac{1}{h}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{h\cdotp \left( -18x_{0}^{2} -18x_{0} h^{1} -6\cdotp h^{2}\right)}{\left( 9x_{0}^{3} +27x_{0}^{2} h+27x_{0} h^{2} +9h^{3}\right) \cdotp x{_{0}}^{3} \cdotp h}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{-18x_{0}^{2} -18x_{0} h -6\cdotp h^{2}}{\left( 9x_{0}^{3} +27x_{0}^{2} h+27x_{0} h^{2} +9h^{3}\right) \cdotp x{_{0}}^{3}}\\
+    & = & \frac{-18x_{0}^{2} -\lim\limits _{h\rightarrow 0}\left( 18x_{0} h -6\cdotp h^{2}\right)}{9x_{0}^{6} +\lim\limits _{h\rightarrow 0}\left( 27x_{0}^{5} h+27x_{0}^{4} h^{2} +9h^{3} x{_{0}}^{3}\right)}\\
+    & = & \frac{-18x_{0}^{2}}{9x_{0}^{6}}\\
+    & = & -\frac{2}{x_{0}^{4}}\\
+    & \overset{x_{0} =\ 3}{=} & -\frac{2}{3^{4}}\\
+    & = & -\frac{2}{81}
+    \end{array}
+\end{equation*}
+
+\subsubsection*{Lösung 1c}
+\begin{equation*}
+    \begin{array}{ c c l }
+    \lim\limits _{x\rightarrow x_{0}} \upDelta ( x) & \eqdef  & \lim\limits _{h\rightarrow 0}\frac{\sqrt{2( x_{0} +h) +3} -\sqrt{2x_{0} +3}}{h}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{\sqrt{2x_{0} +2h+3} -\sqrt{2x_{0} +3}}{h}\\
+    & \overset{x_{0} =\ 3}{=} & \lim\limits _{h\rightarrow 0}\frac{\sqrt{6+2h+3} -\sqrt{6+3}}{h}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{\sqrt{9+2h} -\sqrt{9}}{h}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{\left(\sqrt{9+2h} -3\right) \cdotp \left(\sqrt{9+2h} +3\right)}{h\cdotp \left(\sqrt{9+2h} +3\right)}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{9+2h-9}{h\cdotp \left(\sqrt{9+2h} +3\right)}\\
+    & = & \lim\limits _{h\rightarrow 0}\frac{2}{\sqrt{9+2h} +3}\\
+    & = & \frac{2}{\sqrt{9} +3}\\
+    & = & \frac{1}{3}
+    \end{array}
+\end{equation*}
+
+
 \end{document}
