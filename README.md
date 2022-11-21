@@ -1,5 +1,8 @@
 # :blue_book: AMI B.Sc. Hausaufgaben :student:
 
+[![LaTeX compilation](https://github.com/cortex359/matse-aachen.ws22/actions/workflows/latexmk-vorlage.yml/badge.svg?branch=master)](https://github.com/cortex359/matse-aachen.ws22/actions/workflows/latexmk-vorlage.yml)
+
+
 **Studiengang**
 
 Angewandte Mathematik und Informatik B.Sc. ([AMI](https://www.fh-aachen.de/studium/angewandte-mathematik-und-informatik-bsc)) an der [FH Aachen](https://www.fh-aachen.de/), University of Applied Sciences.
