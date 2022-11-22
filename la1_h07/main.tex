@@ -146,6 +146,9 @@ right=25mm
 
 \usepackage{stmaryrd}
 
+% Missing Symbols
+\usepackage{upgreek}
+
 % Seitennummerierung
 \usepackage{lastpage}
 
@@ -160,6 +163,9 @@ right=25mm
 
 %---- Customs ----%
 \newcommand{\checked}{\checkmark} % for compatibility with mathcha.io exports
+\newcommand*{\eqdef}{\stackrel{\text{def}}{=}}
+\newcommand*{\questeq}{\overset{?}{=}}
+\newcommand*{\defeq}{\overset{?}{=}}
 \renewcommand{\cdotp}{\cdot} % for compatibility with mathcha.io exports
 \renewcommand{\vec}{\overrightarrow} % Darstellung von Vektoren
 \renewcommand{\labelenumi}{\alph{enumi})} % task list with a) b) c) ...
@@ -189,9 +195,9 @@ right=25mm
     pdftitle={\module: Hausaufgabenblatt #1},
     pdfsubject={Aufgaben vom #2, Abgabe am #3},
     pdfkeywords={Hausaufgaben, \module},
-    pdfauthor={Christian Rene Thelen},                  % author
-    pdfcreator={cortex359 v1.2},  % creator of the document
-    pdfproducer={cortex359 / Christian Rene Thelen},    % producer of the document
+    pdfauthor={Christian Rene Thelen}, % author
+    pdfcreator={cortex359 v1.2}, % creator of the document
+    pdfproducer={cortex359 / Christian Rene Thelen}, % producer of the document
     linkcolor=td-blue,       % color of internal links
                             %   (change box color with linkbordercolor)
     citecolor=td-blue,       % color of links to bibliography
