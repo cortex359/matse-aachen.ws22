@@ -3,14 +3,129 @@
 \begin{document}
 
 \section{Aufgabe 3}
-a) Bestimmen Sie die Tangentengleichung der Kurve $f(x) = x^3$ an der Stelle $x=2$.
-
-b) Bestimmen Sie die Gerade, welche eine Tangente an der folgenden Funktion ist:
+\begin{enumerate}
+    \item Bestimmen Sie die Tangentengleichung der Kurve $f(x) = x^3$ an der Stelle $x=2$.
+    \item Bestimmen Sie die Gerade, welche eine Tangente an der folgenden Funktion ist:
+\end{enumerate}
 
 \begin{equation*}
     f(x) = x^2 \ \text{ und }\ g(x) = x^2-2x
 \end{equation*}
 
 \subsection{Lösung 3}
+Der Ansatz für die Tangente einer Funktion $f( x)$ in einem Punkt $x_{0}$ lautet
+\begin{equation*}
+    T( x) =f_{1}( x) =m\cdotp ( x-x_{0}) +b
+\end{equation*}
+Dabei gilt für die Steigung $m=f'( x_{0})$ und für $b=f( x_{0})$.
+
+Die Tangentengleichung lautet somit:
+\begin{equation*}
+    T( x) =f'( x_{0}) \cdotp ( x-x_{0}) +f( x_{0})
+\end{equation*}
+
+\subsubsection*{Lösung 3a}
+Für die Tangente $T( x)$ von der Funktion $f( x) =x^{3}$ an der Stelle $x_{0} =2$ gilt somit:
+\begin{gather*}
+    \begin{array}{ r c l }
+    f'( x) & = & 3x^{2}\\
+    f'( 2) & = & 12\\
+    f( 2) & = & 8
+    \end{array}\\
+    \\
+    \begin{array}{ c l }
+    T( x) & =12\cdotp ( x-2) +8\\
+    & =12x-24+8\\
+    & =12x-16
+    \end{array}
+\end{gather*}
+
+\subsubsection*{Lösung 3b}
+
+\textbf{Ansatz 1:}\\
+
+Die allgemeinen Tangentengleichungen der Funktionen ergeben sich aus der genannten Formel und den Ableitungen der Funktionen.
+\begin{equation*}
+    \begin{array}{ r c l }
+        f'( x) & = & 2x\\
+        g'( x) & = & 2x-2
+    \end{array}
+\end{equation*}
+
+Eine gemeinsame Tangente muss zwei Bedingungen erfüllen.
+\begin{enumerate}
+    \item $\exists \ x_{0} :f'( x_{0}) =g'( x_{0})$ und
+    \item $f( x_{0}) =g( x_{0})$
+\end{enumerate}
+
+
+
+Bedingung 1:
+\begin{gather*}
+    2x=2y-2\\
+    \\
+    x=y-1
+\end{gather*}
+
+
+Bedingung 2:
+\begin{gather*}
+    x^{2} =y^{2} -2y\\
+    x^{2} =y\cdotp ( y-2)
+\end{gather*}
+
+Aus 1 und 2 erhält man:
+\begin{gather*}
+    ( y-1)( y-1) =y\cdotp ( y-2)\\
+    \\
+    y^{2} -y-y+1=y^{2} -2y\\
+    y^{2} -2y+1=y^{2} -2y\\
+    1=0\ \lightning 
+\end{gather*}
+
+Beide Bedingungen können nicht zusammen erfüllt sein. 
+
+\textbf{Ansatz 2:}\\
+
+\begin{gather*}
+    T_{f}( x) =2x_{0} \cdotp ( x-x_{0}) +x^{2}\\
+    T_{g}( x) =( 2x_{0} -2) \cdotp ( x-x_{0}) +\left( x^{2} -2x\right)
+\end{gather*}
+
+Gesucht ist eine gemeinsame Tangente, also soll gelten $T_{f}( x) =T_{g}( x)$:
+\begin{equation*}
+    \begin{array}{ c r c l l }
+     & 2x_{0} \cdotp ( x-x_{0}) +x^{2} & = & ( 2x_{0} -2) \cdotp ( x-x_{0}) +\left( x^{2} -2x\right) & \\
+    \Leftrightarrow  & 2x_{0} x-2x_{0}^{2} +x^{2} & = & 2x_{0} x-2x_{0}^{2} -2x+2x_{0} +x^{2} -2x & \Bigl| -x^{2}\\
+    \Leftrightarrow  & 2x_{0} x-2x_{0}^{2} & = & 2x_{0} x-2x_{0}^{2} -2x+2x_{0} -2x & \Bigl| -2x_{0} x\\
+    \Leftrightarrow  & -2x_{0}^{2} & = & -2x_{0}^{2} -2x+2x_{0} -2x & \Bigl| +2x_{0}^{2}\\
+    \Leftrightarrow  & 0 & = & 2x_{0} -4x & \Bigl| +4x\\
+    \Leftrightarrow  & 2x & = & x_{0} & 
+    \end{array}
+\end{equation*}
+
+Setzt man nun die gefundene Information für $x_{0}$ in die Tangentengleichungen ein, so erhält man:
+\begin{equation*}
+    \begin{array}{ c c l }
+    T_{f}( x) & = & 4x\cdotp ( x-2x) +x^{2}\\
+     & = & -4x^{2} +x^{2}\\
+     & = & -3x^{2}
+    \end{array}
+\end{equation*}
+
+Zur Probe auch noch in die zweite Tangentengleichung:
+\begin{equation*}
+    \begin{array}{ c c l }
+    T_{g}( x) & = & ( 2x_{0} -2) \cdotp ( x-x_{0}) +\left( x^{2} -2x\right)\\
+     & = & ( 4x-2) \cdotp ( x-2x) +\left( x^{2} -2x\right)\\
+     & = & -4x^{2} +2x+x^{2} -2x\\
+     & = & -4x^{2} +x^{2}\\
+     & = & -3x^{2}
+    \end{array}
+\end{equation*}
+Somit ist gezeigt, dass $T_{f}( x) =T_{g}( x) \ =-3x^{2}$.
+
+Problematisch ist nur, dass es sich dabei um eine Parabel und keine Tangente handelt, außer vielleicht eine tangierende Parabel, aber es war ja nach einer Geraden gesucht.
+
 
 \end{document}

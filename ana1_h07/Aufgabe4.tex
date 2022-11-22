@@ -17,5 +17,92 @@ Differenzieren Sie:
 \end{enumerate}
 
 \subsection{Lösung 4}
+Produktregel (Schelthoff\footnotemark{}, Satz 159)
+\begin{equation*}
+    \begin{array}{ r c l }
+    f( x) & = & u( x) \cdotp v( x)\\
+    f'( x) & = & u( x) \cdotp v'( x) +u'( x) \cdotp v( x)
+    \end{array}
+\end{equation*}
+
+Quotientenregel (Schelthoff\footnotemark[\value{footnote}], Satz 160)
+\begin{equation*}
+    \begin{array}{ r c l }
+    f( x) & = & \frac{u( x)}{v( x)}\\
+    f'( x) & = & \frac{u'( x) v( x) -v'( x) u( x)}{v( x)^{2}}
+    \end{array}
+\end{equation*}
+
+Kettenregel (Schelthoff\footnotemark[\value{footnote}], Satz 161)
+\begin{equation*}
+    \begin{array}{ r c l }
+    f( x) & = & g( v( x))\\
+    f'( x) & = & v'( x) \cdotp g'( v( x))
+    \end{array}
+\end{equation*}
+
+\footnotetext{Schelthoff, Christof (2018): MATSE-MATIK. Analysis 1, 6. Auflage, Aachen, Shaker Verlag.}
+
+\subsubsection{Lösung 4a}
+Nach Quotientenregel:
+\begin{equation*}
+    \begin{array}{ c l }
+    u( x) & =e^{x} -e^{-x}\\
+    v( x) & =e^{x} +e^{-x}\\
+    u'( x) & =e^{-x} +e^{x}\\
+    v'( x) & =e^{x} -e^{-x}\\
+    f'( x) & =\frac{\left( e^{-x} +e^{x}\right)\left( e^{x} +e^{-x}\right) -\left( e^{x} -e^{-x}\right)\left( e^{x} -e^{-x}\right)}{\left( e^{x} +e^{-x}\right)\left( e^{x} +e^{-x}\right)}\\
+    & =\frac{\left( e^{x} +e^{-x}\right)\left(\left( e^{-x} +e^{x}\right) -\left( e^{x} -e^{-x}\right)\right)}{\left( e^{x} +e^{-x}\right)\left( e^{x} +e^{-x}\right)}\\
+    & =\frac{\left( e^{-x} +e^{x}\right) -\left( e^{x} -e^{-x}\right)}{\left( e^{x} +e^{-x}\right)}\\
+    & =\frac{2\cdotp e^{-x}}{e^{x} +e^{-x}}
+    \end{array}
+\end{equation*}
+
+\subsubsection{Lösung 4b}
+Kettenregel
+\begin{equation*}
+    \begin{array}{ r c l }
+    f( x) & = & \arcsin\frac{1-x^{2}}{1+x^{2}}\\
+    f( x) & = & g( v( x))\\
+    g( x) & = & \arcsin( x)\\
+    g'( x) & = & \frac{1}{\sqrt{1-x^{2}}}\\
+    v( x) & = & \frac{1-x^{2}}{1+x^{2}}\\
+    v'( x) & = & \frac{-4x}{\left( 1+x^{2}\right)^{2}}\\
+    f'( x) & = & v'( x) \cdotp g'( v( x))\\
+    & = & \frac{-4x}{\left( 1+x^{2}\right)^{2}} \cdotp \frac{1}{\sqrt{1-\left(\frac{1-x^{2}}{1+x^{2}}\right)^{2}}}\\
+    & = & \frac{-4x}{\left( 1+x^{2}\right)^{2} \cdotp \sqrt{1-\left(\frac{1-x^{2}}{1+x^{2}}\right)^{2}}}
+    \end{array}
+\end{equation*}
+
+
+\subsubsection{Lösung 4c}
+Kettenregel
+\begin{equation*}
+    \begin{array}{ r c l }
+    f( x) & = & x^{\cos (x)}\\
+    f( x) & = & g( v( x))\\
+    u & = & v( x)\\
+    v( x) & = & \cos( x)\\
+    v'( x) & = & -\sin( x)\\
+    g( u) & = & x^{u}\\
+    g'( u) & = & u\cdotp x^{( u-1)}\\
+    g'( v( x)) & = & \cos( x) \cdotp x^{(\cos( x) -1)}\\
+    &  & \\
+    f'( x) & = & v'( x) \cdotp g'( v( x))\\
+    & = & -\sin( x) \cdotp \cos( x) \cdotp x^{(\cos( x) -1)}
+    \end{array}
+\end{equation*}
+
+\subsubsection{Lösung 4d}
+Potenzregel
+\begin{equation*}
+    \begin{array}{ r c l }
+    f( x) & = & \sqrt{x\cdotp \sqrt{x\cdotp \sqrt{x}}}\\
+    f'( x) & = & \frac{7}{8x^{1/8}}
+    \end{array}
+\end{equation*}
+
+\subsubsection{Lösung 4e-h}
+\textcolor[rgb]{0.55,0.89,0.2}{Aus Zeitmangel ausgelassen. Es wäre schon ziemlich dämlich für die 8 Unterpunkte von Aufgabe 4 jeweils 3 Punkte zu vergeben, oder? xD}
 
 \end{document}
