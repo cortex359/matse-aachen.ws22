@@ -21,11 +21,108 @@ Gegeben sind die Vektoren
     \end{pmatrix}
 \end{align*}
 
-Bestimmen Sie die Variablen $\alpha$ und $\beta$ derart, dass der aus den 3 Vektoren gebildete Spat das Volumen 17 VE hat und das von den Vektoren $\alpha$ und $\beta$ aufgespannte Parallelogramm den Flächeninhalt 19 FE hat.
+Bestimmen Sie die Variablen $\alpha$ und $\beta$ derart, dass der aus den 3 Vektoren gebildete Spat das Volumen 17 VE hat und das von den Vektoren $a$ und $b$ aufgespannte Parallelogramm den Flächeninhalt 19 FE hat.
 
 \subsection{Lösung 8}
 
 % Ansatz: 2.43 und Abbildung 2.6
 % 2.91 und Abbildung 2.8
+
+Das Spatprodukt dreier Vektoren $a,b,c\in \mathbb{R}^{3}$ ist nach Definition 2.90 und 2.91
+\begin{equation*}
+    \det( a,b,c) =\langle a,b\times c\rangle \in \mathbb{R}
+\end{equation*}
+Das Volumen $V$ des durch die Spaltenvektoren aufgespannten Spats ist der Betrag der Determinante $V=| \det( a,b,c)| $.
+
+Für ein gegebenes Volumen $V=17VE$ soll also gelten:
+\begin{equation*}
+    \begin{array}{ c r l }
+    & 17VE & =\left| \det\begin{pmatrix}[1]
+    1 & 0 & -1\\
+    -1/2 & 2\alpha  & -\alpha \\
+    \beta  & -2 & 1
+    \end{pmatrix}\right| \\
+    \Leftrightarrow  & 17VE & =| 2\alpha \beta -1| \\
+    \overset{( 2\alpha \beta -1)  >0}{\Leftrightarrow } & 9VE & =\alpha \beta \\
+    \Leftrightarrow  & \beta  & =\frac{9VE}{\alpha }
+    \end{array}
+\end{equation*}
+
+Für den Flächeninhalt des Parallelogramms $A$ muss die Länge des Vektorprodukts bestimmt werden. Nach Folgerung 2.43 lässt sich der Flächeninhalt so berechnen:
+\begin{equation*}
+    A=\| a\| \cdotp \| b\| \cdotp \sin \theta =\| a\times b\| 
+\end{equation*}
+
+Für eine gegebene Fläche $A=19FE$ soll also gelten:
+\begin{equation*}
+    \begin{array}{ c r l }
+    & A & = \left\| \begin{pmatrix}[1]
+    1\\
+    -1/2\\
+    \beta 
+    \end{pmatrix} \times \begin{pmatrix}[1]
+    0\\
+    2\alpha \\
+    -2
+    \end{pmatrix} \right\| \\
+    &  & = \left\| \begin{pmatrix}[1]
+    1-2\alpha \beta \\
+    2\\
+    2\alpha 
+    \end{pmatrix} \right\| \\
+    &  & =\sqrt{{( 1-2\alpha \beta )}^{2} +4+4\alpha ^{2}}\\
+    &  & =\sqrt{5+4\alpha ^{2} \beta ^{2} -4\alpha \beta +4\alpha ^{2}}\\
+    \overset{A=19FE}{\Leftrightarrow } & 19FE & =\sqrt{5+4\alpha ^{2} \beta ^{2} -4\alpha \beta +4\alpha ^{2}}\\
+    \overset{\beta =9VE/\alpha }{\Leftrightarrow } & 19FE & =\sqrt{5+4\alpha ^{2}{\left(\frac{9VE}{\alpha }\right)}^{2} -4\alpha \left(\frac{9VE}{\alpha }\right) +4\alpha ^{2}}\\
+    \Leftrightarrow  & 19FE & =\sqrt{5+4\cdotp {( 9VE)}^{2} -4\cdotp ( 9VE) +4\alpha ^{2}}\\
+    \Leftrightarrow  & 19^{2} VE & =5+4\cdotp {( 9VE)}^{2} -4\cdotp ( 9VE) +4\alpha ^{2}\\
+    \Leftrightarrow  & 4\alpha ^{2} & =19^{2} VE-5-4\cdotp {( 9VE)}^{2} +4\cdotp ( 9VE)\\
+    \Leftrightarrow  & \alpha ^{2} & =\frac{19^{2} VE}{4} -{( 9VE)}^{2} +( 9VE) -\frac{5}{4}\\
+    \Leftrightarrow  & \alpha ^{2} & =\frac{19^{2} VE}{4} +( 9VE) -{( 9VE)}^{2} -\frac{5}{4}\\
+    \Leftrightarrow  & \alpha ^{2} & =\left(\frac{397}{4} VE\right) -\left( 81VE^{2}\right) -\frac{5}{4}\\
+    \Leftrightarrow  & \alpha  & =\sqrt{\left(\frac{397}{4} VE\right) -\left( 81VE^{2}\right) -\frac{5}{4}}\\
+    \Leftrightarrow  & \alpha  & =\sqrt{17}
+    \end{array}
+\end{equation*}
+
+
+Somit sind die Parameter $\alpha =\sqrt{17}$ und $\beta =\frac{9}{\sqrt{17}}$ eindeutig bestimmt. 
+
+Die Probe ergibt für das Volumen
+
+\begin{equation*}
+    \begin{array}{ r l }
+    17VE & =\left| \det\begin{pmatrix}[1]
+    1 & 0 & -1\\
+    -1/2 & 2\sqrt{17} & -\sqrt{17}\\
+    \frac{9}{\sqrt{17}} & -2 & 1
+    \end{pmatrix}\right| \\
+    & =\left| 2\cdotp \sqrt{17} \cdotp \frac{9}{\sqrt{17}} -1\right| \\
+    & =| 18-1| \\
+    & =17\ \ \checked 
+    \end{array}
+\end{equation*}
+sowie für den Flächeninhalt
+
+\begin{equation*}
+    \begin{array}{ c r l }
+        19FE & = & \left\| \begin{pmatrix}[1]
+        1-2\cdotp \sqrt{17} \cdotp \frac{9}{\sqrt{17}}\\
+        2\\
+        2\cdotp \sqrt{17}
+        \end{pmatrix} \right\| \\
+        & = & \left\| \begin{pmatrix}[1]
+        -17\\
+        2\\
+        2\cdotp \sqrt{17}
+        \end{pmatrix} \right\| \\
+        & = & \sqrt{{( -17)}^{2} +2^{2} +2^{2} \cdotp 17}\\
+        & = & \sqrt{{( -17)}^{2} +4+4\cdotp 17}\\
+        & = & \sqrt{361}\\
+        & = & 19\ \checked 
+    \end{array}
+\end{equation*}
+
+\textit{Hinweis: Es reicht die Betrachtung des Falls $(2\alpha\beta-1) > 0$, da die Aufgabenstellung nach einer Lösung und nicht nach allen Lösungen fragt.}
 
 \end{document}

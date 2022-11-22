@@ -18,18 +18,273 @@ Die Platte hat eine Aufhängung, welche sich im geschlossenen Zustand am Punkt $
 % https://www.geogebra.org/3d/wafqm5em
 
 \subsubsection{Lösung 6a}
-Winkel zwischen den Ebenen $E_{STA}\measuredangle E_{STB}$.
+Für den Winkel $\varphi $ zwischen den Ebenen $E_{STA} \measuredangle E_{STB}$ gilt
+\begin{equation*}
+\cos \varphi =\frac{\langle n_{1} ,n_{2}\rangle }{| n_{1}| \cdotp | n_{2}| }
+\end{equation*}
+mit $n_{1} ,n_{2}$ als den Normalen der Ebenen.
+
+
+\begin{gather*}
+    \begin{array}{ c l }
+        E_{STA} & =\begin{pmatrix}[1]
+        0\\
+        0\\
+        0
+        \end{pmatrix} +\lambda \begin{pmatrix}[1]
+        0\\
+        4\\
+        0
+        \end{pmatrix} +\mu \begin{pmatrix}[1]
+        -3\\
+        2\\
+        0
+        \end{pmatrix}\\
+        E_{STB} & =\begin{pmatrix}[1]
+        0\\
+        0\\
+        0
+        \end{pmatrix} +\lambda \begin{pmatrix}[1]
+        0\\
+        4\\
+        0
+        \end{pmatrix} +\mu \begin{pmatrix}[1]
+        -3/\sqrt{2}\\
+        2\\
+        3/\sqrt{2}
+        \end{pmatrix}\\
+        n_{1} & =\begin{pmatrix}[1]
+        0\\
+        4\\
+        0
+        \end{pmatrix} \times \begin{pmatrix}[1]
+        -3\\
+        2\\
+        0
+        \end{pmatrix}\\
+        & =\begin{pmatrix}[1]
+        0\\
+        0\\
+        12
+        \end{pmatrix}\\
+        n_{2} & =\begin{pmatrix}[1]
+        0\\
+        4\\
+        0
+        \end{pmatrix} \times \begin{pmatrix}[1]
+        -3/\sqrt{2}\\
+        2\\
+        3/\sqrt{2}
+        \end{pmatrix}\\
+        & =\begin{pmatrix}[1]
+        12/\sqrt{2}\\
+        0\\
+        12/\sqrt{2}
+        \end{pmatrix}
+    \end{array}\\
+    \\
+    \begin{array}{ c r l }
+    & \cos \varphi  & =\frac{\langle n_{1} ,n_{2}\rangle }{| n_{1}| \cdotp | n_{2}| }\\
+    &  & =\frac{12\cdotp \frac{12}{\sqrt{2}}}{\sqrt{12^{2}} \cdotp \sqrt{\frac{12^{2}}{2} +\frac{12^{2}}{2}}}\\
+    &  & =\frac{12\cdotp \frac{12}{\sqrt{2}}}{12^{2}}\\
+    &  & =\frac{1}{\sqrt{2}}\\
+    \Leftrightarrow  & \varphi  & =\arccos\left(\frac{1}{\sqrt{2}}\right)\\
+    &  & =\frac{\pi }{4}
+    \end{array}
+\end{gather*}
+Der Winkel zwischen den Ebenen beträgt im Bogenmaß $\frac{1}{4} \pi $ oder im Gradmaß $45^{\circ}$.
 
 \subsubsection{Lösung 6b}
+Die Länge der Strecke zwsichen den Punkten $A$ und $F$ ist gleich dem Betrag des Abstandsvektors $\overrightarrow{AF}$ ihrer Ortsvektoren. Daher gilt:
 \begin{equation*}
-    \left| \vec{AF} \right| = 9
+    \begin{array}{ c l }
+    \overrightarrow{AF} & =\begin{pmatrix}[1]
+    -3\\
+    2\\
+    0
+    \end{pmatrix} -\begin{pmatrix}[1]
+    3\\
+    -1\\
+    6
+    \end{pmatrix}\\
+    & =\begin{pmatrix}[1]
+    -6\\
+    3\\
+    -6
+    \end{pmatrix}\\
+    & \\
+    | \overrightarrow{AF}|  & =\sqrt{( -6)^{2} +3^{2} +( -6)^{2}}\\
+    & =\sqrt{9+2\cdotp 36}\\
+    & =\sqrt{81}\\
+    & =9
+    \end{array}
 \end{equation*}
+Das an dem Punkt $F$ befestigte Seil muss mindestens eine Länge von $9\ LE$ haben.
 
 \subsubsection{Lösung 6c}
-Abstand vom Punkt $A$ nach $f = \vec{FG}$
+% \textbf{Ansatz 1:}
+% Wir modelieren die gerade Verbindung zwischen den Punkten $F$ und $G$ als Gerade $g$, mit der folgenden Geradengleichung: 
+% \begin{equation*}
+%     \begin{array}{ c c l }
+%     g: & \vec{x} & =\vec{f} +\lambda \cdotp \overrightarrow{FG}\\
+%     g_{FG} : & \vec{x} & =\begin{pmatrix}[1]
+%     3\\
+%     -1\\
+%     6
+%     \end{pmatrix} +\lambda \begin{pmatrix}[1]
+%     3-3\\
+%     8-( -1)\\
+%     3-6
+%     \end{pmatrix}\\
+%     &  & =\begin{pmatrix}[1]
+%     3\\
+%     -1\\
+%     6
+%     \end{pmatrix} +\lambda \begin{pmatrix}[1]
+%     0\\
+%     9\\
+%     -3
+%     \end{pmatrix}
+%     \end{array}
+% \end{equation*}
+% Für den Abstand $d( \lambda )$ zwischen dem Punkt $A$ und einem beliebigen Punkt $H\in g$ ist 
+% \begin{equation*}
+% \begin{array}{ c c l }
+% d( \lambda ) & = & \sqrt{(( 3+\lambda \cdotp 0) -( -3))^{2} +(( -1+\lambda \cdotp 9) -2)^{2} +(( 6+\lambda \cdotp ( -3)) -0)^{2}}\\
+%  & = & \sqrt{6^{2} +( \lambda \cdotp 9-3)^{2} +( 6-3\lambda )^{2}}\\
+%  & = & \sqrt{36+9\lambda ^{2} -54\lambda +9+36-36\lambda +9\lambda ^{2}}\\
+%  & = & \sqrt{81+18\lambda ^{2} -90\lambda }\\
+%  & = & \sqrt{81+18\lambda ^{2} -90\lambda }
+% \end{array}
+% \end{equation*}
+% Es gilt das Minimum der Abstandsfunktion $d( \lambda )$ zu bestimmen. Da ein Abstand immer positiv ist, kann auch das Minimum von $d^{2}( \lambda )$ bestimmt werden.
+% \begin{equation*}
+% \begin{array}{ c c }
+% d^{2}( \lambda ) & =18\lambda ^{2} -90\lambda +81
+% \end{array}
+% \end{equation*}
+% Das Minimum der Parabel liegt am Scheitelpunkt $S$
+% \begin{equation*}
+% \begin{array}{ c l }
+% S & =\left( -\frac{90}{2\cdotp 18}\middle| 81-\frac{90^{2}}{4\cdotp 18}\right)\\
+%  & =\left( -\frac{5}{2}\middle| -\frac{63}{2}\right)
+% \end{array}
+% \end{equation*}
+% Somit ist der minimale Abstand an der Stelle $\lambda =-\frac{5}{2}$. Daraus folgt für den Punkt $H\in g$:
+% \begin{equation*}
+% \begin{array}{ c l }
+% \vec{h} & =\begin{pmatrix}[1]
+% 3\\
+% -1\\
+% 6
+% \end{pmatrix} -\frac{5}{2}\begin{pmatrix}[1]
+% 0\\
+% 9\\
+% -3
+% \end{pmatrix}\\
+%  & =\begin{pmatrix}[1]
+% 3\\
+% \frac{-43}{2}\\
+% \frac{27}{2}
+% \end{pmatrix}
+% \end{array}
+% \end{equation*}
+% Mit dem Abstand $| \vec{h}| =\sqrt{3^{2} +\left(\frac{-43}{2}\right)^{2} +\left(\frac{27}{2}\right)^{2}} \approx 25,5636\dotsc $
 
+
+
+% \textbf{Ansatz 2}
+
+Für den Abstand $d$ zwischen dem Punkt $A$ und der Geraden $g_{FG}$ gilt allgemein:
 \begin{equation*}
-    \left| \vec{Af} \right| = 5,8
+    d=\frac{| (\vec{a} -\vec{f}) \times \overrightarrow{FG}| }{| \overrightarrow{FG}| }
 \end{equation*}
+In diesem Fall also:
+\begin{equation*}
+    \begin{array}{ c l }
+    d & =\frac{\left| \left(\begin{pmatrix}[1]
+    -3\\
+    2\\
+    0
+    \end{pmatrix} -\begin{pmatrix}[1]
+    3\\
+    -1\\
+    6
+    \end{pmatrix}\right) \times \begin{pmatrix}[1]
+    0\\
+    9\\
+    -3
+    \end{pmatrix}\right| }{\left| \begin{pmatrix}[1]
+    0\\
+    9\\
+    -3
+    \end{pmatrix}\right| }\\
+    & =\frac{\left| \begin{pmatrix}[1]
+    -6\\
+    3\\
+    -6
+    \end{pmatrix} \times \begin{pmatrix}[1]
+    0\\
+    9\\
+    -3
+    \end{pmatrix}\right| }{\sqrt{81+9}}\\
+    & =\frac{\left| \begin{pmatrix}[1]
+    45\\
+    -18\\
+    -54
+    \end{pmatrix}\right| }{\sqrt{90}}\\
+    & =\frac{\sqrt{45^{2} +( -18)^{2} +( -54)^{2}}}{\sqrt{90}}\\
+    & =\sqrt{\frac{45^{2} +18^{2} +54^{2}}{90}}\\
+    & =\sqrt{\frac{117}{2}}\\
+    & \approx 7,6485\dotsc 
+    \end{array}
+\end{equation*}
+
+Da aber nach der Position von dem Punkt $H$ und nicht nach der Distanz gefragt war, muss so vorgegangen werden:
+
+Die orthogonale Projektion von $\vec{FG}$ auf $\vec{FA}$
+
+\begin{gather*}
+    \overrightarrow{FG} :=a=\begin{pmatrix}[1]
+    3-3\\
+    ( -1) -8\\
+    6-3
+    \end{pmatrix} =\begin{pmatrix}[1]
+    0\\
+    -9\\
+    3
+    \end{pmatrix}\\
+    \overrightarrow{FA} :=b=\begin{pmatrix}[1]
+    3-( -3)\\
+    ( -1) -2\\
+    6-0
+    \end{pmatrix} =\begin{pmatrix}[1]
+    6\\
+    -3\\
+    6
+    \end{pmatrix}\\
+    \\
+    a_{b} =\frac{\langle a,b\rangle }{|| b| |} \cdotp b\\
+    \\
+    \Rightarrow a_{b} =\frac{0+27+18}{\sqrt{6^{2} +( -3)^{2} +6^{2}}} \cdotp \begin{pmatrix}[1]
+    6\\
+    -3\\
+    6
+    \end{pmatrix} =\frac{45}{\sqrt{81}} \cdotp \begin{pmatrix}[1]
+    6\\
+    -3\\
+    6
+    \end{pmatrix} =5\cdotp \begin{pmatrix}[1]
+    6\\
+    -3\\
+    6
+    \end{pmatrix} =\begin{pmatrix}[1]
+    30\\
+    -15\\
+    30
+    \end{pmatrix}
+\end{gather*}    
+
+
 
 \end{document}
