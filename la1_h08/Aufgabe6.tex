@@ -1,0 +1,126 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 6}
+Zeigen Sie, dass die folgenden Mengen keine Vektorräume über $\mathbb{R}$ bilden.
+
+\begin{enumerate}
+    \item \begin{gather*}
+        V=\mathbb{R}^{3}\text{ mit} \notag\\
+        \notag\\
+        x+y=\begin{pmatrix}[1]
+        x_{1}\\
+        x_{2}\\
+        x_{3}
+        \end{pmatrix} +\begin{pmatrix}[1]
+        y_{1}\\
+        y_{2}\\
+        y_{3}
+        \end{pmatrix} =\begin{pmatrix}[1]
+        x_{1} +y_{1}\\
+        x_{2} +y_{2}\\
+        x_{3} +y_{3}
+        \end{pmatrix}\text{ und} \notag\\
+        \notag\\
+        \textcolor[rgb]{0.96,0.65,0.14}{\lambda } x=\textcolor[rgb]{0.96,0.65,0.14}{\lambda }\begin{pmatrix}[1]
+        x_{1}\\
+        x_{2}\\
+        x_{3}
+        \end{pmatrix} =\begin{pmatrix}[1]
+        \textcolor[rgb]{0.96,0.65,0.14}{\lambda } x_{1}\\
+        x_{2}\\
+        x_{3}
+        \end{pmatrix}
+    \end{gather*}
+    \item \begin{gather*}
+        V=\mathbb{R}^{3}\text{ mit} \notag\\
+        \notag\\
+        x+y=\begin{pmatrix}[1]
+        x_{1}\\
+        x_{2}\\
+        x_{3}
+        \end{pmatrix} +\begin{pmatrix}[1]
+        y_{1}\\
+        y_{2}\\
+        y_{3}
+        \end{pmatrix} =\begin{pmatrix}[1]
+        x_{1} +y_{1}\\
+        x_{2} +y_{2}\\
+        x_{3} +y_{3}
+        \end{pmatrix}\text{ und} \notag\\
+        \notag\\
+        \lambda x=\lambda \begin{pmatrix}[1]
+            x_{1}\\
+            x_{2}\\
+            x_{3}
+            \end{pmatrix} =\begin{pmatrix}[1]
+            0\\
+            0\\
+            0
+        \end{pmatrix}
+    \end{gather*}
+    \item $V=\{x\in \mathbb{R}^{n} |x_{1} \geq 0\}$ mit der Addition und skalaren Multiplikation des $\mathbb{R}^{n}$.
+\end{enumerate}
+
+\subsection{Lösung 6a}
+Axiom 5
+\begin{equation*}
+    \forall \lambda ,\mu \in K,x\in V:( \lambda +\mu ) \odot x=( \lambda \odot x) \oplus ( \mu \odot x)
+\end{equation*}
+verletzt, da
+\begin{equation*}
+    \begin{array}{ c l }
+    \begin{pmatrix}[1]
+    ( \lambda +\mu ) x_{1}\\
+    x_{2}\\
+    x_{3}
+    \end{pmatrix} & =\begin{pmatrix}[1]
+    \lambda x_{1}\\
+    x_{2}\\
+    x_{3}
+    \end{pmatrix} +\begin{pmatrix}[1]
+    \mu x_{1}\\
+    x_{2}\\
+    x_{3}
+    \end{pmatrix}\\
+    & =\begin{pmatrix}[1]
+    ( \lambda +\mu ) x_{1}\\
+    2x_{2}\\
+    2x_{3}
+    \end{pmatrix} \ \lightning 
+    \end{array}
+\end{equation*}
+Da $x_{2} \neq 2x_{2}$ und $x_{3} \neq 2x_{3}$.
+
+
+\subsection{Lösung 6b}
+Axiom 3
+\begin{equation*}
+    \forall x\in V:\mathbb{1} \odot x=x
+\end{equation*}
+(mit $\mathbb{1}$ als dem neutralen Element der Multiplikation) verletzt, da für jedes $x \neq {(0, 0, 0)}^{T}$ 
+\begin{equation*}
+    \mathbb{1} \odot x=\begin{pmatrix}[1]
+    0\\
+    0\\
+    0
+    \end{pmatrix} \neq x
+\end{equation*}
+
+
+\subsection{Lösung 6c}
+Abgeschlossenheit verletzt.
+
+Sei $n=2,\ \lambda =-1,\ x_{1} \neq 0$
+\begin{equation*}
+    -1\cdotp \begin{pmatrix}[1]
+    x_{1}\\
+    x_{2}
+    \end{pmatrix} =\underbrace{\begin{pmatrix}[1]
+    -x_{1}\\
+    -x_{2}
+    \end{pmatrix}}_{\notin V}
+\end{equation*}
+
+\end{document}
