@@ -10,28 +10,28 @@ $x_{1} ,\ \dotsc ,\ x_{n}$ seien linear unabhängige Vektoren aus einem $K$-Vekt
 
 \begin{equation*}
     \begin{array}{ c l }
-    0 & =\sum\limits _{i=1}^{n} \lambda _{i}( x-x_{i})\\
-    & =\sum\limits _{i=1}^{n}( \lambda _{i} x) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
-    & =x\cdotp \sum\limits _{i=1}^{n}( \lambda _{i}) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
-    & =\sum\limits _{i=1}^{n}( \mu _{i} x_{i}) \cdotp \sum\limits _{i=1}^{n}( \lambda _{i}) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
-    & =\sum\limits _{i=1}^{n}\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i} x_{i}\right) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
-    & =\sum\limits _{i=1}^{n}\left(\left(\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}\right) -\sum\limits _{i=1}^{n}( \lambda _{i})\right) x_{i}\right)
+        0 & =\sum\limits _{i=1}^{n} \lambda _{i}( x-x_{i})\\
+        & =\sum\limits _{i=1}^{n}( \lambda _{i} x) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
+        & =x\cdotp \sum\limits _{i=1}^{n}( \lambda _{i}) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
+        & =\sum\limits _{i=1}^{n}( \mu _{i} x_{i}) \cdotp \sum\limits _{i=1}^{n}( \lambda _{i}) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
+        & =\sum\limits _{i=1}^{n}\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i} x_{i}\right) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
+        & =\sum\limits _{i=1}^{n}\left(\left(\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}\right) -\sum\limits _{i=1}^{n}( \lambda _{i})\right) x_{i}\right)
     \end{array}
 \end{equation*}
 Aus der linearen Unabhängigkeit folgt:
 \begin{equation*}
     \begin{array}{ c r l }
-    & 0 & =\sum\limits _{i=1}^{n}\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}\right) -\sum\limits _{i=1}^{n}( \lambda _{i})\\
-    \Leftrightarrow  & \sum\limits _{i=1}^{n} \lambda _{i} & =\sum\limits _{i=1}^{n}\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}\right)\\
-    \Rightarrow  & \forall i\in [ 1;n] : & \lambda _{i} =\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}
+        & 0 & =\sum\limits _{i=1}^{n}\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}\right) -\sum\limits _{i=1}^{n}( \lambda _{i})\\
+        \Leftrightarrow  & \sum\limits _{i=1}^{n} \lambda _{i} & =\sum\limits _{i=1}^{n}\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}\right)\\
+        \Rightarrow  & \forall i\in [ 1;n] : & \lambda _{i} =\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}
     \end{array}
 \end{equation*}
 Außerdem gilt
 \begin{equation*}
     \begin{array}{ c c l }
-    & \sum\limits _{i=1}^{n} \lambda _{i} & =\sum\limits _{i=1}^{n}\left( \mu _{i} \cdotp \sum\limits _{j=1}^{n} \lambda _{j}\right)\\
-    \Leftrightarrow  & 0 & =\sum\limits _{i=1}^{n}\left( \mu _{i} \cdotp \sum\limits _{j=1}^{n} \lambda _{j}\right) -\sum\limits _{i=1}^{n} \lambda _{i}\\
-    \Leftrightarrow  & 0 & =\sum\limits _{i=1}^{n} \lambda _{i} \cdotp \left(\sum\limits _{i=1}^{n}( \mu _{i}) -1\right)
+        & \sum\limits _{i=1}^{n} \lambda _{i} & =\sum\limits _{i=1}^{n}\left( \mu _{i} \cdotp \sum\limits _{j=1}^{n} \lambda _{j}\right)\\
+        \Leftrightarrow  & 0 & =\sum\limits _{i=1}^{n}\left( \mu _{i} \cdotp \sum\limits _{j=1}^{n} \lambda _{j}\right) -\sum\limits _{i=1}^{n} \lambda _{i}\\
+        \Leftrightarrow  & 0 & =\sum\limits _{i=1}^{n} \lambda _{i} \cdotp \left(\sum\limits _{i=1}^{n}( \mu _{i}) -1\right)
     \end{array}
 \end{equation*}
 
@@ -49,5 +49,23 @@ Aus $\sum\nolimits _{i=1}^{n} \lambda _{i} =0$ und $\sum\nolimits _{i=1}^{n} \la
     & =\sum\limits _{i=1}^{n} \lambda _{i} x_{i} \ \checked 
     \end{array}
 \end{equation*}
+
+Aus den folgenden Informationen
+\begin{gather*}
+    0=\sum\limits _{i=1}^{n}( \lambda _{i} x) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
+    \\
+    \sum\limits _{i=1}^{n} \lambda _{i} =0\\
+    \\
+    \sum\limits _{i=1}^{n} \lambda _{i} x_{i} =0
+\end{gather*}
+lässt sich nun (beinahe) zeigen, dass
+\begin{equation*}
+    \begin{array}{ c r l }
+        & 0= & x\cdotp \sum\limits _{i=1}^{n}( \lambda _{i}) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
+        \Leftrightarrow  & 0= & x\cdotp \sum\limits _{i=1}^{n}( \lambda _{i})\\
+        \Rightarrow  & \forall i\in [ 1;n] : & \lambda _{i} =0
+    \end{array}
+\end{equation*}
+
 
 \end{document}
