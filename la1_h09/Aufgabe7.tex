@@ -1,0 +1,53 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 7}
+
+$x_{1} ,\ \dotsc ,\ x_{n}$ seien linear unabhängige Vektoren aus einem $K$-Vektorraum $V$. Weiter sei $x=\sum _{i=1}^{n} \mu _{i} x_{i}$ und $\mu _{i} \in K$ für alle $i=1,\ \dotsc ,\ n$. Es ist zu zeigen, dass unter der Voraussetzung $\sum _{i=1}^{n} \mu _{i} \ \neq 1$ die Vektoren $x-x_{1} ,\ \dotsc x-x_{n}$ linear unabhängig sind.
+
+\subsection{Lösung 7a}
+
+\begin{equation*}
+    \begin{array}{ c l }
+    0 & =\sum\limits _{i=1}^{n} \lambda _{i}( x-x_{i})\\
+    & =\sum\limits _{i=1}^{n}( \lambda _{i} x) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
+    & =x\cdotp \sum\limits _{i=1}^{n}( \lambda _{i}) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
+    & =\sum\limits _{i=1}^{n}( \mu _{i} x_{i}) \cdotp \sum\limits _{i=1}^{n}( \lambda _{i}) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
+    & =\sum\limits _{i=1}^{n}\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i} x_{i}\right) -\sum\limits _{i=1}^{n}( \lambda _{i} x_{i})\\
+    & =\sum\limits _{i=1}^{n}\left(\left(\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}\right) -\sum\limits _{i=1}^{n}( \lambda _{i})\right) x_{i}\right)
+    \end{array}
+\end{equation*}
+Aus der linearen Unabhängigkeit folgt:
+\begin{equation*}
+    \begin{array}{ c r l }
+    & 0 & =\sum\limits _{i=1}^{n}\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}\right) -\sum\limits _{i=1}^{n}( \lambda _{i})\\
+    \Leftrightarrow  & \sum\limits _{i=1}^{n} \lambda _{i} & =\sum\limits _{i=1}^{n}\left(\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}\right)\\
+    \Rightarrow  & \forall i\in [ 1;n] : & \lambda _{i} =\sum\limits _{j=1}^{n}( \lambda _{j}) \cdotp \mu _{i}
+    \end{array}
+\end{equation*}
+Außerdem gilt
+\begin{equation*}
+    \begin{array}{ c c l }
+    & \sum\limits _{i=1}^{n} \lambda _{i} & =\sum\limits _{i=1}^{n}\left( \mu _{i} \cdotp \sum\limits _{j=1}^{n} \lambda _{j}\right)\\
+    \Leftrightarrow  & 0 & =\sum\limits _{i=1}^{n}\left( \mu _{i} \cdotp \sum\limits _{j=1}^{n} \lambda _{j}\right) -\sum\limits _{i=1}^{n} \lambda _{i}\\
+    \Leftrightarrow  & 0 & =\sum\limits _{i=1}^{n} \lambda _{i} \cdotp \left(\sum\limits _{i=1}^{n}( \mu _{i}) -1\right)
+    \end{array}
+\end{equation*}
+
+Da $\sum _{i=1}^{n} \mu _{i} \ \neq 1$ ist, muss $\sum\nolimits _{i=1}^{n} \lambda _{i} =0$ gelten.
+
+\subsection{Lösung 7b}
+
+Aus $\sum\nolimits _{i=1}^{n} \lambda _{i} =0$ und $\sum\nolimits _{i=1}^{n} \lambda _{i}( x-x_{i}) =0$ folgt
+\begin{equation*}
+    \begin{array}{ c l }
+    0 & =\sum\limits _{i=1}^{n} \lambda _{i}( x-x_{i})\\
+    & =\sum\limits _{i=1}^{n} \lambda _{i} x-\sum\limits _{i=1}^{n} \lambda _{i} x_{i}\\
+    & =x\cdotp \underbrace{\sum\limits _{i=1}^{n} \lambda _{i}}_{=0} -\sum\limits _{i=1}^{n} \lambda _{i} x_{i}\\
+    & =-\sum\limits _{i=1}^{n} \lambda _{i} x_{i}\\
+    & =\sum\limits _{i=1}^{n} \lambda _{i} x_{i} \ \checked 
+    \end{array}
+\end{equation*}
+
+\end{document}

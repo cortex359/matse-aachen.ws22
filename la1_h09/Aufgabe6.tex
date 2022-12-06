@@ -1,0 +1,111 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\arraycolsep=1pt\def\arraystretch{1} % streach array
+
+\section{Aufgabe 6}
+
+Untersuchen Sie, ob die folgenden Systeme von Vektoren des $\mathbb{R}^{n}$ linear abhängig oder unabhängig sind.
+
+\begin{enumerate}
+    \item $\begin{pmatrix}[1]
+        4\\
+        -1\\
+        2
+        \end{pmatrix} ,\begin{pmatrix}[1]
+        -4\\
+        10\\
+        2
+        \end{pmatrix}$
+    \item  $\begin{pmatrix}[1]
+        -2\\
+        0\\
+        1
+        \end{pmatrix} ,\ \begin{pmatrix}[1]
+        3\\
+        2\\
+        5
+        \end{pmatrix} ,\begin{pmatrix}[1]
+        6\\
+        -1\\
+        1
+        \end{pmatrix} ,\begin{pmatrix}[1]
+        4\\
+        0\\
+        2
+        \end{pmatrix}$
+    \item $\begin{pmatrix}[1]
+        0\\
+        0\\
+        2\\
+        2
+        \end{pmatrix} ,\begin{pmatrix}[1]
+        3\\
+        3\\
+        0\\
+        0
+        \end{pmatrix} ,\begin{pmatrix}[1]
+        1\\
+        1\\
+        0\\
+        -1
+        \end{pmatrix}$
+\end{enumerate}
+
+\subsection{Lösung 6a}
+
+Wären die beiden Vektoren linear abhängig, dann würde gelten: $\exists \ \lambda $, sodass gilt:
+
+\begin{equation*}
+    \lambda \cdotp \begin{pmatrix}[1]
+    4\\
+    -1\\
+    2
+    \end{pmatrix} =\begin{pmatrix}[1]
+    -4\\
+    10\\
+    2
+    \end{pmatrix} \ \begin{array}{ r r l c }
+    & \lambda  & =-1 & \\
+    & \lambda  & =-10 & \lightning \\
+    & \lambda  & =1 & \lightning 
+    \end{array}
+\end{equation*}
+Da $\lambda \cdotp 4=-4\ \land \lambda \cdotp ( -1) =10\land \lambda \cdotp 2=2\ \lightning $, also kein $\lambda $ existiert, welches die Gleichung erfüllen könnte, müssen die Vektoren linear unabhängig sein.
+
+
+\subsection{Lösung 6b}
+
+Die vier gegebenen Vektoren aus dem $\mathbb{R}^{3}$ müssen zwangsläufig linear abhängig voneinander sein, da maximal $\dim\left(\mathbb{R}^{3}\right) =3$ Vektoren linear unabhängig aus dem Vektorraum sein können. 
+
+\subsection{Lösung 6c}
+
+Wären die drei Vektoren linear abhängig, dann würde gelten: $\exists \ \lambda ,\mu $, sodas gilt:
+\begin{equation*}
+    \lambda \cdotp \begin{pmatrix}[1]
+    0\\
+    0\\
+    2\\
+    2
+    \end{pmatrix} +\mu \begin{pmatrix}[1]
+    3\\
+    3\\
+    0\\
+    0
+    \end{pmatrix} =\begin{pmatrix}[1]
+    1\\
+    1\\
+    0\\
+    -1
+    \end{pmatrix} \ \begin{array}[1]{ r r l c }
+    & \mu  & =1/3 & \\
+    & \mu  & =1/3 & \\
+    & \lambda  & =0 & \\
+    & \lambda  & =-1/2 & \lightning 
+    \end{array}
+\end{equation*}
+
+Da $\lambda \cdotp 2=0\land \lambda \cdotp 2=-1\ \lightning$ sind die Vektoren linear unabhängig. 
+
+\end{document}

@@ -1,0 +1,98 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\arraycolsep=1.2pt\def\arraystretch{1.2} % streach array
+
+\section{Aufgabe 8}
+
+Schreiben Sie das Polynom $v( t) =t^{2} +4t-3$ auf $\mathbb{R}$ als eine Linearkombination der Polynome $e_{1}( t) =t^{2} -2t+5,\ e_{2}( t) =2t^{2} -3t$ und $e_{3}( t) =t+3$.
+
+\subsection{Lösung 8}
+
+Gesucht sind $\alpha ,\beta ,\gamma $ sodass gilt:
+\begin{equation*}
+    v( t) =\alpha \cdotp e_{1}( t) +\beta \cdotp e_{2}( t) +\gamma \cdotp e_{3}( t)
+\end{equation*}
+
+Aus den gegebenen Polynomen lässt sich die folgende Koeffizientenmatrix des LGS aufstellen (die Spalten entsprechen den Polynomen $e_1, e_2, e_3$ und die Ergebnisspalte dem Polynom $v$):
+
+\begin{equation*}
+    \begin{array}{ c l }
+    \begin{array}{l}
+        \begin{pmatrix}
+        1 & 2 & 0 & 1\\
+        -2 & -3 & 1 & 4\\
+        5 & 0 & 3 & -3
+        \end{pmatrix}
+    \end{array} & \begin{array}{l}
+    \begin{array}{ l }
+    \\
+    +2\cdotp I\\
+    +2\cdotp II-I
+    \end{array}
+    \end{array}\vspace{0.4cm}\\
+    \begin{pmatrix}
+    1 & 2 & 0 & 1\\
+    0 & 1 & 1 & 6\\
+    0 & -8 & 5 & 4
+    \end{pmatrix} & \begin{array}{ l }
+    \\
+    \\
+    +8\cdotp II
+    \end{array}\vspace{0.4cm}\\
+    \begin{pmatrix}
+    1 & 2 & 0 & 1\\
+    0 & 1 & 1 & 6\\
+    0 & 0 & 13 & 52
+    \end{pmatrix} & \begin{array}{ l }
+    \\
+    \\
+    :13
+    \end{array}\vspace{0.4cm}\\
+    \begin{pmatrix}
+    1 & 2 & 0 & 1\\
+    0 & 1 & 1 & 6\\
+    0 & 0 & 1 & 4
+    \end{pmatrix} & \begin{array}{ l }
+    \\
+    -\ III\\
+    \\
+    \end{array}\vspace{0.4cm}\\
+    \begin{pmatrix}
+    1 & 2 & 0 & 1\\
+    0 & 1 & 0 & 2\\
+    0 & 0 & 1 & 4
+    \end{pmatrix} & \begin{array}{ l }
+    -2\cdotp II\\
+    \\
+    \\
+    \end{array}\vspace{0.4cm}\\
+    \begin{pmatrix}
+    1 & 0 & 0 & -3\\
+    0 & 1 & 0 & 2\\
+    0 & 0 & 1 & 4
+    \end{pmatrix} & \begin{array}{ l }
+    \\
+    \\
+    \\
+    \end{array}
+    \end{array}
+\end{equation*}
+
+$\Rightarrow \ \alpha =-3,\ \beta =2,\ \gamma =4$
+
+\arraycolsep=1.4pt\def\arraystretch{2.2} % streach array
+
+\begin{equation*}
+    \begin{array}{ c r l }
+        & v( t) = & \alpha \cdotp e_{1}( t) +\beta \cdotp e_{2}( t) +\gamma \cdotp e_{3}( t)\\
+        \Rightarrow  & v( t) = & -3\cdotp e_{1}( t) +2\cdotp e_{2}( t) +4\cdotp e_{3}( t)\\
+        \Rightarrow  & v( t) = & -3\cdotp \left( t^{2} -2t+5\right) +2\cdotp \left( 2t^{2} -3t\right) +4\cdotp ( t+3)\\
+        & = & -3t^{2} +6t-15+4t^{2} -6t+4t+12\\
+        & = & t^{2} +4t-3\ \checked 
+    \end{array}
+\end{equation*}
+
+
+\end{document}
