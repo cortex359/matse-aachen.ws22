@@ -1,0 +1,69 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\arraycolsep=1pt\def\arraystretch{1} % streach array
+
+
+\section{Aufgabe 6}
+Bestimmen Sie das orthogonale Komplement $L^{\perp }$ zu $L$, der linearen Hülle der gegebenen Vektoren.
+\begin{equation*}
+    \left\{\begin{pmatrix}[1]
+    1\\
+    1\\
+    1\\
+    1
+    \end{pmatrix} ,\ \begin{pmatrix}[1]
+    1\\
+    -1\\
+    1\\
+    -1
+    \end{pmatrix} ,\ \begin{pmatrix}[1]
+    1\\
+    1\\
+    1\\
+    -1
+    \end{pmatrix}\right\}
+\end{equation*}
+
+Welche Dimension besitzt $L^{\perp }$?
+
+\subsection{Lösung 6}
+Sei $V=\mathbb{R}^{4}$ und nach Definition $L^{\perp } =\{x\in V|< x,l> =0\}$ so erhalten wir ein LGS, dessen erweiterte Koeffizientenmatrix mit Gauß zu lösen ist:
+
+
+\begin{equation*}
+    \begin{array}{ r l }
+    \begin{pmatrix}[1]
+    1 & 1 & 1 & 1 & 0\\
+    1 & -1 & 1 & -1 & 0\\
+    1 & 1 & 1 & -1 & 0
+    \end{pmatrix} & \begin{array}{ l }
+    \\
+    +I\cdotp ( -1)\\
+    +I\cdotp ( -1)
+    \end{array}\vspace*{4mm}\\
+    \begin{pmatrix}[1]
+    1 & 1 & 1 & 1 & 0\\
+    0 & -2 & 0 & -2 & 0\\
+    0 & 0 & 0 & -2 & 0
+    \end{pmatrix} & \begin{array}{ l }
+    \Rightarrow x_{3} =-x_{1}\\
+    \Rightarrow x_{2} =0\\
+    \Rightarrow x_{4} =0
+    \end{array}
+    \end{array}
+\end{equation*}
+$\Rightarrow $
+\begin{equation*}
+    L^{\perp } =\left\{x_{1} \cdotp \begin{pmatrix}[1]
+    1\\
+    0\\
+    -1\\
+    0
+    \end{pmatrix}\middle| x_{1} \in \mathbb{R}\right\}
+\end{equation*}
+
+Aus den zwei, von $0$ verschiedenen Komponenten, lässt sich ablesen, dass für die Dimension des orthogonale Komplements zu $L$ gilt: $\dim\left( L^{\perp }\right) =2$.
+
+\end{document}
