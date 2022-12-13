@@ -1,0 +1,258 @@
+%%%                                                                         %%%
+%%%    Vorlage für Hausaufgaben und Übungen                                 %%%
+%%%   ======================================                                %%%
+%%%                                                                         %%%
+%%%    Version:                                                   v1.2.0    %%%
+%%%                                            2022-11-13, 12:11 Uhr CET    %%%
+%%%                                                                         %%%
+%%%    Erstellt von:                  Christian Rene Thelen (@cortex359)    %%%
+%%%               https://cortex359.de <christian.thelen@rwth-aachen.de>    %%%
+%%%                                                                         %%%
+%%%                                                                         %%%
+
+\documentclass[12pt,a4paper]{article}
+
+%%%%%%%%%%%%%%% Deutsch %%%%%%%%%%%%%%%
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+%\usepackage[ansinew]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Verfeinerungen des Schriftbildes durch Grauwertausgleich etc.
+\usepackage[babel=true,
+nopatch=eqnum,
+tracking=true,
+kerning=true,
+final
+]{microtype}
+
+%%%%%%%%%%%%%%% AMS %%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\usepackage{makeidx}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+%\usepackage{etex}  % wird für das Symbol beim beweis-Theorem benötigt
+
+\usepackage{framed} % braucht man für die gerahmten Boxen
+
+%%%% erweiterte Umgebung für Theoreme
+\usepackage[amsmath, standard, framed, thmmarks]{ntheorem}
+
+%%% für schräge Brüche in Arrays im Math-mode
+\usepackage{xfrac}
+\usepackage{nicefrac}
+
+\definecolor{gruen}{rgb}{0,0.7,0}
+
+% Skript: dunkelblau
+\definecolor{idxfarbe}{rgb}{0.0,0.0,0.4}
+
+\definecolor{fhcyan}{rgb}{0,0.69411,0.6745}
+\definecolor{fhdarkcyan}{rgb}{0,0.49411, 0.4745}
+\definecolor{fhlightcyan}{rgb}{0.4,0.89411, 0.8745}
+\definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
+\definecolor{defcolor}{RGB}{195,62,62}
+\definecolor{red}{rgb}{0.9,0,0}
+\definecolor{td-blue}{cmyk}{   0.9,    1,    0,    0}  % ThelenDesign Blau
+\definecolor{td-orange}{cmyk}{0.02, 0.35, 0.89, 0.04}  % ThelenDesign Orange
+
+\usepackage[
+naturalnames=true,  % mre 090528 beseitigt \ref Problem in Mik2.7
+colorlinks=true,
+hyperindex=true,
+bookmarks=true,
+bookmarksnumbered=true,
+filecolor=fhcyan,
+breaklinks,
+urlcolor=fhcyan,
+linkcolor=td-blue
+]{hyperref}
+
+%~ prevent overfull lines ~%
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}
+
+\parindent0cm
+
+\definecolor{grau}{gray}{0.4}
+
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{0}
+
+% Index erzeugen lassen
+\makeindex
+
+% Serifenschrift: Palatino anstelle der Standard-Schrift
+\usepackage[sc]{mathpazo}
+
+% serifenlose Schrift: Helvetica anstelle der Standardschrift
+% Die Formeln auf den Folien werden dadurch besser lesbar.
+\usepackage[scaled=.95]{helvet}
+
+% Schriftart Courier anstelle der Standardschrift für Maschinenschrift
+\usepackage{courier}
+
+\usepackage{listings}
+% nötig, um in Formeln Kreise um Zahlen zu ermöglichen
+\usepackage{tikz}
+
+\usepackage{relsize}
+
+%---- Part 2 ----%
+
+% Seiten Geometrie
+\usepackage[a4paper,
+includehead,% See below for an explanation
+nomarginpar,% We don't want any margin paragraphs
+headheight=28pt, % Set \headheight to 16pt to avoid fancyhr warnings
+top=25mm,
+bottom=25mm,
+left=25mm,
+right=25mm
+]{geometry}
+
+% Zeitstempel der letzten Modifikation
+\usepackage{filemod}
+
+\usepackage{rotating}
+\usepackage{pstricks}
+
+\usepackage{siunitx} % für SI Einheiten
+\sisetup{locale = DE}
+
+%\usepackage{physics}
+
+\usepackage{mathdots}
+\usepackage{yhmath}
+\usepackage{cancel}
+\usepackage{color}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amssymb}
+%\usepackage{gensymb}
+%\usepackage{tabularx}
+\usepackage{extarrows}
+\usepackage{booktabs}
+
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+
+\usepackage{stmaryrd}
+
+% Missing Symbols
+\usepackage{upgreek}
+
+% Seitennummerierung
+\usepackage{lastpage}
+
+% Kopf und Fußzeilen
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% Subfiles
+\usepackage{xr}
+\usepackage{subfiles}
+\externaldocument[M-]{\subfix{main}} % Cross-referencing between subfiles
+
+%---- Customs ----%
+\newcommand{\checked}{\checkmark} % for compatibility with mathcha.io exports
+\newcommand*{\eqdef}{\stackrel{\text{def}}{=}}
+\newcommand*{\questeq}{\overset{?}{=}}
+\newcommand*{\defeq}{\overset{?}{=}}
+\renewcommand{\cdotp}{\cdot} % for compatibility with mathcha.io exports
+\renewcommand{\vec}{\overrightarrow} % Darstellung von Vektoren
+\renewcommand{\labelenumi}{\alph{enumi})} % task list with a) b) c) ...
+
+% Standardmäßige Vergrößerung normaler Arrays
+\arraycolsep=1.4pt\def\arraystretch{2.2} % streach array
+% Anpassbarkeit von Matrizen und Vektoren
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+  \edef\arraystretch{#1}%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{*\c@MaxMatrixCols c}}
+\makeatother
+
+\newcommand{\hausaufgabe}[3]{
+  \fancyhead[L]{\textbf{\module}\\\textbf{\semester}}
+  \fancyhead[C]{\textbf{Hausaufgaben}\\\textbf{Blatt #1}}
+  \fancyhead[R]{Ausgabe: #2\\Abgabe: #3}
+
+  \hypersetup{
+    pdfprintscaling=,        % siehe https://komascript.de/node/1897
+    breaklinks=true,         %
+    colorlinks=true,         % false: boxed links; true: colored links
+    unicode=true,            % non-Latin characters in Acrobat’s bookmarks
+    pdfnewwindow=true,       % links in new window
+    pdftitle={\module: Hausaufgabenblatt #1},
+    pdfsubject={Aufgaben vom #2, Abgabe am #3},
+    pdfkeywords={Hausaufgaben, \module},
+    pdfauthor={Christian Rene Thelen}, % author
+    pdfcreator={cortex359 v1.2}, % creator of the document
+    pdfproducer={cortex359 / Christian Rene Thelen}, % producer of the document
+    linkcolor=td-blue,       % color of internal links
+                             %   (change box color with linkbordercolor)
+    citecolor=td-blue,       % color of links to bibliography
+    filecolor=td-blue,       % color of file links
+    urlcolor=td-blue,        % color of external links
+    menucolor=td-blue
+  }
+
+}
+
+%---- Header ---%
+\fancyhf{}
+\newcommand{\semester}{WiSe 2022/2023}
+
+%\newcommand{\module}{Lineare Algebra 1}
+\newcommand{\module}{Analysis 1}
+
+%\hausaufgabe{01}{05.10.2022}{11.10.2022}
+%\hausaufgabe{02}{12.10.2022}{18.10.2022}
+%\hausaufgabe{03}{19.10.2022}{25.10.2022}
+%\hausaufgabe{04}{26.10.2022}{01.11.2022}
+%\hausaufgabe{05}{02.11.2022}{08.11.2022}
+%\hausaufgabe{06}{09.11.2022}{15.11.2022}
+%\hausaufgabe{07}{16.11.2022}{22.11.2022}
+%\hausaufgabe{08}{23.11.2022}{29.11.2022}
+\hausaufgabe{09}{30.11.2022}{06.12.2022}
+%\hausaufgabe{10}{07.12.2022}{13.12.2022}
+%\hausaufgabe{11}{14.12.2022}{03.01.2023}
+%\hausaufgabe{12}{04.01.2023}{10.01.2023}
+
+%--- Footer ----%
+\newcommand{\lastMod}{
+    \Filemodtoday{\filemodNewest{{Aufgabe1.tex}{Aufgabe2.tex}{Aufgabe3.tex}{Aufgabe4.tex}{Aufgabe5.tex}}}
+    %\Filemodtoday{\filemodNewest{{Aufgabe6.tex}{Aufgabe7.tex}{Aufgabe8.tex}}}
+}
+\date{\lastMod{}}
+\author{Christian Rene Thelen}
+
+\makeatletter
+\fancyfoot[L]{{\small \@date}}
+\fancyfoot[C]{{\small Seite \thepage~von~\pageref{LastPage}}}
+\fancyfoot[R]{{\small \@author}}
+\makeatother
+
+\begin{document}
+
+\subfile{Aufgabe1.tex}
+\subfile{Aufgabe2.tex}
+\subfile{Aufgabe3.tex}
+\subfile{Aufgabe4.tex}
+\subfile{Aufgabe5.tex}
+
+% \subfile{Aufgabe6.tex}
+% \subfile{Aufgabe7.tex}
+% \subfile{Aufgabe8.tex}
+% \subfile{Aufgabe9.tex}
+
+\end{document}

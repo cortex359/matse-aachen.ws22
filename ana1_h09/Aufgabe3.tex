@@ -1,0 +1,144 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 3}
+
+\begin{enumerate}
+    \item Welche Vorschrift hat die Funktion 4.Ordnung, welche die $x$-Achse im Punkt $( 2|0)$ berührt, in $( 0|0)$ einen Wendepunkt hat und dessen Tangente mit der $x$-Achse einen Winkel von 45° bildet?
+    \item Berechnen Sie die Fläche zwischen der Kurve der Funktion und der positiven $x$-Achse.
+\end{enumerate}
+
+\subsection{Lösung 3a}
+
+Die gesuchte Funktion hat die Form $f( x) =ax^{4} +bx^{3} +cx^{2} +dx+e$ und es soll gelten $f( 2) =0$, $f'( 2) =0$ sowie für den Wendepunkt $f( 0) =0$, das notwendige Kriterium $f''( 0) =0$, sowie das hinreichende Kriterium $f'''( 0) \neq 0$. Ferner soll die Tangente an dem Punkt $( 0|0)$ eine Steigung von $1$ haben, also $f'( 0) =1$.
+
+Die ersten drei Ableitungen der Funktion lauten.
+\begin{equation*}
+    \begin{array}{ r l }
+    f( x) & =ax^{4} +bx^{3} +cx^{2} +dx+e\\
+    f'( x) & =4ax^{3} +3bx^{2} +2cx+d\\
+    f''( x) & =12ax^{2} +6bx+2c\\
+    f'''( x) & =24ax+6b
+    \end{array}
+\end{equation*}
+
+Entsprechend der Voraussetzungen ergeben sich die folgenden Gleichungen:
+\arraycolsep=1.2pt\def\arraystretch{1.2} % streach array
+
+\begin{equation*}
+\begin{array}{ l r l }
+I: & f( 2) & =0\\
+\Leftrightarrow  & 0 & =a2^{4} +b2^{3} +c2^{2} +d2+e\\
+\Leftrightarrow  & 0 & =16a+8b+4c+2d+e\\
+\overset{II}{\Leftrightarrow } & 0 & =16a+8b+4c+2d\\
+\overset{III}{\Leftrightarrow } & 0 & =16a+8b+2d\\
+\Leftrightarrow  & 0 & =8a+4b+d\\
+\overset{IV}{\Leftrightarrow } & 0 & =8a+4b+1\\
+ &  & \\
+II: & f( 0) & =0\\
+\Leftrightarrow  & 0 & =e\\
+ &  & \\
+III: & f''( 0) & =0\\
+\Leftrightarrow  & 0 & =2c\\
+\Leftrightarrow  & 0 & =c\\
+ &  & \\
+IV: & f'( 0) & =1\\
+\Leftrightarrow  & 1 & =d\\
+ &  & \\
+V: & f'( 2) & =0\\
+\Leftrightarrow  & 0 & =4a2^{3} +3b2^{2} +2c2+d\\
+\Leftrightarrow  & 0 & =32a+12b+4c+d\\
+\overset{III}{\Leftrightarrow } & 0 & =32a+12b+d\\
+\overset{IV}{\Leftrightarrow } & 0 & =32a+12b+1
+\end{array}
+\end{equation*}
+Es ergibt sich aus den Gleichungen $V:\ 32a+12b=-1$ und $I:8a+4b=-1$ das LGS:
+\begin{gather*}
+\begin{array}{ c c }
+\begin{pmatrix}[1]
+8 & 4 & -1\\
+32 & 12 & -1
+\end{pmatrix} & \begin{array}{ c }
+ \\
+-4\cdotp I
+\end{array}\\
+\begin{pmatrix}[1]
+8 & 4 & -1\\
+0 & -4 & 3
+\end{pmatrix} & \begin{array}{ c }
++II\\
+ \\
+\end{array}\\
+\begin{pmatrix}[1]
+8 & 0 & 2\\
+0 & -4 & 3
+\end{pmatrix} & 
+\end{array}\\
+\\
+8a=2\Leftrightarrow a=\frac{1}{4}\\
+\\
+-4b=3\ \Leftrightarrow b=-\frac{3}{4}
+\end{gather*}
+
+$\Rightarrow f( x) =\frac{1}{4} x^{4} -\frac{3}{4} x^{3} +x$\\
+
+Schließlich muss noch die hinreichende Begingung für den Wendepunkt überprüft werden:
+\begin{equation*}
+\begin{array}{ l r l }
+VI: & f'''( 0) & \neq 0\\
+ & f'''( 0) & =24a\cdotp 0+6b\\
+\Leftrightarrow  & f'''( 0) & =6b\\
+ & f'''( 0) & =-\frac{9}{2}\\
+ &  & \neq 0\ \checked 
+\end{array}
+\end{equation*}
+$\Rightarrow $ Die gefundene Funktionsvorschrift erfüllt die alle genannten Bedingungen.
+
+\subsection{Lösung 3b}
+\arraycolsep=1.4pt\def\arraystretch{2.2} % streach array
+
+Nullstellen berechnen:
+
+$f( x) =\frac{1}{4} x^{4} -\frac{3}{4} x^{3} +x$
+\begin{equation*}
+\begin{array}{ r r l }
+ & f( x) & =0\\
+\Leftrightarrow  & 0 & =\frac{1}{4} x^{4} -\frac{3}{4} x^{3} +x\\
+\Leftrightarrow  & 0 & =x^{4} -3x^{3} +4x
+\end{array}
+\end{equation*}
+Polynomdivision durch die bekannten Nullstellen $x_{0} =0,\ x_{1} =2$:
+\begin{gather*}
+\left( x^{4} -3x^{3} +4x\right) :x=x^{3} -3x^{2} +4\\
+\\
+\left( x^{3} -3x^{2} +4\right) :( x-2) =x^{2} -x-2\\
+\\
+x^{2} -x-2=0\Leftrightarrow \ ( x+1)( x-2) =0
+\end{gather*}
+$\Rightarrow x_{2} =-1,\ x_{3} =2$
+
+
+
+Da nur die Fläche $A$ zwischen der Kurve und der positiven $x$-Achse gesucht ist, betrachten wir die Nullstellen $x_{0} =0,\ x_{1} =2$ und entsprechend das bestimmte Integral in dem gegebenen Intervall.
+
+\begin{equation*}
+A=\int _{0}^{2} f( x) dx=F( 2) -F( 0)
+\end{equation*}Sei $F( x)$ die Stammfunktion von $f( x)$:
+\begin{equation*}
+F( x) =\frac{1}{20} x^{5} -\frac{3}{16} x^{4} +\frac{1}{2} x^{2} +c
+\end{equation*}
+Daraus folgt:
+\begin{equation*}
+\begin{array}{ r l }
+A= & \left(\frac{1}{20} 2^{5} -\frac{3}{16} 2^{4} +\frac{1}{2} 2^{2}\right) -\left(\frac{1}{20} 0^{5} -\frac{3}{16} 0^{4} +\frac{1}{2} 0^{2}\right)\\
+= & \frac{1}{20} 2^{5} -\frac{3}{16} \cdotp 16+2\\
+= & \frac{32}{20} -\frac{3\cdotp 16}{16} +2\\
+= & \frac{8}{5} -3+2\\
+= & \frac{3}{5}
+\end{array}
+\end{equation*}
+Die eingeschlossene Fläche is $3/5\ FE$ groß.
+
+
+\end{document}
