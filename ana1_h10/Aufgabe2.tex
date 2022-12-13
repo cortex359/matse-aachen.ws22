@@ -8,13 +8,13 @@ Berechnen Sie die Mantelfläche des Rotationskörpers, der durch Drehung des Gra
 \subsection{Lösung 2}
 Die Manteloberfläche lässt sich nach der folgenden Formel berechnen:
 \begin{equation*}
-    M_{a}^{b}( f) \ =\ 2\pi \cdotp \int _{a}^{b} f( x) \cdotp \sqrt{1+( f'( x))^{2}} \ dx
+    M_{a}^{b}( f) \ =\ 2\pi \cdotp \int _{a}^{b} f( x) \cdotp \sqrt{1+{( f'( x))}^{2}} \ dx
 \end{equation*}
 
 Für $f( x) =\sqrt{x}$ und entsprechend $f'( x) =\frac{1}{2} x^{-1/2} =\frac{1}{2\sqrt{x}}$ bedeutet dies im Intervall $x\in [ 0;5]$:
 \begin{equation*}
     \begin{array}{ c l }
-        M_{a}^{b}( f) \  & =\ 2\pi \cdotp \int _{0}^{5}\sqrt{x} \cdotp \sqrt{1+\left(\frac{1}{2\sqrt{x}}\right)^{2}} \ dx\\
+        M_{a}^{b}( f) \  & =\ 2\pi \cdotp \int _{0}^{5}\sqrt{x} \cdotp \sqrt{1+{\left(\frac{1}{2\sqrt{x}}\right)}^{2}} \ dx\\
         & =\ 2\pi \cdotp \int _{0}^{5}\sqrt{x} \cdotp \sqrt{1+\frac{1}{4x}} \ dx\\
         & =\ 2\pi \cdotp \int _{0}^{5}\sqrt{x} \cdotp \sqrt{\frac{4x+1}{4x}} \ dx\\
         & =\ 2\pi \cdotp \int\nolimits _{0}^{5}\sqrt{x} \cdotp \sqrt{\frac{x+\frac{1}{4}}{x}} \ dx\\
@@ -28,8 +28,8 @@ Die Substitution mit $u=x+\frac{1}{4}$ und $du=dx$ gibt die neue untere Grenze $
     \begin{array}{ c l }
         M_{a}^{b}( f) \  & =\ 2\pi \cdotp \int\nolimits _{1/4}^{21/4}\sqrt{u} \ du\\
         & =\ 2\pi \cdotp \left[\frac{2}{3} x^{3/2}\right]_{1/4}^{21/4}\\
-        & =\ 2\pi \cdotp \left( \ \frac{2}{3}\left(\frac{21}{4}\right)^{3/2} -\frac{2}{3}\left(\frac{1}{4}\right)^{3/2}\right)\\
-        & =\ \frac{4\pi }{3} \cdotp \left( \ \left(\frac{21}{4}\right)^{3/2} -\left(\frac{1}{4}\right)^{3/2}\right)\\
+        & =\ 2\pi \cdotp \left( \ \frac{2}{3}{\left(\frac{21}{4}\right)}^{3/2} -\frac{2}{3}{\left(\frac{1}{4}\right)}^{3/2}\right)\\
+        & =\ \frac{4\pi }{3} \cdotp \left( \ {\left(\frac{21}{4}\right)}^{3/2} -{\left(\frac{1}{4}\right)}^{3/2}\right)\\
         & =\ \frac{\pi }{6} \cdotp \left( 21\sqrt{21} -1\right)\\
         & \approx \ 49,864\ FE
     \end{array}
