@@ -11,6 +11,34 @@ Beweisen oder widerlegen Sie:
 \end{enumerate}
 
 \subsection{Lösung 7a}
+
+\begin{equation*}
+    \begin{array}{ c c r l }
+    x\in L( N) & \Rightarrow  & x\  & =\ \sum\limits _{k=1}^{r} \lambda _{k} \cdotp n_{k}\\
+     &  &  & =\ \sum\limits _{k=1}^{r} \lambda _{k} \cdotp n_{k} +0\\
+     &  &  & =\ \sum\limits _{k=1}^{r} \lambda _{k} \cdotp n_{k} +\ \sum\limits _{m\in M\setminus N} 0\cdotp m\\
+     & \Rightarrow  &  & x\in L( M)\\
+     & \Rightarrow  &  & L( N) \subseteq L( M) \checked
+    \end{array}
+\end{equation*}
+    
+
 \subsection{Lösung 7b}
+Es ist zu zeigen, dass $L(L(M)) \subseteq L(M)$.\\
+
+Sei $x\in L( L( N))$ so gilt $x=\sum\limits _{i=1}^{k} a_{i} \cdotp m_{i}$ mit $m_{i} \in L( N)$ für $n\in [ 1;k]$. Dann ist $m_{i} =\sum\limits _{j=1}^{l} k_{j} \cdotp n_{j}$. 
+
+Somit ist $a_{i} \cdotp m_{i} =a_{i} \cdotp \sum\limits _{j=1}^{l} b_{j} \cdotp n_{j} =\sum\limits _{j=1}^{1} a_{i} \cdotp b_{j} \cdotp n_{j}$. Außerdem ist dann
+\begin{equation*}
+    \begin{array}{ c l }
+    \sum\limits _{i=1}^{k} a_{i} \cdotp m_{i} & =\sum\limits _{i=1}^{k}\sum\limits _{j=1}^{l} a_{i} \cdotp b_{j} \cdotp n_{j}\\
+    & =\sum\limits _{j=1}^{l}\sum\limits _{i=1}^{k} a_{i} \cdotp b_{j} \cdotp n_{j}\\
+    & =\sum\limits _{j=1}^{l}\underbrace{\left(\sum\limits _{i=1}^{k} a_{i}\right) \cdotp b_{j}}_{:=\ c_{j}} \cdotp n_{j}
+    \end{array}
+\end{equation*}
+
+So sieht man, dass $x\in L( N)$ \checked
+
+Aus $M\subseteq N$ folgt $L( M) \subseteq L( N)$. Setze ein $N=L( M)$. Da $M\subseteq L( M)$ ist, folgt ebenso $L( M) \subseteq L( L( M))$. \checked
 
 \end{document}
