@@ -1,0 +1,40 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 3}
+
+Berechnen Sie:
+
+\begin{enumerate}
+    \item $\lim\limits _{x\rightarrow \infty }\left(\frac{1}{x} \cdotp \int\limits _{0}^{x}\frac{1}{t+e^{-1}} \ dt\right)$
+    \item $\lim\limits _{x\rightarrow \infty }\left(\frac{1}{x} \cdotp \int\limits _{0}^{x}\frac{t+1}{t^{2} +2} \ dt\right)$
+\end{enumerate}
+
+\subsection{Lösung 3a}
+Wir betrachten das Integral $\int\nolimits _{0}^{x}\frac{1}{t+e^{-1}} dt$ und substituieren $u( t) =t+e^{-1}$. Das bedeutet für die untere Grenze $u( 0) =e^{-1}$ und für die obere Grenze $u( x) =x+e^{-1}$.
+
+\begin{gather*}
+    \int\limits _{0}^{x}\frac{1}{t+e^{-1}} \ dt=\int\limits _{e^{-1}}^{x+e^{-1}}\frac{1}{u} \ du=[\ln( u)]_{e^{-1}}^{x+e^{-1}} =\ln\left( x+\frac{1}{e}\right) -\ln\left(\frac{1}{e}\right) =\ln( e\cdotp x+1) +1\\
+    \\
+    \lim\limits _{x\rightarrow \infty }\left(\frac{1}{x} \cdotp \int\limits _{0}^{x}\frac{1}{t+e^{-1}} \ dt\right) =\lim\limits _{x\rightarrow \infty }\left(\frac{\ln( e\cdotp x+1) +1}{x}\right)
+\end{gather*}
+
+Nach dem Satz von L`Hospital gilt hier, mit $f( x) =\ln( e\cdotp x+1) +1$ und $f'( x) =\frac{e}{1+e\cdotp x}$:
+\begin{equation*}
+    \lim\limits _{x\rightarrow \infty }\left(\frac{\ln( e\cdotp x+1) +1}{x}\right) =\lim\limits _{x\rightarrow \infty }\left(\frac{\frac{e}{1+e\cdotp x}}{1}\right) =\lim\limits _{x\rightarrow \infty }\left(\frac{e}{1+e\cdotp x}\right) =0
+\end{equation*}
+
+\subsection{Lösung 3b}
+
+Analog gilt mit L`Hospital auch hier
+\begin{equation*}
+    \lim\limits _{x\rightarrow \infty }\left(\frac{1}{x} \cdotp \int\limits _{0}^{x}\frac{t+1}{t^{2} +2} \ dt\right) =\lim\limits _{x\rightarrow \infty }\left(\frac{x+1}{x^{2} +2} -0\right)
+\end{equation*}
+
+Der größte Exponent im Nenner des Terms ist $x^{2}$, weshalb wir Zähler und Nenner dadurch teilen. Wir erhalten:
+\begin{equation*}
+    \lim\limits _{x\rightarrow \infty }\left(\frac{\frac{1}{x} +\frac{1}{x^{2}}}{1+\frac{2}{x^{2}}}\right) =\frac{\lim\limits _{x\rightarrow \infty }\left(\frac{1}{x} +\frac{1}{x^{2}}\right)}{\lim\limits _{x\rightarrow \infty }\left( 1+\frac{2}{x^{2}}\right)} =\frac{\lim\limits _{x\rightarrow \infty }\left(\frac{1}{x}\right) +\lim\limits _{x\rightarrow \infty }\left(\frac{1}{x^{2}}\right)}{1+\lim\limits _{x\rightarrow \infty }\left(\frac{2}{x^{2}}\right)} =\frac{0+0}{1+0} =0
+\end{equation*}
+
+\end{document}

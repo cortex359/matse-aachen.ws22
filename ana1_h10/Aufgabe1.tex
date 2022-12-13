@@ -1,0 +1,51 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 1}
+
+Berechnen Sie die Länge der Strecke zwischen den Punkten $A(-3|2)$ und $B( 2|4)$ mithilfe der Integration.
+
+\subsection{Lösung 1}
+Es soll die Länge einer Kurve $L_{a}^{b}( f)$ berechnet werden, welche als Geradengleichung der Form $f( x) =m\cdotp x+b$ entsprechen soll und durch die Punkte $A$ und $B$ gehen soll.
+
+Dazu wird zunächst die Geradengleichung bestimmt:
+\begin{equation*}
+    \begin{array}{ c l }
+        f( x) & =\frac{4-2}{2+3} \cdotp x+b\\
+        & =\frac{2}{5} \cdotp x+b
+    \end{array}
+\end{equation*}
+
+Um den Punkt $B$ zu schneiden muss gelten $f( 2) =4\ \Leftrightarrow \frac{2\cdotp 2}{5} +b=4\Leftrightarrow b=\frac{16}{5}$. Somit lautet die Geradengleichung $f( x) =\frac{2}{5} \cdotp x+\frac{16}{5}$.
+
+Die Formel zur Berechnung der Länge einer Kurve lautet:
+\begin{equation*}
+    L_{a}^{b}( f) =\int _{a}^{b}\sqrt{1+( f'( x))^{2}} dx
+\end{equation*}
+
+Mit $f'( x) =\frac{2}{5}$ bedeutet dies im Intervall $x\in [ -3;2]$:
+
+\begin{equation*}
+    \begin{array}{ c l }
+    L_{-3}^{2}( f) & =\int\limits _{-3}^{2}\sqrt{1+\left(\frac{2}{5}\right)^{2}} dx\\
+    & =\int\limits _{-3}^{2}\sqrt{\frac{29}{25}} dx\\
+    & =\left[\frac{\sqrt{29}}{5} \cdotp x\right]_{-3}^{2}\\
+    & =\frac{\sqrt{29}}{5} \cdotp 5\\
+    & =\sqrt{29}
+    \end{array}
+\end{equation*}
+
+\textit{Bemerkung / Lustige Kuriosität:}
+
+Die KI ChatGPT von OpenAI hat für die Aufgabe ebenfalls eine richtige Lösung ermitteln können, welche technisch gesehen ebenfalls Integration nutzt.\\
+Hier ist die Ausgabe von ChatGPT:
+
+\begin{quote}
+    \textcolor[rgb]{0.05,0.73,0.15}{
+        Die Länge einer Strecke zwischen zwei Punkten kann mit Hilfe der Integration berechnet werden, indem man die Differenzen der x- und y-Koordinaten der beiden Punkte integriert. In diesem Fall haben wir die Differenzen $\Delta x=5$ und $\Delta y=2$, also lautet die Länge der Strecke
+        $\int _{0}^{1}\sqrt{\Delta x^{2} +\Delta y^{2}} dx=\int _{0}^{1}\sqrt{5^{2} +2^{2}} dx=\int _{0}^{1}\sqrt{29} dx=\boxed{\sqrt{29}}$.
+    }
+\end{quote}
+
+\end{document}

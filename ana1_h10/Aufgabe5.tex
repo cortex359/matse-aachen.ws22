@@ -1,0 +1,37 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 5}
+Untersuchen Sie die Konvergenz der folgenden Integrale und berechnen Sie deren Wert, wenn sie konvergent sind:
+
+\begin{enumerate}
+    \item $\int _{0}^{\infty } e^{-x} \ dx$
+    \item $\int _{0}^{\infty }\cos( x) \ dx$
+\end{enumerate}
+
+\subsection{Lösung 5a}
+\begin{equation*}
+    \begin{array}{ c l }
+        \int _{0}^{\infty } e^{-x} \ dx & =\lim\limits _{b\rightarrow \infty }\int _{0}^{b} e^{-x} \ dx\\
+        & =\lim\limits _{b\rightarrow \infty }\left[ -e^{-x}\right]_{0}^{b}\\
+        & =\lim\limits _{b\rightarrow \infty }\left( -e^{-b} +e^{0}\right)\\
+        & =\lim\limits _{b\rightarrow \infty }\left( -e^{-b}\right) +1\\
+        & =1
+    \end{array}
+\end{equation*}
+Das Integral konvergiert gegen 1.
+
+\subsection{Lösung 5b}
+\begin{equation*}
+    \begin{array}{ c l }
+    \int _{0}^{\infty }\cos( x) \ dx & =\lim\limits _{b\rightarrow \infty }\int _{0}^{b}\cos( x) \ dx\\
+     & =\lim\limits _{b\rightarrow \infty }[\sin( x)]_{0}^{b}\\
+     & =\lim\limits _{b\rightarrow \infty }(\sin( b) -\sin( 0))\\
+     & =\lim\limits _{b\rightarrow \infty }(\sin( b) -0)\\
+     & =\underbrace{\lim\limits _{b\rightarrow \infty }\sin( b)}_{\text{existiert nicht}}
+    \end{array}
+\end{equation*}
+Das Integral divergiert.
+
+\end{document}

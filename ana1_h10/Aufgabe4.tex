@@ -1,0 +1,39 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 4}
+
+Berechnen Sie jeweils die Ableitung $F'( x)$ der Funktionen
+
+\begin{enumerate}
+    \item $F( x) =\int\limits _{t=1}^{x}\sqrt{1+t^{2} \ } dt$
+    \item $F( x) =\int\limits _{t=x^{2}}^{1+x^{4}}\frac{\sin( t\cdotp x)}{t} \ dt$
+\end{enumerate}
+
+\subsection{Lösung 4a}
+Wir betrachten das Integral $\int\nolimits _{1}^{x}\sqrt{1+t^{2} \ } dt$ und substituieren $u( t) =1+t^{2}$. Für die untere Grenze gilt nun $u( 1) =2$ und für die obere Grenze $u( x) =1+x^{2}$. Somit lässt sich die Funktion wie folgt umschreiben.
+\begin{equation*}
+    \begin{array}{ c l }
+        F( x) & =\int\nolimits _{t=1}^{x}\sqrt{1+t^{2} \ } dt\\
+        & =\int\nolimits _{2}^{1+x^{2}}\sqrt{u} \ du\\
+        & =\left[\frac{2}{3} u^{3/2}\right]_{2}^{1+x^{2}}\\
+        & =\frac{2}{3}\left( 1+x^{2}\right)^{3/2} -\frac{2}{3}( 2)^{3/2}\\
+        & =\frac{2}{3}\left( 1+x^{2}\right)^{3/2} -\frac{4\sqrt{2}}{3}
+    \end{array}
+\end{equation*}
+
+Die Ableitung der Funktion lässt sich nun mit der Kettenregel bestimmen.
+\begin{equation*}
+    \begin{array}{ r c l }
+        f( x) & = & g( v( x))\\
+        f'( x) & = & v'( x) \cdotp g'( v( x))
+    \end{array}
+\end{equation*}
+
+Mit $v( x) =1+x^{2}$ und $g( v) =\frac{2}{3} v^{3/2}$ und entsprechend $v'( x) =2x$ und $g'( v) =\sqrt{v}$:
+\begin{equation*}
+    F'( x) =2x\cdotp \sqrt{1+x^{2}}
+\end{equation*}
+
+\end{document}
