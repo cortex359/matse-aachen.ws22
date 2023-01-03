@@ -1,0 +1,84 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 8}
+Zeigen Sie, dass die Vektoren
+\begin{equation*}
+x=\begin{pmatrix}[1]
+-3/5\\
+4/5\\
+0
+\end{pmatrix} ,\ y=\begin{pmatrix}[1]
+4/5\\
+3/5\\
+0
+\end{pmatrix} ,\ z=\begin{pmatrix}[1]
+0\\
+0\\
+1
+\end{pmatrix}
+\end{equation*}
+eine Orthonormalbasis des euklidischen Raums $R^{3}$ (mit dem Standardskalarprodukt) bilden.
+
+\subsection{Lösung 8}
+Nach Definition 3.128, Seite 111 muss für eine Orthonormalbasis $\mathcal{B}_{ON} =( x,y,z)$ folgende Bedingungen erfüllt sein:
+
+1. Orthogonalsystem: $x\perp y\land y\perp z\land x\perp z$
+
+2. Orthonormalsystem: $\| x\| =\| y\| =\| z\| =1$
+
+3. Orthogonalbasis: $x,y,z$ ist ein minimales Erzeugendensystem vom Vektorraum $V$\\
+
+
+1. $\mathcal{B}_{ON}$ ist ein Orthogonalsystem, wenn alle Vektoren paarweise orthogonal sind:
+\begin{equation*}
+    \begin{array}{ c l }
+        <x,y>  & =\frac{-3\cdotp 4}{5} +\frac{4\cdotp 3}{5} +0\\
+        & =0\\
+        & \Rightarrow x\perp y\\
+        & \\
+        <y,z>  & =\frac{4\cdotp 0}{5} +\frac{3\cdotp 0}{5} +0\\
+        & =0\\
+        & \Rightarrow y\perp z\\
+        & \\
+        <x,z>  & =\frac{-3\cdotp 0}{5} +\frac{4\cdotp 0}{5} +0\\
+        & =0\\
+        & \Rightarrow x\perp z
+    \end{array}
+\end{equation*}
+$\Rightarrow x\perp y\land y\perp z\land x\perp z\ \checked $\\
+
+
+2. Ein Orthogonalsystem $\mathcal{B}_{ON}$ ist ein Orthonormalsystem, wenn die Norm aller Vektoren $1$ beträgt:
+\begin{equation*}
+    \begin{array}{ c l }
+        \| x\|  & =\sqrt{\left(\frac{-3}{5}\right)^{2} +\left(\frac{4}{5}\right)^{2} +0^{2}}\\
+        & =\sqrt{\frac{9}{25} +\frac{16}{25}}\\
+        & =\sqrt{\frac{25}{25}}\\
+        & =1\\
+        & \\
+        \| y\|  & =\sqrt{\left(\frac{4}{5}\right)^{2} +\left(\frac{3}{5}\right)^{2} +0^{2}}\\
+        & =\sqrt{\frac{16}{25} +\frac{9}{25}}\\
+        & =1\\
+        & \\
+        \| z\|  & =\sqrt{0^{2} +0^{2} +1^{2}}\\
+        & =1
+    \end{array}
+\end{equation*}
+$\Rightarrow \| x\| =\| y\| =\| z\| =1$\\
+
+
+3. Ein Orthogonalsystem $\mathcal{B}_{ON}$ ist eine Orthogonalbasis von $V$, wenn es eine Basis von $V$ ist. 
+Man sieht, dass die Vektoren $x,y,z$ eine Lineare Hülle aufspannen, sodass $L( x,y,z) =\mathbb{R}^{3}$. Es bleibt die lineare Unabhängigkeit der Vektoren zu zeigen:
+\begin{equation*}
+    \begin{array}{ c l }
+        \det( x,y,z) & =\frac{-9}{5} +0+0-0-0-\left(\frac{-9}{5}\right)\\
+        & =0
+    \end{array}
+\end{equation*}
+$\Rightarrow $$x,y,z$ ist ein minimales Erzeugendes System vom Vektorraum $V$. $\checked $\\
+
+Aus 1, 2 und 3 folgt, dass es sich bei der $\mathcal{B}_{ON}$ um eine Orthonormalbasis des Vektorraums $\mathbb{R}^{3}$ handelt.
+
+\end{document}

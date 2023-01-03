@@ -1,0 +1,64 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 6}
+Beweisen oder widerlegen Sie, dass es sich bei den gegebenen Abbildungen um eine Norm für Vektoren des Vektorraums $\mathbb{R}^{n}$ handelt.
+
+
+\begin{enumerate}
+    \item \begin{equation*}
+        \| x\| =\sum _{i=1}^{n} x_{i}
+        \end{equation*}
+    \item \begin{equation*}
+        \| x\| =\left| \prod _{i=1}^{n} x_{i}\right| 
+        \end{equation*}
+    \item \begin{equation*}
+        \| x\| =\underset{i=1,\dotsc ,n}{\min}| x_{i}| 
+        \end{equation*}
+\end{enumerate}
+
+\subsection{Lösung 6}
+
+Nach Definition 3.114, Seite 106 heißt eine Abbildung $\| \cdot \| :V\rightarrow \mathbb{R}$ Norm, genau dann, wenn 
+
+\begin{itemize}
+    \item \textbf{N0} :\textbf{ }$\| a\| \in \mathbb{R}$
+    \item \textbf{N1} : $\| a\| \geq 0$
+    \item \textbf{N2} : $\| a\| =0\ \Leftrightarrow a=0$
+    \item \textbf{N3} : $\forall \lambda \in \mathbb{K} :\| \lambda \cdotp a\| =| \lambda | \cdotp \| a\| $
+    \item \textbf{N4} : $\| a+b\| \leq \| a\| +\| b\| $.
+\end{itemize}
+
+
+%Geeeeas##d#f
+
+
+
+
+
+\subsection{Lösung 6a}
+
+Bei der Abbildung $\| x\| =\sum _{i=1}^{n} x_{i}$ handelt es sich nicht um eine Norm, da für den Vektor $x=( -1)$ die Bedingung N1, $\| a\| \geq 0$ verletzt ist.
+
+\textcolor[rgb]{0.28,0.71,0.02}{
+    Darüber hinaus wäre für den Vektor $x=( 1;\ -1)^{T}$ die Bedingung N2 verletzt und für $\lambda < 0$ auch die Bedingung N3.
+}
+
+
+\subsection{Lösung 6b}
+
+Bei der Abbildung $\| x\| =\left| \prod _{i=1}^{n} x_{i}\right| $ ist die Bedingung N2 verletzt, da für jeden Vektor $a$ mit einer beliebigen Komponente $a_{i} =0$ die Norm $\| a\| =0$ wäre.
+
+
+
+\subsection{Lösung 6c}
+
+Auch bei der Abbildung $\| x\| =\underset{i=1,\dotsc ,n}{\min}| x_{i}| $ handelt es sich nicht um eine Norm, weil die Bedingung N4 verletzt ist:
+
+Sei $a=( 1;2)^{T} ,\ b=( 2;1)^{T}$ dann ist 
+\begin{equation*}
+    \| ( 3;3)^{T} \| =3\leq \| ( 1;2)^{T} \| +\| ( 2;1)^{T} \| =1+1\,\, \lightning .
+\end{equation*}
+
+\end{document}
