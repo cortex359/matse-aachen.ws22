@@ -1,0 +1,63 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 4}
+Untersuchen Sie mit dem Integralkriterium die Konvergenz der folgenden Reihen:
+
+\begin{enumerate}
+    \item $\sum\limits _{n=1}^{\infty }\frac{1}{\sqrt[3]{n}}$
+    \item $\sum\limits _{n=1}^{\infty }\frac{\ln( n)}{n}$
+\end{enumerate}
+
+\subsection{Lösung 4}
+Integralkriterium, Satz 210:
+
+Sei $f$ eine auf dem Intervall $[ m-1;\infty )$ monoton fallende Funktion mit $f( x) \geq 0\ \forall x\in [ m;\infty )$, dann ist die Reihe $\sum _{n=m}^{\infty } f( n)$ genau dann konvergent, wenn $\int _{m}^{\infty } f( x) \ dx$ existiert.
+
+\subsection{Lösung 4a}
+Wir betrachten die Funktion $f( n) =n^{-3/2}$ im Intervall $[ 0;\infty )$ und bilden ihre erste Ableitung $f'( n) =-\frac{3}{2} n^{-5/2}$ um zu zeigen, dass für $n\geq 0:f'( n) < 0$ gilt. Die Funktion ist somit monoton fallend. Außerdem ist $f( n) \geq 0$ im Intervall $[ 1;\infty )$, sodass das Integralkriterium angewandt werden kann.
+
+Zur Untersuchung der Konvergenz der gegebenen Reihe betrachten wir also das folgende Integral:
+\begin{equation*}
+\begin{array}{ c l }
+\int\limits _{1}^{\infty }\frac{1}{\sqrt[3]{n}} \ dn & =\lim\limits _{a\rightarrow \infty }\int\limits _{1}^{a} n^{-1/3} \ dn\\
+ & =\lim\limits _{a\rightarrow \infty }\left[\frac{3}{2} n^{2/3}\right]_{1}^{a}\\
+ & =\lim\limits _{a\rightarrow \infty }\frac{3}{2} a^{2/3} -\frac{3}{2}\\
+ & =-\frac{3}{2} +\frac{3}{2} \cdotp \lim\limits _{a\rightarrow \infty }\underbrace{a^{2/3}}_{\rightarrow \infty }\\
+ & =\infty 
+\end{array}
+\end{equation*}
+Das Integral divergiert und somit divergiert die Reihe nach dem Integralkriterium ebenfalls.
+
+
+\subsection{Lösung 4b}
+Die Funktion $f( n) =\frac{\ln( n)}{n}$ ist für $n\geq 1$ positiv, jedoch erkennen wir an $f'( n) =\frac{1-\ln( n)}{n^{2}}$, dass $f'( n) \leq 0\ \forall n\geq e$ gilt, die Funktion also nur im Intervall $[ e;\infty )$ monoton steigend ist.
+
+Da für die Konvergenz einer Reihe endlich viele Summanden weggelassen oder verändert werden können, ohne dass sich dabei das Konvergenzverhalten ändert, untersuchen wir die Reihe mit einem Anfangswert des Laufindizes von $3$. 
+
+Wir untersuchen also die Reihe $\sum _{n=3}^{\infty }\frac{\ln( n)}{n}$ mit dem Integralkriterium.
+
+Wir betrachten also das Integral $\int \frac{\ln( n)}{n} \ dn$ und substituieren mit $u=\ln( n)$ um die Stammfunktion zu bestimmen. Aus der Substitution $\frac{du}{dn} =\frac{1}{n} \Leftrightarrow dn=n\cdotp du$ und der Rücksubstitution ergibt sich:
+\begin{equation*}
+    \int \frac{\ln( n)}{n} \ dn=\int \frac{u}{n} \cdotp n\ \mathrm{d} u\Bigl|_{u=\ln( n)} =\left[\frac{1}{2} u^{2}\right] =\left[\frac{1}{2}\ln( n)^{2}\right]
+\end{equation*}
+
+Mit der Stammfunktion bestimmen wir nun das uneigentliche Integral im Intervall $[ 3;\infty )$ um eine Aussage über die Konvergenz der Reihe treffen zu können.
+\begin{equation*}
+    \begin{array}{ c l }
+    \int\limits _{3}^{\infty }\frac{\ln( n)}{n} \ dn & =\lim\limits _{a\rightarrow \infty }\int\limits _{3}^{a}\frac{\ln( n)}{n} \ dn\\
+    & =\lim\limits _{a\rightarrow \infty }\left[\frac{1}{2}\ln( n)^{2}\right]_{3}^{a}\\
+    & =\lim\limits _{a\rightarrow \infty }\frac{1}{2}\left(\ln( a)^{2} -\ln( 3)^{2}\right)\\
+    & =\frac{1}{2}\lim\limits _{a\rightarrow \infty }\left(\underbrace{\ln( a)^{2}}_{\rightarrow \infty }\right) -\frac{\ln( 3)^{2}}{2}\\
+    & =\infty 
+    \end{array}
+\end{equation*}
+
+Da das Integral der Funktion $\int _{3}^{\infty } f( n)$ im Intervall $[ 3;\infty )$ divergiert, divergiert auch die Reihe $\sum _{n=3}^{\infty } f( n)$.
+
+Da $\sum _{n=1}^{\infty } f( n) =\frac{\ln( 2)}{2} +\sum _{n=3}^{\infty } f( n)$ ist auch das Konvergenzverhalten der Reihe $\sum _{n=3}^{\infty } f( n)$ dasselbe wie das der Reihe $\sum _{n=1}^{\infty } f( n)$.
+
+Daraus folgt, dass die Reihe über das Intervall $[ 1;\infty )$ divergiert.
+
+\end{document}

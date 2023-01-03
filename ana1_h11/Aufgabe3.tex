@@ -1,0 +1,28 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 3}
+Untersuchen Sie das folgende Integral auf Konvergenz
+\begin{equation*}
+    \int\limits _{3}^{\infty }\frac{x-2}{x^{4} -x^{3} +13x^{2} -4x+3} \ dx
+\end{equation*}
+
+\subsection{Lösung 3}
+Da nach dem Integralkriterium das Konvergenzverhalten eines Integrals dem einer Summe folgt, gleiche 
+\begin{gather*}
+    \lim _{a\rightarrow \infty }\int\limits _{3}^{a}\frac{x-2}{x^{4} -x^{3} +13x^{2} -4x+3} \ dx\\
+    \\
+    \sum _{n=3}^{\infty }\frac{1}{x^{2}} \geq \sum _{n=3}^{\infty }\frac{x-2}{x^{4} -x^{3} +13x^{2} -4x+3} \geq \sum _{n=3}^{\infty }\frac{1}{x^{4}}\\
+    \\
+    \sum _{n=3}^{\infty }\frac{1}{x^{2}} =\sum _{n=1}^{\infty }\frac{1}{x^{2}} -\frac{5}{4} =\frac{\pi ^{2}}{6} -\frac{5}{4}\\
+    \\
+    \sum _{n=3}^{\infty }\frac{1}{x^{4}} =\sum _{n=1}^{\infty }\frac{1}{x^{4}} -\frac{17}{16}\\
+    \\
+    \sum _{n=1}^{\infty }\frac{1}{x^{2}} =\frac{\pi ^{2}}{6}\\
+    \\
+    \\
+    \sum _{n=3}^{\infty }\frac{x-2}{x^{4} -x^{3} +13x^{2} -4x+3} =\sum _{n=1}^{\infty }\frac{x-2}{x^{4} -x^{3} +13x^{2} -4x+3} -\frac{1}{12}
+\end{gather*}
+
+\end{document}

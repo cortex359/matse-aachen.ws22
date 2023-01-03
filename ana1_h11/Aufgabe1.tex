@@ -1,0 +1,55 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 1}
+Berechnen Sie
+\begin{enumerate}
+    \item $\int\limits _{1}^{2}\frac{x^{3}}{\sqrt{4-x^{2}}} \ dx$
+    \item $\int\limits _{0}^{\frac{\pi }{2}}\frac{\cos( x)}{\sqrt[3]{\sin( x)}} \ dx$
+\end{enumerate}
+
+\subsection{Lösung 1a}
+Um die Stammfunktion zu bestimmen substituieren wir $u=4-x^{2}$. Somit gilt für $dx=-\frac{1}{2x} du$.
+\begin{equation*}
+    \int \frac{x^{3}}{\sqrt{4-x^{2}}} \ dx=\int \frac{x^{3}}{\sqrt{u}} \cdot \frac{du}{-2x} =\frac{1}{2}\int \frac{4-x^{2} -4}{\sqrt{u}} du=\frac{1}{2}\int \frac{u-4}{\sqrt{u}} du
+\end{equation*}
+Aus der Linearität des Integrals lässt sich mit $u\cdotp u^{-1/2} =u^{1/2}$ folgern:
+\begin{equation*}
+    {\displaystyle \begin{array}{ c c }
+    {\displaystyle \frac{1}{2}\int \frac{u-4}{\sqrt{u}} du} & {\displaystyle =\frac{1}{2}\int \sqrt{u} \ du-2\int u^{-1/2} du}\\
+    & {\displaystyle =\frac{1}{2}\int \sqrt{u} \ du-2\int u^{-1/2} du}\\
+    & {\displaystyle =\frac{1}{3}\left[ u^{3/2}\right] -4\left[ u^{1/2}\right]}
+    \end{array}}
+\end{equation*}
+
+Durch Rücksubstitution von $u=4-x^{2}$ ergibt sich $F( x) =\frac{1}{3}\left( 4-x^{2}\right)^{3/2} -4\left( 4-x^{2}\right)^{1/2} +C$
+\begin{equation*}
+    \begin{array}{ c l }
+    \int\limits _{1}^{2}\frac{x^{3}}{\sqrt{4-x^{2}}} \ dx & =\left[\frac{1}{3}\left( 4-x^{2}\right)^{3/2} -4\left( 4-x^{2}\right)^{1/2}\right]_{1}^{2}\\
+    & =-\left(\sqrt{3} -4\sqrt{3}\right)\\
+    & =3\sqrt{3}
+    \end{array}
+\end{equation*}
+
+\subsection{Lösung 1b}
+Substituriere $u=\sin( x)$. Somit gilt $dx=\frac{du}{\cos( x)}$.
+\begin{equation*}
+    \begin{array}{ c l }
+    {\displaystyle \int \frac{\cos( x)}{\sqrt[3]{\sin( x)}} \ dx} & ={\displaystyle \int \cos( x) \cdotp \sin( x)^{-1/3} \ dx}\\
+    & ={\displaystyle \int \cos( x) \cdotp u^{-1/3} \ }\frac{du}{\cos( x)}\\
+    & ={\displaystyle \int u^{-1/3} \ du}\\
+    & =\frac{3}{2} \cdotp u^{2/3} +C
+    \end{array}
+\end{equation*}
+Nach Rücksubstitution ergibt sich für das eigentliche Integral:
+\begin{equation*}
+    \begin{array}{ c l }
+    {\displaystyle \int\limits _{0}^{\frac{\pi }{2}}\frac{\cos( x)}{\sqrt[3]{\sin( x)}} \ dx} & =\left[\frac{3}{2} \cdotp \sin( x)^{2/3}\right]_{0}^{\frac{\pi }{2}}\\
+    & =\frac{3}{2} \cdotp \sin\left(\frac{\pi }{2}\right)^{2/3} -\frac{3}{2} \cdotp \sin( 0)^{2/3}\\
+    & =\frac{3}{2} -0\\
+    & =\frac{3}{2}
+    \end{array}
+\end{equation*}
+
+\end{document}
