@@ -1,0 +1,87 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 2}
+Konvergieren die folgenden Reihen? Begründen Sie ihre Antwort.
+
+\begin{enumerate}
+    \item $\sum\limits _{k=1}^{\infty }( -1)^{k+1} \cdotp \frac{2k+1}{k^{2} +k}$
+    \item $\sum\limits _{k=2}^{\infty }( -1)^{k} \cdotp \frac{1}{\sqrt{k-\sqrt{k}}}$
+\end{enumerate}
+
+
+\subsection{Lösung 2}
+Konvergenzkriterium von Leibniz für alternierende Reihen:
+
+Sei $a_{n}  >0$ und $a_{n}$ monoton fallend und $\lim\limits _{n\rightarrow \infty } a_{n} =0$, dann ist $\sum _{n=1}^{\infty }( -1)^{n-1} \cdotp a_{n}$ konvergent.
+
+\subsection{Lösung 2a}
+\begin{equation*}
+\sum\limits _{k=1}^{\infty }( -1)^{k+1} \cdotp \frac{2k+1}{k^{2} +k} =\sum\limits _{k=1}^{\infty }( -1)^{k+1} \cdotp a_{k}
+\end{equation*}
+Es liegt eine alternierende Reihe vor.
+
+
+
+\underline{Monotonie}
+
+Wir zeigen, dass $a_{k}$ monoton fallend ist.
+\begin{equation*}
+\begin{array}{ c l }
+a_{k+1} -a_{k} & =\frac{2( k+1) +1}{( k+1)^{2} +k+1} -\frac{2k+1}{k^{2} +k}\\
+    & =\frac{2k+3}{k^{2} +3k+2} -\frac{2k+1}{k^{2} +k}\\
+    & =\frac{( 2k+3)\left( k^{2} +k\right) -( 2k+1)\left( k^{2} +3k+2\right)}{\left( k^{2} +3k+2\right)\left( k^{2} +k\right)}\\
+    & =\frac{\left( 2k^{3} +2k^{2} +3k^{2} +3k\right) -\left( 2k^{3} +6k^{2} +4k+k^{2} +3k+2\right)}{k^{4} +3k^{3} +2k^{2} +k^{3} +3k^{2} +2k}\\
+    & =\frac{\left( 2k^{3} +5k^{2} +3k\right) -\left( 2k^{3} +7k^{2} +7k+2\right)}{k^{4} +4k^{3} +5k^{2} +2k}\\
+    & =-\frac{2k^{2} +4k+2}{k^{4} +4k^{3} +5k^{2} +2k}\\
+    & < 0\ \Rightarrow \ a_{k} \ \text{ ist monoton fallend für} \ k\geq 1
+\end{array}
+\end{equation*}
+\underline{Grenzwert}
+
+Die Folge $a_{k}$ ist eine Nullfolge:
+\begin{equation*}
+\begin{array}{ c l }
+\lim\limits _{k\rightarrow \infty } a_{k} & =\lim\limits _{k\rightarrow \infty }\frac{2k+1}{k^{2} +k}\\
+    & =\lim\limits _{k\rightarrow \infty }\frac{k\cdotp \left( 2+\frac{1}{k}\right)}{k \cdotp ( k+1)}\\
+    & =\lim\limits _{k\rightarrow \infty }\frac{2+\frac{1}{k}}{k+1}\\
+    & =\lim\limits _{k\rightarrow \infty }\frac{2}{k+1}\\
+    & =0
+\end{array}
+\end{equation*}
+$\Rightarrow$ Die alternierende Reihe ist konvergent nach dem Leibniz Kriterium.
+
+\subsection{Lösung 2b}
+\begin{equation*}
+\sum\limits _{k=2}^{\infty }( -1)^{k} \cdotp \frac{1}{\sqrt{k-\sqrt{k}}} =\sum\limits _{k=2}^{\infty }( -1)^{k} \cdotp a_{k}
+\end{equation*}
+Es liegt eine alternierende Reihe vor.
+
+\underline{Grenzwert}
+
+Die Folge $a_{k}$ ist eine Nullfolge:
+\begin{equation*}
+\begin{array}{ c l }
+\lim\limits _{k\rightarrow \infty } a_{k} & =\lim\limits _{k\rightarrow \infty }\frac{1}{\sqrt{k-\sqrt{k}}}\\
+    & =0
+\end{array}
+\end{equation*}
+\underline{Monotonie}
+
+Wir zeigen, dass $a_{k}$ monoton fallend ist.
+\begin{equation*}
+\begin{array}{ c r c l c }
+    & a_{k} & \geq  & a_{k+1} & \\
+\Leftrightarrow  & \frac{1}{\sqrt{k-\sqrt{k}}} & \geq  & \frac{1}{\sqrt{k+1-\sqrt{k+1}}} & \\
+\Leftrightarrow  & \sqrt{k+1-\sqrt{k+1}} & \geq  & \sqrt{k-\sqrt{k}} & \\
+\overset{k >0}{\Leftrightarrow } & k+1-\sqrt{k+1} & \geq  & k-\sqrt{k} & \\
+\Leftrightarrow  & 1-\sqrt{k+1} & \geq  & -\sqrt{k} & \\
+\Leftrightarrow  & 1+\sqrt{k} & \geq  & \sqrt{k+1} & \checked
+\end{array}
+\end{equation*}
+
+
+$\Rightarrow$ Die alternierende Reihe ist konvergent nach dem Leibniz Kriterium.
+
+\end{document}

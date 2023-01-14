@@ -1,0 +1,36 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 5}
+Zeigen Sie:
+
+\begin{enumerate}
+    \item Ist die Funktion $f( x) =\sqrt{x}$ im Intervall $[ 1;3]$ selbstkontrahierend?
+    \item Ist die Funktion $f( x) =x^{2} -2x$ im Intervall $[ 0;2]$ selbstkontrahierend?
+\end{enumerate}
+
+\subsection{Lösung 5}
+Fixpunktsatz:
+
+Sei $f:[ a;b]\rightarrow [ c;d]$ stetig mit $[ c;d] \subset [ a;b]$ (selbstkontrahierend), dann exisitert ein Fixpunkt $u=f( x)$.
+
+\subsection{Lösung 5a}
+Die Wurzelfunktion ist bekannterweise stetig und monoton wachsen für $x >0$, also ist sie auch im Intervall $[ 1;3]$ stetig und monoton wachsend.
+
+Setze die Grenzen ein:
+\begin{gather*}
+f( 1) =1\in [ 1;3]\\
+f( 3) =\sqrt{3} \in [ 1;3]
+\end{gather*}
+Somit ist $\left[ 1;\sqrt{3}\right] \subset [ 1;3]$ und die Funktion selbstkontrahierend.
+
+\subsection{Lösung 5b}
+
+\textit{Selbstkontraktion:}
+\begin{equation*}
+f( 1) =-1\notin [ 0;2]
+\end{equation*}
+Somit ist die Funktion nicht selbstkontrahierend.
+
+\end{document}

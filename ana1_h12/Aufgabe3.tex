@@ -1,0 +1,29 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 3}
+Ist die Funktion
+\begin{equation*}
+    f\left( x\right) =\begin{cases}
+    \cos\left( x\right) & \text{für} \ x\leq \pi \\
+    \frac{\sin\left( x\right)}{x-\pi } & \text{für} \ x >\pi
+    \end{cases}
+\end{equation*}
+stetig?
+
+\subsection{Lösung 3}
+Wir betrachten die Grenzwerte der Funktion $f\left( x\right)$ an der Grenze $x\rightarrow \pi $:
+\begin{gather*}
+\lim\limits _{x\uparrow \pi } f\left( x\right) =\lim\limits _{x\uparrow \pi }\cos\left( x\right) =\cos\left( \pi \right) =-1\\
+\\
+\lim\limits _{x\downarrow \pi } f\left( x\right) =\lim\limits _{x\downarrow \pi }\frac{\sin\left( x\right)}{x-\pi }\underset{ \arraycolsep=1pt\def\arraystretch{1} % streach array
+\begin{array}{c}
+\uparrow \\
+\left[\frac{0}{0}\right]
+\end{array}}{\overset{l'H}{=}}\lim\limits _{x\downarrow \pi }\frac{\cos\left( x\right)}{1} =-1
+\end{gather*}
+$\Rightarrow$ Die Funktion ist an der Stell $\pi $ stetig.
+
+
+\end{document}

@@ -1,0 +1,84 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 6}
+Berechnen Sie die Bestapproximation des Punktes $V=( 2|3|1)$ auf die, von den Vektoren
+\begin{equation*}
+    v_{1} =\begin{pmatrix}[1]
+    1\\
+    2\\
+    2
+    \end{pmatrix} ,\ v_{2} =\begin{pmatrix}[1]
+    2\\
+    -2\\
+    1
+    \end{pmatrix}
+\end{equation*}
+aufgespannte Ebene. Klären Sie zunächst, wie die Bestapproximation in der analytischen Geometire genannt wird. Nutzen Sie bei der Berechnung die orthogonale Projektion auf Unterräume. Bestimmen Sie auch den minimalen Abstand von $V$ zur Ebene.
+
+\subsection{Lösung 6}
+Die Bestapproximation wird in der analytischen Geometire orthogonale Projektion oder auch Orthogonalprojektion genannt.
+
+Nach Satz 3.151 gilt für die Bestapproximation:
+\begin{equation*}
+\| v-p_{U}( v) \| =\underset{u\in U}{\min} \| u-v\|
+\end{equation*}
+
+Nach Satz 3.121 gilt für die orthogonale Projektion $p_{b}( a)$ eines Vektors $a$ auf $b$ mit $b\neq 0$ in jedem unitären Vektorraum:
+\begin{equation*}
+p_{b}( a) =\frac{< a,b> }{< b,b> } \cdot b
+\end{equation*}
+Für die orthogonale Projektion $p_{U}( a) \in U$ eines Vektors $a\in V$ auf einen endlich erzeugten Untervektorraum $U$ muss nach Satz 3.122 gelten:
+\begin{equation*}
+a-p_{U}( a) \perp u\ \forall u\in U
+\end{equation*}
+Für die orthogonale Projektion $p_{E}( a)$ des Vektors $a$ auf eine Ebene $E$, welche durch den Ursprung verläuft und mit $E=\mu \cdot \vec{v} +\lambda \cdot \vec{u}$ beschrieben ist, wobei $\vec{v} \perp \vec{u}$, gilt entsprechend:
+\begin{equation*}
+p_{E}( a) =\frac{< a,v> }{< v,v> } \cdot v+\frac{< a,u> }{< u,u> } \cdot u
+\end{equation*}
+Wir betrachten die durch $v_{1}$ und $v_{2}$ aufgespannte Ebene als Untervektorraum $U$ des $\mathbb{R}^{3}$. Dadurch, dass wir den Nullvektor als Aufpunkt wählen, stellen wir sicher, dass sich dieser in der Hyperebene befindet und wir somit von einem Untervektorraum sprechen können.
+\begin{equation*}
+U=\left\{x\in \mathbb{R}^{3}\middle| x=\mu \begin{pmatrix}[1]
+1\\
+2\\
+2
+\end{pmatrix} +\lambda \begin{pmatrix}[1]
+2\\
+-2\\
+1
+\end{pmatrix} ,\ \mu ,\lambda \in \mathbb{R}\right\}
+\end{equation*}
+Für die Orthogonalprojektion von dem Ortsvektor $a$ des Punktes $V$, mit \ $a=( 2;3;1)^{T}$, auf den Untervektorraum $U$ gilt also:
+\begin{equation*}
+\begin{array}{ c l }
+p_{U}( a) & =\frac{< a,v_{1}> }{< v_{1} ,v_{1}> } \cdot v_{1} +\frac{< a,v_{2}> }{< v_{2} ,v_{2}> } \cdot v_{2}\\
+ & =\frac{10}{9} \cdot v_{1} -\frac{1}{9} \cdot v_{2}\\
+ & =\frac{1}{9} \cdot ( 10\cdot v_{1} -v_{2})\\
+ & =\frac{1}{9} \cdot \begin{pmatrix}[1]
+8\\
+22\\
+19
+\end{pmatrix}
+\end{array}
+\end{equation*}
+Für die Bestapproximation gilt nun:
+\begin{equation*}
+\| a-p_{U}( a) \| =\| \begin{pmatrix}[1]
+2\\
+3\\
+1
+\end{pmatrix} -\frac{1}{9}\begin{pmatrix}[1]
+8\\
+22\\
+19
+\end{pmatrix} \| =\frac{\sqrt{225}}{9} =\frac{5}{3}
+\end{equation*}
+
+
+Da die Orthogonalprojektion des Punktes $V$ auf den Untervektorraum $U$ auch Lotfußpunkt genannt wird und der Differenzvektor zwischen dem Punkt $V$ und seiner Orthogonalprojektion das Lot ist, dessen Länge sich über seine $\mathcal{l}_{2}$-Norm berechnet, ist der minimale Abstand von $a$ zur Ebene
+\begin{equation*}
+\underset{u\in U}{\min} \| u-a\| =\| a-p_{U}( a) \| =\frac{5}{3}\text{.}
+\end{equation*}
+
+\end{document}

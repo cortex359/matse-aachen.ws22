@@ -1,0 +1,58 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 1}
+
+Untersuchen Sie die folgenden Reihen auf Konvergenz:
+
+\begin{enumerate}
+    \item $\sum\limits _{n=1}^{\infty }\frac{n+2}{n^{3} +\sin( n) +1}$
+    \item $\sum\limits _{n=2}^{\infty }\frac{n^{2} -3}{n^{3} +\sin( n) +1}$
+\end{enumerate}
+
+\subsection{Lösung 1a}
+Untersuchung mit Majorantenkriterium:
+
+Sei fast immer $\forall n\in \mathbb{N} :a_{n} \leq c_{n}$ und konvergiert $\sum\nolimits _{n=1}^{\infty } c_{n}$, so konvergiert auch die Reihe $\sum\nolimits _{n=1}^{\infty } a_{n}$. Dabei ist $c_{n}$ eine \textit{konvergente Majorante.}
+
+Die Reihe mit $a_{n} =\frac{n+2}{n^{3} +\sin( n) +1}$ konvergiert nach dem Majorantenkriterium, da wir wie folgt nach oben abschätzen können:
+\begin{equation*}
+\begin{array}{ c l }
+a_{n} & =\frac{n+2}{n^{3} +\sin( n) +1}\\
+ & \leq \frac{n+2}{n^{3} -1+1}\\
+ & =\frac{n+2}{n^{3}}\\
+ & =\frac{1}{n^{2}} +\frac{2}{n^{3}}\\
+ & =:c_{n}
+\end{array}
+\end{equation*}
+
+Da $\sum\nolimits _{n=1}^{\infty }\frac{1}{n^{a}}$ für $a >1$ bekanntermaßen konvergent ist, ist \ $\sum _{n=1}^{\infty } c_{n}$ ebenfalls konvergent und entsprechend muss auch die Reihe $\sum\nolimits _{n=1}^{\infty } a_{n}$ konvergent sein.
+
+\subsection{Lösung 1b}
+Untersuchung mit Minorantenkriterium:
+
+Sei fast immer $\forall n\in \mathbb{N} :0\leq c_{n} \leq a_{n}$ und divergiert $\sum\nolimits _{n=1}^{\infty } c_{n}$, so divergiert auch die Reihe $\sum\nolimits _{n=1}^{\infty } a_{n}$. Dabei ist $c_{n}$ eine \textit{divergente Minorante}.
+
+Als bekanntermaßen divergente Minorante verwenden wir die harmonische Reihe und zeigen, dass $\frac{n^{2} -3}{n^{3} +\sin( n) +1} \geq \frac{1}{n}$ gilt:
+\begin{equation*}
+\begin{array}{ c r l c }
+ & \frac{n^{2} -3}{n^{3} +\sin( n) +1} & \geq \frac{1}{n} & \\
+\Leftrightarrow  & \frac{n^{2}}{n^{3} +\sin( n) +1} & \geq \frac{1}{n} & \\
+\Leftrightarrow  & \frac{n^{2}}{n^{3}} & \geq \frac{1}{n} & \\
+\Leftrightarrow  & \frac{1}{n} & \geq \frac{1}{n} & \checked
+\end{array}
+\end{equation*}
+Daraus folgt, dass
+\begin{equation*}
+\begin{array}{ c l }
+\sum\limits _{n=2}^{\infty }\frac{n^{2} -3}{n^{3} +\sin( n) +1} & =\sum\limits _{n=1}^{\infty }\frac{n^{2} -3}{n^{3} +\sin( n) +1} -\frac{1-3}{1+\sin( 1) +1}\\
+ & =\sum\limits _{n=1}^{\infty }\frac{n^{2} -3}{n^{3} +\sin( n) +1} +\frac{2}{2+\sin( 1)}\\
+ & \geq \sum\limits _{n=1}^{\infty }\frac{1}{n}\\
+ & =\infty
+\end{array}
+\end{equation*}
+und somit die Reihe divergiert.
+
+
+\end{document}

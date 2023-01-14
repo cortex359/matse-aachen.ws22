@@ -1,0 +1,85 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{Aufgabe 4}
+Überprüfen Sie, ob und wie die folgenden Funktionen in $x_{0} =-1$ stetig ergänzbar sind.
+
+\begin{enumerate}
+    \item $f( x) =\frac{x^{3} -x^{2} -x+1}{x^{2} +3x+2}$
+    \item $g( x) =\frac{x^{4} -5x^{2} +4}{x^{3} +2x^{2} -5x-6}$
+    \item $h( x) =\frac{4x}{x^{2} +2x+1}$
+\end{enumerate}
+
+\subsection{Lösung 4}
+Eine Funktion $f( x)$ ist genau dann stetig in $x_{0}$, wenn
+\begin{equation*}
+l-\lim _{x\rightarrow x_{0}} f( x) =r-\lim _{x\rightarrow x_{0}} f( x) =f( x_{0})\text{.}
+\end{equation*}
+Sei $f( x)$ steitg für $x\neq x_{0} ,x_{0} \notin D$. Dann erhält man mit $f( x_{0}) :=\lim _{x\rightarrow x_{0}} f( x)$ eine stetige Funktion, wenn der Grenzwert exisitert. $x_{0}$ wird dann als \textit{hebbare Lücke }bezeichnet.
+
+\subsection{Lösung 4a}
+\begin{equation*}
+    \begin{array}{ r l }
+    \lim\limits _{x\uparrow -1} f( x) & =\lim\limits _{x\uparrow -1}\frac{x^{3} -x^{2} -x+1}{x^{2} +3x+2}\\
+     & \underset{\arraycolsep=1pt\def\arraystretch{1}
+     \begin{array}{c}
+    \uparrow \\
+    \left[\frac{0}{0}\right]
+    \end{array}}{\overset{l'H}{=}}\lim\limits _{x\uparrow -1}\frac{3x^{2} -2x -1}{2x +3}\\
+     & =4\\
+    \lim\limits _{x\downarrow -1} f( x) & =\lim\limits _{x\downarrow -1}\frac{x^{3} -x^{2} -x+1}{x^{2} +3x+2}\\
+     & \underset{\arraycolsep=1pt\def\arraystretch{1}
+     \begin{array}{c}
+    \uparrow \\
+    \left[\frac{0}{0}\right]
+    \end{array}}{\overset{l'H}{=}}\lim\limits _{x\downarrow -1}\frac{3x^{2} -2x -1}{2x +3}\\
+     & =4
+    \end{array}
+    \end{equation*}
+    Da $\lim\limits _{x\rightarrow -1} f( x) =4$ existiert, kann die Funktion an der Stelle $x_{0}$ stetig ergänzt werden.
+    \begin{equation*}
+    f( x) =\begin{cases}
+    \frac{x^{3} -x^{2} -x+1}{x^{2} +3x+2} & \text{für } x\neq -1\\
+    4 & \text{für } x=-1
+    \end{cases}
+\end{equation*}
+
+\subsection{Lösung 4b}
+\begin{equation*}
+    \begin{array}{ c l }
+    \lim\limits _{x\rightarrow -1} g( x) & =\lim\limits _{x\rightarrow -1}\frac{x^{4} -5x^{2} +4}{x^{3} +2x^{2} -5x-6}\\
+     & \underset{\arraycolsep=1pt\def\arraystretch{1}
+     \begin{array}{c}
+    \uparrow \\
+    \left[\frac{0}{0}\right]
+    \end{array}}{\overset{l'H}{=}}\lim\limits _{x\rightarrow -1}\frac{4x^{3} -10x}{3x^{2} +4x-5}\\
+     & =\frac{6}{-6}\\
+     & =-1
+    \end{array}
+    \end{equation*}
+    Da der Grenzwert existiert, kann die Funktion an der Stelle $x_{0}$ stetig ergänzt werden.
+    \begin{equation*}
+    g( x) =\begin{cases}
+    \frac{x^{4} -5x^{2} +4}{x^{3} +2x^{2} -5x-6} & \text{für } x\neq -1\\
+    -1 & \text{für } x=-1
+    \end{cases}
+\end{equation*}
+
+
+\subsection{Lösung 4c}
+\begin{gather*}
+    \begin{array}{ c l }
+    \lim\limits _{x\rightarrow -1} h( x) & =\lim\limits _{x\rightarrow -1}\frac{4x}{x^{2} +2x+1}\\
+     & =\lim\limits _{x\rightarrow -1}\frac{4x}{x^{2} \cdotp \left( 1+\frac{2}{x} +\frac{1}{x^{2}}\right)}\\
+     & =\lim\limits _{x\rightarrow -1}\frac{4}{x} \cdotp \frac{1}{1+\frac{2}{x} +\frac{1}{x^{2}}}\\
+     & =-4\cdot \lim\limits _{x\rightarrow -1}\underbrace{\frac{1}{\underbrace{1+\frac{2}{x} +\frac{1}{x^{2}}}_{\rightarrow 0}}}_{\rightarrow \infty }\\
+     & =-\infty
+    \end{array}\\
+    \\
+    \lim\limits _{x\uparrow -1} h( x) =\lim\limits _{x\downarrow -1} h( x)
+\end{gather*}
+
+Die Funktion divergiert an der Stelle $x_{0}$ und kann somit nicht ergänzt werden.
+
+\end{document}
