@@ -5,22 +5,11 @@
 \section{Aufgabe 8}
 Folgende Vektoren spannen einen Unterraum $U$ des $\mathbb{R}^{4}$ auf:
 \begin{equation*}
-V=\left\{\begin{pmatrix}[1]
-1\\
-0\\
-2\\
--2
-\end{pmatrix} ,\begin{pmatrix}[1]
-2\\
-1\\
-4\\
--4
-\end{pmatrix} ,\begin{pmatrix}[1]
-0\\
-1\\
--1\\
-2
-\end{pmatrix}\right\}
+	V = \left\{
+		\vektor{ 1 \\ 0 \\ 2 \\ -2 },
+		\vektor{2 \\ 1 \\ 4 \\ -4},
+		\vektor{0 \\1 \\ -1 \\ 2 }
+	\right\}
 \end{equation*}
 
 \begin{enumerate}
@@ -31,97 +20,34 @@ V=\left\{\begin{pmatrix}[1]
 \subsection{Lösung 8a}
 Orthogonalisierungsverfahren nach Gram-Schmidt.
 \begin{equation*}
-\begin{array}{ c l }
-w_{1} & :=\frac{v_{1}}{\| v_{1} \| }\\
-r_{k+1} & :=v_{k+1} -\sum\limits _{i=1}^{k}< v_{k+1} ,w_{i}> w_{i}\\
-w_{k+1} & =\frac{r_{k+1}}{\| r_{k+1} \| }
-\end{array}
+	\begin{array}{ c l }
+		w_{1}   & := \frac{v_{1}}{\norm{ v_{1} } }\\
+		r_{k+1} & := v_{k+1} -\sum\limits _{i=1}^{k}\scalarprod{ v_{k+1} ,w_{i}} w_{i}\\
+		w_{k+1} &  = \frac{r_{k+1}}{\norm{ r_{k+1} } }
+	\end{array}
 \end{equation*}
+
 Sei $V$ ein unitärer Vektorraum und die Vektoren $v_{1} ,\dotsc ,v_{m}$ linear unabhängig, dann bilden $w_{1} ,\dotsc ,w_{m}$ eine Orthonormalbasis von $\mathcal{L}( v_{1} ,\dotsc ,v_{m})$.
+
 \begin{gather*}
-\begin{array}{ c l }
-w_{1} & :=\frac{v_{1}}{\| v_{1} \| }\\
- & =\frac{v_{1}}{3}\\
- & =\begin{pmatrix}[1]
-1/3\\
-0\\
-2/3\\
--2/3
-\end{pmatrix}\\
-r_{2} & :=v_{2} -< v_{2} ,w_{1}> w_{1}\\
- & =\begin{pmatrix}[1]
-2\\
-1\\
-4\\
--4
-\end{pmatrix} -6\cdotp \begin{pmatrix}[1]
-1/3\\
-0\\
-2/3\\
--2/3
-\end{pmatrix}\\
- & =\begin{pmatrix}[1]
-0\\
-1\\
-0\\
-0
-\end{pmatrix}\\
-w_{2} & =\frac{r_{2}}{\| r_{2} \| }\\
- & =\begin{pmatrix}[1]
-0\\
-1\\
-0\\
-0
-\end{pmatrix}\\
-r_{3} & :=v_{3} -(< v_{3} ,w_{1}> w_{1} +< v_{3} ,w_{2}> w_{2})\\
- & =\begin{pmatrix}[1]
-0\\
-1\\
--1\\
-2
-\end{pmatrix} -\left(\begin{pmatrix}[1]
--2/3\\
-0\\
--4/3\\
-4/3
-\end{pmatrix} +\begin{pmatrix}[1]
-0\\
-1\\
-0\\
-0
-\end{pmatrix}\right)\\
- & =\begin{pmatrix}[1]
-2/3\\
-0\\
-1/3\\
-2/3
-\end{pmatrix}\\
-w_{3} & =\frac{r_{3}}{\| r_{3} \| }\\
- & =\begin{pmatrix}[1]
-2/3\\
-0\\
-1/3\\
-2/3
-\end{pmatrix}
-\end{array}\\
+	\begin{array}{ c l }
+		w_{1} & :=\frac{v_{1}}{\norm{ v_{1} } }\\
+		 & =\frac{v_{1}}{3}\\
+		 & =\vektor{ 1/3 \\ 0 \\ 2/3 \\ -2/3 }\\
+		r_{2} & :=v_{2} -\scalarprod{ v_{2} ,w_{1}} w_{1}\\
+		 & =\vektor{ 2 \\ 1 \\ 4 \\ -4 } -6\cdotp \vektor{ 1/3 \\ 0 \\ 2/3 \\ -2/3 }\\
+		 & =\vektor{ 0 \\ 1 \\ 0 \\ 0 }\\
+		w_{2} & =\frac{r_{2}}{\norm{ r_{2} } }\\
+		 & =\vektor{ 0 \\ 1 \\ 0 \\ 0 }\\
+		r_{3} & :=v_{3} -(\scalarprod{ v_{3} ,w_{1}} w_{1} +\scalarprod{ v_{3} ,w_{2}} w_{2})\\
+		 & =\vektor{ 0 \\ 1 \\ -1 \\ 2 } -\left(\vektor{ -2/3 \\ 0 \\ -4/3 \\ 4/3 } + \vektor{ 0 \\ 1 \\ 0 \\ 0 }\right)\\
+		 & =\vektor{ 2/3 \\ 0 \\ 1/3 \\ 2/3 }\\
+		w_{3} & =\frac{r_{3}}{\norm{ r_{3} } }\\
+		 & =\vektor{ 2/3 \\ 0 \\ 1/3 \\ 2/3 }
+	\end{array}\\
 \end{gather*}
 \begin{gather*}
-    W=\left\{\begin{pmatrix}[1]
-    1/3\\
-    0\\
-    2/3\\
-    -2/3
-    \end{pmatrix} ,\begin{pmatrix}[1]
-    0\\
-    1\\
-    0\\
-    0
-    \end{pmatrix} ,\begin{pmatrix}[1]
-    2/3\\
-    0\\
-    1/3\\
-    2/3
-    \end{pmatrix}\right\}
+    W=\left\{\vektor{ 1/3 \\ 0 \\ 2/3 \\ -2/3 } ,\vektor{ 0 \\ 1 \\ 0 \\ 0 } ,\vektor{ 2/3 \\ 0 \\ 1/3 \\ 2/3 }\right\}
 \end{gather*}
 \textbf{Probe:}
 
@@ -131,11 +57,11 @@ Die Vektoren $w_{1} ,w_{2}$ und $w_{3}$ sind linear unabhängig.
 
 Normiertheit:
 
- $\| w_{1} \| =\sqrt{\frac{1}{9} +\frac{4}{9} +\frac{4}{9}} =1\land \| w_{2} \| =1\land \| w_{3} \| =\sqrt{\frac{4}{9} +\frac{1}{9} +\frac{4}{9} =1} \ \checked $
+ $\norm{ w_{1} } =\sqrt{\frac{1}{9} +\frac{4}{9} +\frac{4}{9}} =1\land \norm{ w_{2} } =1\land \norm{ w_{3} } =\sqrt{\frac{4}{9} +\frac{1}{9} +\frac{4}{9} =1} \ \checked $
 
 Orthogonalität:
 
-$< w_{1} ,w_{2}> =0\land < w_{2} ,w_{3}> =0\ \land < w_{1} ,w_{3}> =0\ \checked $
+$\scalarprod{ w_{1} ,w_{2}} =0\land \scalarprod{ w_{2} ,w_{3}} =0\ \land \scalarprod{ w_{1} ,w_{3}} =0\ \checked $
 
 
 
@@ -144,7 +70,7 @@ $\Rightarrow $ $W$ ist eine Orthonormalbasis von $U$.
 \subsection{Lösung 8b}
 Nach Folgerung 3.145 gilt für einen endlich erzeugten unitären Vektorraum $V$ und einem beliebigen Untervektorraum $U$
 \begin{equation*}
-    \dim( V) =\dim( U) +\dim\left( U^{\perp }\right) .
+    \dim( V) =\dim( U) +\dim\left( U^{\perp }\right).
 \end{equation*}
 Damit gilt auch $\dim\left( U^{\perp }\right) =\ \dim( V) -\dim( U)$, was bedeutet, dass $\dim\left( U^{\perp }\right) =1$
 
