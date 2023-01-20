@@ -6,27 +6,29 @@
 
 Beweisen oder widerlegen Sie:
 \begin{enumerate}
-    \item Seien zwei endliche Mengen $M$ und $N$ Teilmengen des $\mathbb{R}^{n}$. Aus $N\subseteq M$ folgt $L( N) \subseteq L( M)$.
-    \item Für $M\subseteq \mathbb{R}^{n}$, $M$ endlich, gilt $L( M) =L( L( M))$.
+    \item Seien zwei endliche Mengen $M$ und $N$ Teilmengen des $\mathbb{R}^{n}$. Aus $N\subseteq M$ folgt $\mathcal{L}(N) \subseteq \mathcal{L}(M)$.
+    \item Für $M\subseteq \mathbb{R}^{n}$, $M$ endlich, gilt $\mathcal{L}(M) = \mathcal{L}(\mathcal{L}(M))$.
 \end{enumerate}
 
 \subsection{Lösung 7a}
 
 \begin{equation*}
     \begin{array}{ c c r l }
-    x\in L( N) & \Rightarrow  & x\  & =\ \sum\limits _{k=1}^{r} \lambda _{k} \cdotp n_{k}\\
+    x\in \mathcal{L}(N) & \Rightarrow  & x\  & =\ \sum\limits _{k=1}^{r} \lambda _{k} \cdotp n_{k}\\
      &  &  & =\ \sum\limits _{k=1}^{r} \lambda _{k} \cdotp n_{k} +0\\
      &  &  & =\ \sum\limits _{k=1}^{r} \lambda _{k} \cdotp n_{k} +\ \sum\limits _{m\in M\setminus N} 0\cdotp m\\
-     & \Rightarrow  &  & x\in L( M)\\
-     & \Rightarrow  &  & L( N) \subseteq L( M)\;\; \checked
+     & \Rightarrow  &  & x\in \mathcal{L}(M)\\
+     & \Rightarrow  &  & \mathcal{L}(N) \subseteq \mathcal{L}(M) \ \checked
     \end{array}
 \end{equation*}
     
 
 \subsection{Lösung 7b}
-Es ist zu zeigen, dass $L(L(M)) \subseteq L(M)$.\\
+Es ist zu zeigen, dass $\mathcal{L}(\mathcal{L}(M)) \subseteq \mathcal{L}(M)$.\\
 
-Sei $x\in L( L( N))$ so gilt $x=\sum\limits _{i=1}^{k} a_{i} \cdotp m_{i}$ mit $m_{i} \in L( N)$ für $n\in [ 1;k]$. Dann ist $m_{i} =\sum\limits _{j=1}^{l} k_{j} \cdotp n_{j}$. 
+Sei $x\in \mathcal{L}( \mathcal{L}( N))$ so gilt $x=\sum\limits _{i=1}^{k} a_{i} \cdotp m_{i}$ mit $m_{i} \in \mathcal{L}( N)$ für $n\in [ 1;k]$.
+
+Dann ist $m_{i} =\sum\limits _{j=1}^{l} k_{j} \cdotp n_{j}$. 
 
 Somit ist $a_{i} \cdotp m_{i} =a_{i} \cdotp \sum\limits _{j=1}^{l} b_{j} \cdotp n_{j} =\sum\limits _{j=1}^{1} a_{i} \cdotp b_{j} \cdotp n_{j}$. Außerdem ist dann
 \begin{equation*}
@@ -37,8 +39,8 @@ Somit ist $a_{i} \cdotp m_{i} =a_{i} \cdotp \sum\limits _{j=1}^{l} b_{j} \cdotp 
     \end{array}
 \end{equation*}
 
-So sieht man, dass $x\in L( N)$ \checked
+So sieht man, dass $x\in \mathcal{L}( N)$ \ \checkmark
 
-Aus $M\subseteq N$ folgt $L( M) \subseteq L( N)$. Setze ein $N=L( M)$. Da $M\subseteq L( M)$ ist, folgt ebenso $L( M) \subseteq L( L( M))$. \checked
+Aus $M\subseteq N$ folgt $\mathcal{L}( M) \subseteq \mathcal{L}( N)$. Setze ein $N=\mathcal{L}( M)$. Da $M\subseteq \mathcal{L}( M)$ ist, folgt ebenso $\mathcal{L}( M) \subseteq \mathcal{L}( \mathcal{L}( M))$. \ \checkmark
 
 \end{document}
