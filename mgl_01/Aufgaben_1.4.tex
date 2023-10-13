@@ -1,0 +1,176 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+\section{1.4 Aufgaben}
+
+\subsection{Aufgabe 1}
+Überprüfen Sie mithilfe von Wahrheitstafeln, ob die folgenden Aussageformen allgemeingültig sind.
+
+\subsubsection{a)}
+$$
+    (A \lor B) \implies (( \lnot A \lor B) \land (A \implies \lnot A))
+$$
+\newcolumntype{d}{>{\columncolor{yellow!15}}c}
+\newcolumntype{e}{>{\columncolor{yellow!30}}c}
+\newcolumntype{f}{>{\columncolor{yellow!45}}c}
+\newcolumntype{g}{>{\columncolor{yellow!60}}c}
+\newcolumntype{h}{>{\columncolor{yellow!75}}c}
+\begin{equation*}
+\begin{array}{d|e|d|h|e|d|f|e|g|d|f|e|d}
+    (A  & \lor &  B) & \implies & (( \lnot &  A & \lor & B) & \land & (A & \implies & \lnot & A))\\
+    \hline
+     w  & w  & w  & f  & f  & w  & w  & w  & f  & w  & f  & f  & w\\
+     w  & w  & f  & f  & f  & w  & f  & f  & f  & w  & f  & f  & w\\
+     f  & w  & w  & w  & w  & f  & w  & w  & w  & f  & w  & w  & f\\
+     f  & f  & f  & w  & w  & f  & w  & f  & w  & f  & w  & w  & f\\
+    \hline
+     1. & 2. & 1. & 5. & 2. & 1. & 3. & 1. & 4. & 1. & 3. & 2. & 1.\\
+\end{array}
+\end{equation*}
+
+Die Aussage ist nicht allgemeingültig.
+
+\subsubsection{b)}
+$$
+    (A \implies (B \implies C)) \equiv ((A \land B) \implies C)
+$$
+
+\begin{equation*}
+    \begin{array}{d|f|d|e|d|g|d|e|d|f|d}
+        (A  & \implies  & (B    & \implies  & C)   & ) \equiv ( & (A   & \land & B)    & \implies  & C) \\
+        \hline
+         w  & w  & w  & w  & w  & w  & w  & w  & w  & w  &  w \\
+         w  & f  & w  & f  & f  & w  & w  & w  & w  & f  &  f \\
+         w  & w  & f  & w  & w  & w  & w  & f  & f  & w  &  w \\
+         w  & w  & f  & w  & f  & w  & w  & f  & f  & w  &  f \\
+         f  & w  & w  & w  & w  & w  & f  & f  & w  & w  &  w \\
+         f  & w  & w  & f  & f  & w  & f  & f  & w  & w  &  f \\
+         f  & w  & f  & w  & w  & w  & f  & f  & f  & w  &  w \\
+         f  & w  & f  & w  & f  & w  & f  & f  & f  & w  &  f \\ \hline
+         1. & 3. & 1. & 2. & 1. & 4. & 1. & 2. & 1. & 3. &  1.\\
+    \end{array}
+\end{equation*}
+
+Die Aussage ist allgemeingültig.
+
+\subsection{Aufgabe 2}
+Vereinfachen Sie die folgenden Ausdrücke:
+
+\subsubsection{a)}
+\begin{equiveqs}[rrcl]
+        & (A \implies B) & \lor & ((A \land B) \Leftarrow B) \\
+\equiv  & \lnot A \lor B & \lor & \lnot B \lor (A \land B) \\
+\equiv  & B & \lor & \lnot B \\
+\equiv  & & T &  \\
+\end{equiveqs}
+
+\subsubsection{b)}
+\begin{equiveqs}[rrcl]
+        & (A \land B) & \Leftarrow & ((A \implies B) \land B) \\
+\equiv  & ((A \implies B) \land B)         & \implies & (A \land B)  \\
+\equiv  & ((\lnot A \lor B) \land B)       & \implies & (A \land B)  \\
+\equiv  & \lnot ((\lnot A \lor B) \land B) & \lor     & (A \land B)  \\
+\equiv  & \lnot ((\lnot A \land B) \lor (B \land B)) & \lor     & (A \land B)  \\
+\equiv  & \lnot ((\lnot A \land B) \lor B) & \lor     & (A \land B)  \\
+\equiv  & \lnot B & \lor     & (A \land B)  \\
+\equiv  & \lnot B & \lor & A  \\
+\end{equiveqs}
+
+\subsection{Aufgabe 3}
+Erstellen Sie für die folgende logische Aussageform $\alpha$ eine Wahrheitstafel:
+$$
+    \alpha = \lnot ( A \equiv  (B  \implies  C) ) \implies (\lnot  A  \lor  C)  \land  (B \land  \lnot  C)
+$$
+
+\begin{equation*}
+\begin{array}{g|d|f|d|e|d|h|e|d|f|d|g|d|f|e|d}
+    \lnot & ( A & \equiv & (B & \implies & C) &) \implies (&\lnot & A & \lor & C) & \land & (B &\land & \lnot & C) \\
+    \hline
+    f & w  & w  & w  & w  &  w  & w  & f  & w  & w  & w  & f  & w  & f  &  f  & w \\
+    w & w  & f  & w  & f  &  f  & f  & f  & w  & f  & f  & f  & w  & w  &  w  & f \\
+    f & w  & w  & f  & w  &  w  & w  & f  & w  & w  & w  & f  & f  & f  &  f  & w \\
+    f & w  & w  & f  & w  &  f  & w  & f  & w  & f  & f  & f  & f  & f  &  w  & f \\
+    w & f  & f  & w  & w  &  w  & f  & w  & f  & w  & w  & f  & w  & f  &  f  & w \\
+    f & f  & w  & w  & f  &  f  & w  & w  & f  & w  & f  & w  & w  & w  &  w  & f \\
+    w & f  & f  & f  & w  &  w  & f  & w  & f  & w  & w  & f  & f  & f  &  f  & w \\
+    w & f  & f  & f  & w  &  f  & f  & w  & f  & w  & f  & f  & f  & f  &  w  & f \\ \hline
+    4.& 1. & 3. & 1. & 2. &  1. & 5. & 2. & 1. & 3. & 1. & 4. & 1. & 3. &  2. & 1.\\
+\end{array}
+\end{equation*}
+\\[4mm]
+Wann ist die Aussage wahr?
+
+\begin{equation*}
+\begin{array}{lcl}
+    \text{wahr} & & \text{falsch} \\
+    \begin{array}{d|d|d|h}
+        A & B & C & \alpha \\
+        \hline
+        w & w & w  & w \\
+        w & f & w  & w \\
+        w & f & f  & w \\
+        f & w & f  & w \\
+    \end{array}
+    & \quad &
+    \begin{array}{d|d|d|h}
+        A & B & C & \alpha \\
+        \hline
+        w & w & f  & f \\
+        f & w & w  & f \\
+        f & f & w  & f \\
+        f & f & f  & f \\
+    \end{array}
+\end{array}
+\end{equation*}
+\\[4mm]
+
+Geben Sie eine disjunktive und eine konjunktive Normalform an.
+
+\begin{equation*}
+    \begin{aligned}
+        \text{DNF von } \alpha: & (A \land B \land C) \lor (A \land \lnot B \land C) \lor (A \land \lnot B \land \lnot C) \lor (\lnot A \land B \land \lnot C)\\
+    \end{aligned}
+\end{equation*}
+
+Die konjunktive Normalform ergibt sich über die DNF von $\lnot \alpha$, welche man zunächst aufstellen muss. 
+
+\begin{equation*}
+    \begin{aligned}
+        \text{DNF von } \lnot \alpha: & (A \land B \land \lnot C) \lor (\lnot A \land B \land C) \lor (\lnot A \land \lnot B \land C) \lor (\lnot A \land \lnot B \land \lnot C)\\
+    \end{aligned}
+\end{equation*}
+
+Danach lässt sich durch Invertierung und Anwendung von deMorgan die KNF konstruieren:
+
+\begin{equiveqs}[lrcl]
+    & \lnot \alpha & \equiv & (A \land B \land \lnot C) \lor (\lnot A \land B \land C) \lor (\lnot A \land \lnot B \land C) \lor (\lnot A \land \lnot B \land \lnot C)\\
+\congruent & \lnot [\lnot \alpha] & \equiv & \lnot \left[ (A \land B \land \lnot C) \lor (\lnot A \land B \land C) \lor (\lnot A \land \lnot B \land C) \lor (\lnot A \land \lnot B \land \lnot C) \right]\\
+\congruent & \alpha & \equiv & \lnot(A \land B \land \lnot C) \land \lnot(\lnot A \land B \land C) \land \lnot (\lnot A \land \lnot B \land C) \land \lnot (\lnot A \land \lnot B \land \lnot C)\\
+\congruent & \alpha & \equiv & (\lnot A \lor \lnot B \lor C) \land (A \lor \lnot B \lor \lnot C) \land (A \lor B \lor \lnot C) \land (A \lor B \lor C)\\
+\end{equiveqs}
+
+\subsection*{Aufgabe 4}
+
+Gegeben seien die folgenden Aussagen:
+\begin{itemize}
+\item[A:] Die Sonne scheint.
+\item[B:] Ein Auftrag liegt vor.
+\item[C:] Miss Peel übt Karate.
+\item[D:] Miss Peel besucht Mr. Steed.
+\item[E:] Mr. Steed spielt Golf.
+\item[F:] Mr. Steed luncht mit Miss Peel.
+\end{itemize}
+
+Bestimmen Sie für folgende Aussagen die zugehörigen aussagenlogischen Formeln:
+\begin{enumerate}
+    \item Wenn die Sonne scheint, dann spielt Mr. Steed Golf.
+    \item Wenn die Sonne nicht scheint und kein Auftrag vorliegt, dann luncht Mr. Steed mit Miss Peel.
+    \item Entweder übt Miss Peel Karate oder sie besucht Mr. Steed.
+    \item Miss Peel übt Karate genau dann, wenn Mr. Steed Golf spielt oder ein Auftrag vorliegt.
+    \item Entweder scheint die Sonne und Mr. Steed spielt Golf oder Miss Peel besucht Mr. Steed und dieser luncht mit ihr.
+    \item Es trifft nicht zu, dass Miss Peel Mr. Steed dann besucht, wenn ein Auftrag vorliegt.
+    \item Genau dann, wenn kein Auftrag vorliegt, luncht Mr. Steed mit Miss Peel.
+\end{enumerate}
+
+\end{document}

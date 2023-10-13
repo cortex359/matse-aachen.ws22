@@ -1,0 +1,538 @@
+%%%                                                                         %%%
+%%%    Vorlage für Hausaufgaben und Übungen                                 %%%
+%%%   ======================================                                %%%
+%%%                                                                         %%%
+%%%    Version:                                                   v1.2.3    %%%
+%%%                                                                         %%%
+%%%    Erstellt von:                  Christian Rene Thelen (@cortex359)    %%%
+%%%               https://cortex359.de <christian.thelen@rwth-aachen.de>    %%%
+%%%                                                                         %%%
+
+\documentclass[12pt,a4paper]{article}
+
+%%%%%%%%%%%%%%% Deutsch %%%%%%%%%%%%%%%
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+
+% Verfeinerungen des Schriftbildes durch Grauwertausgleich etc.
+\usepackage[babel=true,
+nopatch=eqnum,
+tracking=true,
+kerning=true,
+final
+]{microtype}
+
+%%%%%%%%%%%%%%% AMS %%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+\usepackage{makeidx}
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+%\usepackage{etex}  % wird für das Symbol beim beweis-Theorem benötigt
+
+\usepackage{framed} % braucht man für die gerahmten Boxen
+
+%%%% erweiterte Umgebung für Theoreme
+\usepackage[amsmath, standard, framed, thmmarks]{ntheorem}
+
+%%% für schräge Brüche in Arrays im Math-mode
+\usepackage{xfrac}
+\usepackage{nicefrac}
+
+\definecolor{gruen}{rgb}{0,0.7,0}
+
+% Skript: dunkelblau
+\definecolor{idxfarbe}{rgb}{0.0,0.0,0.4}
+
+\definecolor{fhcyan}{rgb}{0,0.69411,0.6745}
+\definecolor{fhdarkcyan}{rgb}{0,0.49411, 0.4745}
+\definecolor{fhlightcyan}{rgb}{0.4,0.89411, 0.8745}
+\definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
+\definecolor{defcolor}{RGB}{195,62,62}
+\definecolor{red}{rgb}{0.9,0,0}
+\definecolor{td-blue}{cmyk}{   0.9,    1,    0,    0}  % ThelenDesign Blau
+\definecolor{td-orange}{cmyk}{0.02, 0.35, 0.89, 0.04}  % ThelenDesign Orange
+
+\definecolor{codered}{rgb}{0.788, 0.102, 0.35}
+\definecolor{codegreen}{rgb}{0.137, 0.471, 0.255}
+\definecolor{codeblue}{rgb}{0, 0.333, 0.749}
+\definecolor{codeorange}{rgb}{0.996, 0.541, 0.094}
+\definecolor{codegrey}{rgb}{0.627, 0.647, 0.663}
+\definecolor{codepurple}{HTML}{C42043}
+\definecolor{backcolour}{HTML}{F2F2F2}
+
+\usepackage[
+naturalnames=true,  % mre 090528 beseitigt \ref Problem in Mik2.7
+colorlinks=true,
+hyperindex=true,
+bookmarks=true,
+bookmarksnumbered=true,
+breaklinks,
+filecolor=fhcyan,
+urlcolor=fhcyan,
+linkcolor=td-blue
+]{hyperref}
+
+%~ prevent overfull lines ~%
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}}
+
+\parindent0cm
+
+\definecolor{grau}{gray}{0.4}
+
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{0}
+
+% Index erzeugen lassen
+\makeindex
+
+% Serifenschrift: Palatino anstelle der Standard-Schrift
+\usepackage[sc]{mathpazo}
+
+% serifenlose Schrift: Helvetica anstelle der Standardschrift
+% Die Formeln auf den Folien werden dadurch besser lesbar.
+\usepackage[scaled=.95]{helvet}
+
+% Schriftart Courier anstelle der Standardschrift für Maschinenschrift
+\usepackage{courier}
+
+\usepackage{listings}
+
+% \lstdefinestyle{mystyle}{
+%     basicstyle=\ttfamily,
+%     breakatwhitespace=false,
+%     breaklines=true,
+%     captionpos=b,
+%     keepspaces=true,
+%     numbers=left,
+%     numbersep=10pt,
+%     showspaces=false,
+%     showstringspaces=false,
+%     showtabs=false,
+%     tabsize=4
+% }
+% \lstset{style=mystyle}
+
+
+%%%% coloring numbers
+\makeatletter
+
+%%% Copied from https://tex.stackexchange.com/a/500690/23765
+% Some conditional tests
+\def\@genericif#1{#1\expandafter\@firstoftwo\else\expandafter\@secondoftwo\fi}
+\def\@ifdigit#1{\@genericif{\ifnum1<1\noexpand#1\relax}}
+\def\@ifempty#1{\@genericif{\if\relax\detokenize{#1}\relax}}
+
+% The main parsing macros
+\def\parse@num#1{%
+    \@ifempty{#1}%
+        {\parse@num@false}%
+        {\@genericif{\parsesign}%
+            {\parse@num@sign#1{}\@end}%
+            {\parse@num@dig#1{}\@end}%
+        }%
+}
+% Parse sign
+\def\parse@num@sign#1#2\@end{%
+    \@genericif{\ifx\parse@num@minus#1}%
+        {\@ifempty{#2}{\parse@num@false}{\parse@num@dig#2\@end}}%
+        {\@genericif{\ifx\parse@num@plus#1}%
+            {\@ifempty{#2}{\parse@num@false}{\parse@num@dig#2\@end}}%
+            {\parse@num@dig#1#2\@end}%
+        }%
+}
+% Parse first digit
+\def\parse@num@dig#1#2\@end{%
+    \@ifdigit{#1}%
+        {\@ifempty{#2}{\parse@num@true}{\parse@num@digs#2\@end}}%
+        {\parse@num@false}%
+}
+% Parse optional following digits
+\def\parse@num@digs#1#2\@end{%
+    \@ifdigit{#1}{%
+        \@ifempty{#2}%
+            {\parse@num@true}%
+            {\parse@num@digs#2\@end}%
+    }{%
+        \@genericif{\parsefloat}{%
+            \@genericif{\ifx\parse@num@point#1}%
+                {\@ifempty{#2}{\parse@num@false}{\parse@num@decs#2\@end}}%
+                {\parse@num@false}%
+        }{\parse@num@false}%
+    }%
+}
+% Parse decimal places
+\def\parse@num@decs#1#2\@end{%
+    \@ifdigit{#1}{%
+        \@ifempty{#2}%
+            {\parse@num@true}%
+            {\parse@num@decs#2\@end}%
+    }{\parse@num@false}%
+}
+
+% User interface
+\newcommand\ifnumber[4][]{%
+    \begingroup
+    \let\parsesign=\iftrue%
+    \let\parsefloat=\iftrue%
+    \let\parse@num@minus=-%
+    \let\parse@num@plus=+%
+    \let\parse@num@point=.%
+    #1%
+    \def\parse@num@true{\endgroup#3}%
+    \def\parse@num@false{\endgroup#4}%
+    \parse@num{#2}%
+}
+
+
+%%% Additions to the listings package
+\lst@Key{numbersstyle}{}{\def\lst@numbersstyle{#1}}
+\lst@Key{parsenumbers}{false}[t]{\lstKV@SetIf{#1}\lst@ifparsenumbers}
+
+\lst@AddToHook{OutputOther}{%
+    \lst@ifparsenumbers
+        % Only if mode changes are not prohibited
+        \lst@ifmode\else
+            \expandafter\@hook@ifnumber\the\lst@token\@end
+                {\let\lst@thestyle=\lst@numbersstyle}%
+                {}%
+        \fi
+    \fi
+}
+\def\@hook@ifnumber#1#2\@end{%
+    \@genericif{\ifx\lst@nolig#1}%
+        {\@hook@ifnumber@{#2}}%
+        {\@hook@ifnumber@{#1#2}}%
+}
+\def\@hook@ifnumber@{%
+    \ifnumber[\expandafter\let\expandafter\parse@num@minus\csname lst@um-\endcsname]%
+}
+
+\makeatother
+%%%% /coloring numbers
+
+\lstdefinelanguage{RAM}{
+  morekeywords={READ, WRITE, LOAD, STORE, ADD, SUB, MUL, DIV, GOTO, JZ, JGTZ, HALT},
+  keywordstyle=\bfseries\color{codeblue},
+  string=[s]{[}{]},
+  stringstyle=\color{blue},
+  comment=[l]{:},
+  commentstyle=\color{fhdarkcyan},
+  numbersstyle = {\color{blue}},
+}
+
+\lstdefinestyle{MyCodeStyle}{
+  %backgroundcolor=,           % colour for the background. External color or xcolor package needed.
+  commentstyle = \color{fhdarkcyan},        % style of comments in source language.
+  basicstyle = \footnotesize\ttfamily, % font size/family/etc. for source (e.g. basicstyle=\ttfamily\small)
+  keywordstyle = \bfseries\color{codeblue}, % style of keywords in source language (e.g. keywordstyle=\color{red})
+  numberstyle = \scriptsize\ttfamily\color{codegrey},               % style used for line-numbers
+  numbersep = 10pt,                 % distance of line-numbers from the code
+  stringstyle = \color{codered},            % style of strings in source language
+  showspaces = false,           % emphasize spaces in code (true/false)
+  showstringspaces = false,     % emphasize spaces in strings (true/false)
+  showtabs = false,             % emphasize tabulators in code (true/false)
+  numbers = left,               % position of line numbers (left/right/none, i.e. no line numbers)
+  prebreak = \tiny\raisebox{0ex}[0ex][0ex]{\ensuremath{\ldots}},  % displaying mark on the end of breaking line (e.g. prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}})
+  postbreak = \tiny\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookrightarrow\ }},  % displaying mark on the end of breaking line (e.g. prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}})
+  breakindent = 12pt,
+  captionpos = b,               % position of caption (t/b)
+  breakatwhitespace = true,    % sets if automatic breaks should only happen at whitespaces
+  breaklines = true,            % automatic line-breaking
+  keepspaces = true,            % keep spaces in the code, useful for indetation
+  tabsize = 4,                  % default tabsize
+  gobble=4,                     % gobbles <number> characters at the beginning of each environment code line.
+  texcl = true, % LaTeX comments f activated, comment line delimiters are printed as usual, but the comment line text (up to the end of line) is read as LATEX code and typeset in comment style.
+  %escapeinside = {\%*}{*)},     % specify characters to escape from source code to LaTeX, e.g. escapeinside={\%*}{*)} -> %* latexcode here *)
+  escapeinside={(*@}{@*)},
+  frame = single,               % showing frame outside code (none/leftline/topline/bottomline/lines/single/shadowbox)
+  rulecolor = \color{codegrey},                 % Specify the colour of the frame-box
+  framerule = 0.4pt,            % controls the width of the rules; default: 0.4pt
+  framesep = 3pt, % control the space between frame and listing, effects size of the quarter circles when used with frameround; default 3pt
+  frameround = tttt, % top right, bottom right, bottom left and top left corner; t makes the according corner round. If you use round corners, the rule width is controlled via \thinlines and \thicklines.
+  resetmargins = true, % If true, indention from list environments like enumerate or itemize is reset, i.e. not used.
+  xleftmargin = 5pt,
+  xrightmargin = 0pt,
+  % framex{left,right,top,bottom}margin are the dimensions which are used additionally to framesep to make up the margin of a frame.
+  framexleftmargin = 0.5mm, % Note include the line numbers inside the frame.
+  framexrightmargin = 2pt,
+  framextopmargin = 0pt,
+  framexbottommargin = 0pt,
+  inputencoding = utf8,
+  extendedchars = true,       % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  parsenumbers = true, % number coloring extension from above
+  literate =         % Support additional characters
+    {á}{{\'a}}1  {é}{{\'e}}1  {í}{{\'i}}1 {ó}{{\'o}}1  {ú}{{\'u}}1
+    {Á}{{\'A}}1  {É}{{\'E}}1  {Í}{{\'I}}1 {Ó}{{\'O}}1  {Ú}{{\'U}}1
+    {à}{{\`a}}1  {è}{{\`e}}1  {ì}{{\`i}}1 {ò}{{\`o}}1  {ù}{{\`u}}1
+    {À}{{\`A}}1  {È}{{\'E}}1  {Ì}{{\`I}}1 {Ò}{{\`O}}1  {Ù}{{\`U}}1
+    {ä}{{\"a}}1  {ë}{{\"e}}1  {ï}{{\"i}}1 {ö}{{\"o}}1  {ü}{{\"u}}1
+    {Ä}{{\"A}}1  {Ë}{{\"E}}1  {Ï}{{\"I}}1 {Ö}{{\"O}}1  {Ü}{{\"U}}1
+    {â}{{\^a}}1  {ê}{{\^e}}1  {î}{{\^i}}1 {ô}{{\^o}}1  {û}{{\^u}}1
+    {Â}{{\^A}}1  {Ê}{{\^E}}1  {Î}{{\^I}}1 {Ô}{{\^O}}1  {Û}{{\^U}}1
+    {œ}{{\oe}}1  {Œ}{{\OE}}1  {æ}{{\ae}}1 {Æ}{{\AE}}1  {ß}{{\ss}}1
+    {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1  {Ø}{{\O}}1   {å}{{\r a}}1
+    {Å}{{\r A}}1 {ã}{{\~a}}1  {õ}{{\~o}}1 {Ã}{{\~A}}1  {Õ}{{\~O}}1
+    {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1 {¡}{{!`}}1
+    {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1 {»}{{\guillemotright}}1
+    {°}{{\textdegree}}1 {º}{{\textordmasculine}}1 {ª}{{\textordfeminine}}1
+    % textgreek symbols
+    %   - not needed with texcl = true
+    % {α}{{\textalpha}}1 {β}{{\textbeta}}1 {γ}{{\textgamma}}1 {δ}{{\textdelta}}1 {ε}{{\textepsilon}}1 {ζ}{{\textzeta}}1 {η}{{\texteta}}1 {θ}{{\texttheta}}1 {ι}{{\textiota}}1
+    % {κ}{{\textkappa}}1 {λ}{{\textlambda}}1 {μ}{{\textmu}}1 {μ}{{\textmugreek}}1 {ν}{{\textnu}}1 {ξ}{{\textxi}}1 {ο}{{\textomikron}}1 {π}{{\textpi}}1
+    % {ρ}{{\textrho}}1 {σ}{{\textsigma}}1 {τ}{{\texttau}}1 {υ}{{\textupsilon}}1 {φ}{{\textphi}}1 {χ}{{\textchi}}1 {ψ}{{\textpsi}}1 {ω}{{\textomega}}1
+    % {Α}{{\textAlpha}}1 {Β}{{\textBeta}}1 {Γ}{{\textGamma}}1 {Δ}{{\textDelta}}1 {Ε}{{\textEpsilon}}1 {Ζ}{{\textZeta}}1 {Η}{{\textEta}}1 {Θ}{{\textTheta}}1 {Ι}{{\textIota}}1
+    % {Κ}{{\textKappa}}1 {Λ}{{\textLambda}}1 {Μ}{{\textMu}}1 {Ν}{{\textNu}}1 {Ξ}{{\textXi}}1 {Ο}{{\textOmikron}}1 {Π}{{\textPi}}1 {Ρ}{{\textRho}}1 {Σ}{{\textSigma}}1
+    % {Τ}{{\textTau}}1 {Υ}{{\textUpsilon}}1 {Φ}{{\textPhi}}1 {Χ}{{\textChi}}1 {Ψ}{{\textPsi}}1 {Ω}{{\textOmega}}1 {ς}{{\textvarsigma}}1 {φ}{{\straightphi}}1 {θ}{{\scripttheta}}1
+    % {θ}{{\straighttheta}}1 {}{{\straightepsilon}}1
+}
+\lstset{style=MyCodeStyle}
+
+\usepackage{relsize}
+
+%---- Part 2 ----%
+
+% Seiten Geometrie
+\usepackage[a4paper,
+includehead,% See below for an explanation
+nomarginpar,% We don't want any margin paragraphs
+headheight=28pt, % Set \headheight to 16pt to avoid fancyhr warnings
+top=25mm,
+bottom=25mm,
+left=25mm,
+right=25mm
+]{geometry}
+
+% Zeitstempel der letzten Modifikation
+\usepackage{filemod}
+
+\usepackage{rotating}
+\usepackage{pstricks}
+
+\usepackage{siunitx} % für SI Einheiten
+\sisetup{locale = DE}
+
+\usepackage{icomma} % Intelligent commas for decimal numbers
+
+%\usepackage{physics}
+
+\usepackage{mathdots}
+\usepackage{yhmath}
+\usepackage{cancel}
+\usepackage{color}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amssymb}
+\usepackage{extarrows}
+\usepackage{booktabs}
+\usepackage{twemojis}
+
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+\usetikzlibrary{plotmarks}
+\usepgflibrary{plotmarks}
+\usepgfplotslibrary{fillbetween}
+
+\usepackage{stmaryrd}
+
+% Missing Symbols
+\usepackage{upgreek} % upgreek provides commands to set upright Greek letters in math mode
+
+% textgreek needs pkg package texlive-langgreek
+%\usepackage[euler]{textgreek} % textgreek provides text commands for Greek letters in text that adapt to the surrounding font
+
+% Seitennummerierung
+\usepackage{lastpage}
+
+% Kopf und Fußzeilen
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% Subfiles
+\usepackage{xr}
+\usepackage{subfiles}
+\externaldocument[M-]{\subfix{main}} % Cross-referencing between subfiles
+
+%---- Customs ----%
+\newcommand{\checked}{\checkmark} % for compatibility with mathcha.io exports
+\renewcommand{\cdotp}{\cdot} % for compatibility with mathcha.io exports
+
+\newcommand*{\defeq}{\overset{\text{def}}{=}}
+\newcommand*{\questeq}{\overset{?}{=}}
+\newcommand*{\exeq}{\overset{!}{=}}
+
+\renewcommand{\vec}{\overrightarrow} % Darstellung von Vektoren
+\newcommand{\vektor}[1]{%
+  %\arraycolsep=1pt\def\arraystretch{1}%
+  \begin{pmatrix*}[r] #1 \end{pmatrix*}%
+}
+
+\renewcommand{\labelenumi}{\alph{enumi})} % task list with a) b) c) ...
+
+% \ct{e} für Konstanten wie e, i, etc.
+%\newcommand\ct[1]{\text{\rmfamily\upshape #1}}
+\newcommand{\ct}[1]{\mathrm{#1}}
+\newcommand{\dx}[1]{~\mathrm{d}#1}
+
+\DeclareMathOperator{\e}{\mathrm{e}}
+\let\i\relax
+\DeclareMathOperator{\i}{\mathrm{i}}
+
+\RequirePackage{mathtools}
+\mathtoolsset{centercolon}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\DeclarePairedDelimiter\scalarprod{\langle}{\rangle}
+\DeclarePairedDelimiterX\skalarprod[2]{\langle}{\rangle}{#1, #2}
+\DeclarePairedDelimiter\interval{[}{]}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Operators
+\DeclareMathOperator{\Eig}{Eig}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Mean}{E}
+\DeclareMathOperator{\Bild}{Bild}
+\DeclareMathOperator{\Spur}{Spur}
+\DeclareMathOperator{\Kern}{Kern}
+\DeclareMathOperator{\rg}{rg}
+\DeclareMathOperator{\rang}{rang}
+\DeclareMathOperator{\diff}{d}
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator*{\argmin}{argmin} % star indicates, that limits typeset beneath them instead of to the right
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator{\R}{\mathbb{R}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Symbols
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+
+% Roman Numeral 2 -> II
+\newcommand{\Rnum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+\def\ojoin{\setbox0=\hbox{$\bowtie$}%
+  \rule[-.02ex]{.25em}{.4pt}\llap{\rule[\ht0]{.25em}{.4pt}}}
+
+%% Erweiterte Matrizen in der Form \eqmatrix{ccc|c}{1 & 1 \\ ...}
+\newcommand*{\eqmatrix}[2]{%
+    \ensuremath{\left(\begin{array}{#1}
+        #2
+    \end{array}\right)}%
+}
+
+\renewcommand{\equiv}{\Leftrightarrow}
+
+\usepackage{environ}
+\NewEnviron{equiveqs}[1][crl]{%
+	\begin{displaymath}%
+		\everymath={\displaystyle}%
+		\begin{array}{#1}%
+			\BODY
+		\end{array}%
+	\end{displaymath}%
+}
+%\newenvironment{equiveqs}[1][crl]{%
+%	\[\everymath={\displaystyle}\begin{array}{#1}%
+%}{%
+%	\end{array}\]%
+%}
+
+\author{Christian Rene Thelen}
+
+%% Hausaufgabenspezifisch
+\newcommand{\hausaufgabe}[3]{
+  \fancyhead[L]{\textbf{\module}\\\textbf{\semester}}
+  \fancyhead[C]{\textbf{Hausaufgaben}\\\textbf{Blatt #1}}
+  \fancyhead[R]{Ausgabe: #2\\Abgabe: #3}
+
+  \hypersetup{
+    pdfprintscaling=,        % siehe https://komascript.de/node/1897
+    breaklinks=true,         %
+    colorlinks=true,         % false: boxed links; true: colored links
+    unicode=true,            % non-Latin characters in Acrobat’s bookmarks
+    pdfnewwindow=true,       % links in new window
+    pdfpagemode=UseNone,     % Determines how the file is opened. Possibilities are UseThumbs (Thumbnails), UseOutlines (Bookmarks) and FullScreen
+    pdfstartpage=1,          % Determines on which page the PDF file is opened
+    pdftitle={\module: Hausaufgabenblatt #1},
+    pdfsubject={Aufgaben vom #2, Abgabe am #3},
+    pdfkeywords={Hausaufgaben, \module},
+    pdfauthor={Christian Rene Thelen}, % author
+    pdfcreator={cortex359 v1.2}, % creator of the document
+    pdfproducer={cortex359 / Christian Rene Thelen}, % producer of the document
+    linkcolor=black,         % color of internal links
+    citecolor=td-blue,       % color of links to bibliography
+    filecolor=td-blue,       % color of file links
+    urlcolor=td-blue,        % color of external links
+    menucolor=td-blue
+  }
+}
+
+%---- Header ---%
+\fancyhf{}
+\newcommand{\semester}{SoSe 2023}
+
+\newcommand{\module}{Lineare Algebra 2}
+%\newcommand{\module}{Analysis 2}
+%\newcommand{\module}{Theoretische Informatik}
+
+\hausaufgabe{01}{20.03.2023}{26.03.2023}
+%\hausaufgabe{02}{27.03.2023}{02.04.2023}
+%\hausaufgabe{03}{03.04.2023}{10.04.2023}
+%\hausaufgabe{04}{11.04.2023}{16.04.2023}
+%\hausaufgabe{05}{17.04.2023}{23.04.2023}
+%\hausaufgabe{06}{24.04.2023}{01.05.2023}
+%\hausaufgabe{07}{02.05.2023}{07.05.2023}
+%\hausaufgabe{08}{08.05.2023}{14.05.2023}
+%\hausaufgabe{09}{15.05.2023}{21.05.2023}
+%\hausaufgabe{10}{22.05.2023}{29.05.2023}
+%\hausaufgabe{11}{30.05.2023}{04.06.2023}
+%\hausaufgabe{12}{05.06.2023}{11.06.2023}
+%\hausaufgabe{13}{12.06.2023}{18.06.2023}
+
+%--- Footer -
+\newcommand{\lastMod}{
+    \Filemodtoday{\filemodNewest{
+        {Aufgabe1.tex}{Aufgabe2.tex}{Aufgabe3.tex}{Aufgabe4.tex}{Aufgabe5.tex}
+        {Aufgabe6.tex}{Aufgabe7.tex}{Aufgabe8.tex}
+    }}
+}
+\date{\lastMod{}}
+
+\makeatletter
+\fancyfoot[L]{{\small \@date}}
+\makeatother
+\fancyfoot[C]{{\small Seite \thepage~von~\pageref{LastPage}}}
+\fancyfoot[R]{{\small \href{mailto://christian.thelen@rwth-aachen.de}{Christian Rene Thelen}}}
+
+\begin{document}
+
+\subfile{Aufgabe1.tex}
+% \subfile{Aufgabe2.tex}
+% \subfile{Aufgabe3.tex}
+% \subfile{Aufgabe4.tex}
+% \subfile{Aufgabe5.tex}
+% \subfile{Aufgabe6.tex}
+% \subfile{Aufgabe7.tex}
+% \subfile{Aufgabe8.tex}
+% \subfile{Aufgabe9.tex}
+
+\end{document}
